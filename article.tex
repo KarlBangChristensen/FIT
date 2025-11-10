@@ -1,0 +1,417 @@
+\documentclass[Review,sageapa,times]{sagej}
+\renewcommand{\normalsize}{\fontsize{10}{12pt}\selectfont}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=CadetBlue,urlcolor=CadetBlue]{hyperref}
+\usepackage{comment,moreverb,url,apacite}
+\usepackage{booktabs}
+
+\usepackage{varwidth}
+\usepackage[colorinlistoftodos]{todonotes}
+\makeatletter
+\tikzstyle{diaanotestyle} = [
+    draw=\@todonotes@currentbordercolor,
+    fill=\@todonotes@currentbackgroundcolor,
+    line width=0.5pt,
+    inner sep = 0.8 ex,
+    rounded corners=4pt,align=left,
+   ]
+
+\renewcommand{\@todonotes@drawInlineNote}{%
+        {\begin{tikzpicture}[remember picture,baseline={(0,0)}]%
+            \draw node[diaanotestyle,font=\@todonotes@sizecommand,anchor=base west]{%
+               \begin{varwidth}[t]{5cm}
+                \if@todonotes@authorgiven%
+                    {\@todonotes@sizecommand \@todonotes@author:\,\@todonotes@text}%
+                \else%
+                    {\@todonotes@sizecommand \@todonotes@text}%
+                \fi
+                \end{varwidth}};%
+            \end{tikzpicture}}%
+       }%
+\makeatother  
+
+\usepackage{soul}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+
+    
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    %numberstyle=\tiny\color{codegray},               
+    %numbers=left,                    
+    %numbersep=5pt,      
+    numbers=none,
+    stringstyle=\color{red},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frameround=tttt,
+    rulecolor=\color{backcolour}
+}
+\lstset{style=mystyle}
+
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\def\volumeyear{2023}
+
+
+\runninghead{Christensen, Buchardt and Horton}
+
+\title{Empirical critical values for Rasch item fit statistics}
+
+\author{Karl Bang Christensen\affilnum{1}, Ann-Sophie Buchardt\affilnum{2} and Mike Horton\affilnum{3}}
+
+\affiliation{\affilnum{1}Section of Biostatistics, Department of Public Health, University of Copenhagen, Denmark}
+
+\affiliation{\affilnum[2]{Mary Elizabeth’s Hospital, University Hospital Copenhagen, Rigshospitalet, Denmark}}
+
+\affiliation{\affilnum{3}Psychometric Laboratory for Health Sciences, University of Leeds, UK}
+
+\corrauth{Karl Bang Christensen, Section of Biostatistics, Department of Public Health, University of Copenhagen, Øster Farimagsgade 5 opg. B, 1353 København K, Denmark.}
+
+\email{kach@sund.ku.dk}
+
+\begin{abstract}
+Item fit statistics are very frequently reported as part of Rasch validation studies. Many of them have an unknown asymptotic distribution, and the interpretation of what constitutes 'fit' relies on cut-off values that may not always be appropriate. Extensive simulation studies have shown that it is not possible to provide critical fit range values that will apply in all settings. This is a problem for all Rasch validation studies that relies on proprietary software. We introduce an easy-to-use software application that will help in establishing critical values on a case-by-case basis.\end{abstract}
+
+\keywords{dichotomous Rasch model, item fit, type I error, asymptotic distribution.}
+
+\begin{document}
+
+%%%%%%%%%%%%
+\listoftodos
+%%%%%%%%%%%%
+
+
+\maketitle
+
+\section{Introduction}
+
+Indirect measurement of latent traits is common, across a number of disciplines, such as healthcare, psychology, and education. This indirect measurement takes the form of scales, questionnaires, assessments, or examinations, and in healthcare applications these types of scales are often known as patient reported outcomes measures (PROMs). In all of these types of scales, the measurement principle is the same, in that a number of items are summed to form a total score that represents the latent trait that is being measured. For these measures to be considered useful, they must be validated in some way, and modern test theory (MTT), which encompasses item response theory (IRT) and Rasch measurement theory (RMT), provides the current standard against which they should be validated.
+
+In most applications of item response theory (IRT) models, evaluation of item fit is an important part of the validation process. Here, we outline a general approach for the evaluation of item fit and illustrate an implementation in R for the Rasch \citeyear{Rasch-1960} model for dichotomous items (RMD).
+
+In the Rasch model, the fit of an item refers to the extent to which an item functions as intended within the context of the overall measurement scale. Many methods are used to evaluate item fit. These include: (i) infit and outfit statistics based on the deviation of observed responses from the expected values under the Rasch model, (ii) chi-square tests that use these observed and expected responses to calculate a $p$-value, (iii) Standardized residuals where the standardization means that they can be directly compared across items. Furthermore, graphical methods have always been an important part of Rasch analysis: Visual inspection of plots of the observed responses against the expected responses or other fit statistics can also be used to identify items with poor fit.
+
+\emph{Item fit statistics} are a commonly reported feature in Rasch validation studies. Among the wide range of existing item fit statistics, very few are actually used in practice. The most widely used are the fit statistics and the fit of the fit of the fitting and the equipment \cite{wright-Stone-1979,Wright-Masters-1982} reported in the Winsteps software program \cite{Winsteps} and the \emph{fit residual}, \emph{Chi-square} and \emph{ANOVA} item fit statistics reported in the RUMM2030 software program \cite{Andrich-Sheridan-Luo-2010}. 
+
+All of these item fit statistics are based on residuals computed for each person-item interaction. They rely on assumptions about convergence to an asymptotic distribution of the sum of squared Pearson-type standardized residuals. This has been criticized by Karabatsos \cite{Karabatsos-2000}, who provided a critical analysis of the residual fit statistics of the Rasch model and argued:
+
+\begin{quote}
+`The faulty statistical properties of the residual fit statistics do not allow either a convenient or a straightforward approach to Rasch fit analysis.'
+\end{quote}
+
+More specifically, in mathematical statistics this assumption from linear models is known to be problematic for non-linear models like the Rasch model, because the residuals have a discrete distribution that depends on the observed value. A consequence of this is that each residual has a unique distribution. In this setting, it is not appropriate to claim that standardized residuals are asymptotically normal or chi-squared \cite{Jennings-1986}. 
+
+Item fit statistics with known asymptotic properties \cite{Christensen-Kreiner-2013,Muller-2020,Johansson2025} exist and have been implemented in R \cite{iarm}, but the use of residual fit statistics with faulty statistical properties persists. Until such a time when item fit statistics with known asymptotic properties are commonly used, it would be helpful for practitioners to have some guidelines for interpreting the residual fit statistics that are produced by the current major Rasch software packages.
+
+One way to do this would be to tabulate critical values for a range of conditions, but even large tables would not be exhaustive. Simple rule-of-thumb critical values for acceptable fit may be inappropriate \cite{Smith-et-al-1998,Wang-Chen-2005}. Critical ranges set using adapted values like $1\pm6/\sqrt{N}$ and $1\pm2/\sqrt{N}$, respectively, are sometimes recommended, as is the use of the Wilson-Hilferty cube-root transformation. However, these do not apply in all settings as illustrated in a Monte Carlo simulation study \cite{Seol2016}.
+
+Beyond illustrating empirical distributions Mont Carlo methods have also been used directly in calculation of item fit statistics. Stone \citeyear{Stone-2000} described a fit statistic based on Monte Carlo that closely approximates a scaled chi-squared random variable and is similar to Yen's \citeyear{Yen-1981} method. Similar methodology was discussed by \citeA{Su-Sheu-Wang-2007} in the context of Rasch models and \citeNP{Wolfe-2008} describes an implementation in SAS for estimating critical values for, among other things, the item fit statistics produced by the WINSTEPS computer program.\todo{We provide a online interface based on R that will allow users to estimate empirical critical values in any setting.}
+
+Wolfe \citeyear{Wolfe-2013} examined the distributions of outfit and infit statistics under a limited number of conditions, and recommended bootstrapping to get adequate critical values. This motivates the method and implementation developed here.
+
+Hodge and Morgan \citeyear{Hodge-Morgan-2017} examined the stability and appropriateness of the "rule-of-thumb" critical values for infit and outfit (e.g., values within 0.7 to 1.3 indicating fit) in applied settings with small samples, such as professional certification clinical exams. Using data from a high-stakes clinical certification exam (the American Chiropractic Neurology Board OSCE), they compared empirical fit statistics against 250 simulated datasets to assess stability. For both statistics the proportion of values within the 0.7 to 1.3 rule-of-thumb range was substantially larger than the proportion that fell within the simulated confidence interval. Thus, relying solely on fixed critical values (rule-of-thumb) can lead to incorrect conclusions about model-data fit.
+
+
+
+\section{Statistical assumptions and item fit statistics}
+
+Let $X_{vi} \in \{0,1\}$ denote a dichotomous random variable representing a response from person $v = 1,\ldots, N$ to item $i = 1,\ldots,K$. The simplest parametric IRT model is the Rasch \citeyear{Rasch-1960} model for dichotomous items (RMD) also known as the 1PL model, 
+\begin{equation}
+\label{RMD}
+P(X_{vi}=x|\theta_v=\theta)
+=\frac{\exp(x(\theta-\beta))}{1 + \exp(x(\theta-\beta))}.
+\end{equation}
+$\beta_1,\ldots,\beta_k$ that can be interpreted as item difficulties.
+
+In the Rasch model, estimates $\hat\beta_1,\ldots,\hat\beta_k$ can be computed in several ways \cite{Christensen-2013,Robitzsch-2021}, but in most applications the choice of estimation procedure is dictated by the choice of software. For R users, the choices are many \cite{Robitzsch-2021}, while for users of proprietary software, there are fewer choices. ConQuest \ci   te{Adams-Wu-Cloney-Wilson-2020} uses marginal maximum likehood (MML). RUMM \cite{Andrich-Sheridan-Luo} uses pairwise conditional estimation (PCML; \citeNP{Zwinderman-1995,Andrich-Luo-2003}). Winsteps \cite{Winsteps} uses joint maximum likelihood (JML) estimation. This approach was used in IRT for many years until the MML approach became dominant. 
+
+Estimates $\hat\theta_1,\ldots,\hat\theta_N$ of the person parameters $\theta_1,\ldots,\theta_N$ can be computed using maximum likelihood (ML), weighted maximum likelihood (WML; \citeNP{Warm-1989}) and other methods \cite{Kreiner-Christensen-2013}. Again, the choice of estimator is often dictated by the choice of software.
+
+
+The RMD is \eqref{RMD} is sometimes supplemented by an assumption about the distribution of the latent variable in the population. After observing a value $x$ we can use \eqref{RMD} to estimate the item parameters and the person parameters. The issue of model fit then boils down to whether or not the observed data $x_{vi}$ is consistent with the data generating mechanism
+
+\begin{equation}
+\label{IRThat}
+P(X_{vi}=x_{vi}|\theta_v=\hat\theta_v),
+\end{equation}
+for all $v = 1,\ldots,N$.
+
+This question is typically addressed using statistical tests and tests with a specified alternative, e.g., 'misfit is due to item $i_0$', are usually used.
+
+
+\section{Item fit statistics}
+
+This section describes three item fit statistics that are widely used in Rasch analysis. Let for $v=1,\ldots,N$ and $i=1,\ldots,K$
+$$
+E_{vi} = E(X_{vi} | \theta_v = \hat\theta_v)
+$$ 
+and 
+$$
+V_{vi} = V(X_{vi} | \theta_v = \hat\theta_v)
+$$
+denote the expected value and variance, respectively, of the item responses conditional on the estimated value $\hat\theta_v$ of $\theta_v$.
+
+Let $z_{vi}$ denote the standardized residuals, that is,
+$$
+z_{vi} = \frac{x_{vi} - E_{vi}}{\sqrt{V_{vi}}}
+$$
+
+%Let $\boldsymbol{D}_v=\textrm{diag}(\hat{\boldsymbol{p}}_v)$.
+
+\subsection{Outfit}
+
+The outfit item fit statics for the $i=1,\ldots,K$ items is defined as
+\begin{equation}
+u_i = \frac1N\sum_{v=1}^N z_{vi}^2.
+\label{outfit}
+\end{equation}
+
+\subsection{Infit}
+
+The infit item fit statistics for the $i=1,\ldots,k$ items is defined as
+\begin{equation}
+v_i = \frac{z_{vi}^2}{\sum_{v = 1}^N V_{vi}}.
+\label{infit}    
+\end{equation}
+
+
+The item fit statistics (\ref{infit}) and (\ref{outfit}) have no established null distribution though false claims that they do can be found in early Rasch literature \cite{Wright-Panchapakesan-1969,wright-Stone-1979}. Transformations have been proposed and implemented.
+
+\subsection{Transformations}
+
+Let for $i=1,\ldots,K$
+$$
+q_i^2 = \frac{1}{N^2} \sum_{v=1}^N \frac{C_{vi}}{V_{ni}^2} - \frac1N,
+$$
+where
+$$
+C_{vi} = E_{vi}^4 (1 - E_{vi}) + (1-E_{vi})^4 E_{vi}.
+$$
+It has been suggested that the Wilson-Hilferty \citeyear{Wilson-Hilferty-1931} cube-root transformations
+\begin{equation}\label{wilson-hilferty-OUT}
+t_{u,i} = \frac{3u_i^{\frac{1}{3}} - 1}{q_i} + \frac{q_i}{3}
+\end{equation}
+and
+\begin{equation}\label{wilson-hilferty-IN}
+t_{v,i} = \frac{3v_i^{\frac{1}{3}} - 1}{q_i} + \frac{q_i}{3}
+\end{equation}
+yield distributions that approximate a $t$ distribution \cite[Table 5.4a, p.100]{Wright-Masters-1982}. However, this claim rests on the false assumption that the item fit statistics (\ref{infit}) and (\ref{outfit}) follow a $\chi^2$ distribution. Another transformation of the outfit test statistic is reported in the software package RUMM \cite{Andrich-Sheridan-Luo}. This transformation is based on using the ratio $S_i/f$ where
+\begin{equation}
+S_i = \sum_{v = 1}^N z_{vi}^2.
+\label{S}
+\end{equation}
+This ratio is argued to be approximately chi-square distributed on $f$ degrees of freedom using an ad hoc derivation that, in the notation of this paper, amounts to $N\cdot k$ data points minus $N+k-1$ estimated parameters with each item contributing equally yielding $f=(Nk-N-k+1)/k$. Using the approximation
+\begin{equation}
+V(\log(S_i/f))\simeq\frac1{f^2}{V(S_i)}
+\end{equation}
+the test statistic FitResid defined as 
+\begin{equation}
+s_i=\frac{\log(S_i/f)}{\sqrt{V(\log(S_i/f))}}
+=\frac{f(\log(S_i)-\log(f))}{\sqrt{V(S_i)}}
+\label{FitResid}
+\end{equation}
+is argued to have a symmetrical distribution with mean zero and variance one. The item fit residual is considered to be sensitive towards a deviation from the requirement of equal discrimination, and $\pm2.5$ are commonly accepted thresholds. 
+
+\subsection{Other item fit statistics}
+
+The McKinley and Mills \citeyear{McKinley-Mills-1985} likelihood ratio $G^2$ and Yen's \citeyear{Yen-1981} Q1 have both been argued to have an approximate $\chi^2$ distribution. Computing one of these fit statistics for each of the $K$ items and reporting the largest observed value will inherently lead to type I errors. 
+
+The Molenaar \citeyear{Molenaar-1983} item fit statistic $U$ for evaluating item fit in the RMD summarizes trends in residuals calculated in different score groups derived by partitioning the score range into three intervals. Molenaar argued that $U$ has an asymptotic standardized normal distribution under the Rasch model and that large positive or negative values for an item indicates that the discrimination is stronger or weaker, respectively, than what is assumed by the Rasch model. 
+
+\subsection{Summary}
+
+Published Rasch validation studies will very often report an item fit statistic for each of the items in a scale and then report on the item (or items). Trust in the null distribution and a reasonable strategy for addressing multiple testing is needed. 
+
+\section{Methods}
+
+Inspired by earlier work \cite{Stone-2000,Su-Sheu-Wang-2007,Wolfe-2008,Hodge-Morgan-2017} we propose the following general approach:
+
+\begin{enumerate}
+\item Given estimates $\beta_1,\ldots,\beta_K$ and $\theta_1,\ldots,\theta_N$ simulate $B$ data sets using the data generating mechanism (\ref{IRThat}) and, for each of these:
+\begin{enumerate}
+\item Estimate $\beta_1^{(s)},\ldots,\beta_K^{(s)}$ and $\theta_1^{(s)},\ldots,\theta_N^{(s)}$ using an estimation method of choice;
+\item compute the item fit statistic of choice $Z_i^{(s)}$ for each item;
+\item compute $L^{(s)}=\min\{Z_i^{(s)}:i=1,\ldots,K\}$; and
+\item compute $U^{(s)}=\max\{Z_i^{(s)}:i=1,\ldots,K\}$.
+\end{enumerate}
+\item Evaluate percentiles for $(L^{(s)})_{s=1,\ldots,B}$, $(U^{(s)})_{s=1,\ldots,B}$, or both, as appropriate.
+\end{enumerate}
+
+This approach applies to any estimation method and, for this reason, can be used to study the empirical distribution of item fit statistics from proprietary software. In this paper we present a software implementation that generates these empirical distributions. It is part of the \texttt{RASCHplot} package which is available as a free package for the R software environment \cite{R}. In addition, we have supplemented the R code with a shiny app \cite{shiny} to provide a web interface. Shiny is an open source R package that provides an elegant and powerful web framework for building web applications using R \cite{beeley2013}. The ‘app’ can be interacted with by entering data, running functions with user-specified settings to plot figures, and downloading the resultant figures in a variety of formats.
+
+%\todo[inline]{Følgende er en forkortet og mindre R-teknisk version af den i R-afsnittet}
+The computational algorithm relies on repeated random sampling to obtain a sampling distribution for an item fit statistic of interest, in particular, the outfit, infit, or item fit residual. From the imported item and person parameter estimates $\hat\beta_1,\ldots,\hat\beta_k$ and $\hat\theta_1,\ldots,\hat\theta_k$ conditional probabilities for item responses are computed under the model \eqref{RMD}. The probabilities are stored in a matrix as follows:
+\begin{equation}
+\boldsymbol{\hat{P}}
+=
+\left[\hat{P}_{vi}\right]_{\substack{v=1,\ldots,N \\ i=1,\ldots,K}}
+=
+\left[P(x_{vi}=1 \mid \theta_v=\hat\theta_v; \beta_i=\hat\beta_i)\right]_{\substack{v=1,\ldots,N \\ i=1,\ldots,K}}.
+\label{probability-matrix}
+\end{equation}
+Then, for each cell in the matrix of probabilities, a random number is generated from a uniform distribution $p^{(l)}_{vi} \sim \mathcal{U}[0,1]$ and we define $x^{(l)}_{vi}=1$ if $\hat{P}_{vi} > p^{(l)}_{vi}$ and $x^{(l)}_{vi}=0$ otherwise. This way we generate a data matrix  $\mathbf{x}^{(l)}$, $l=1,2,\ldots$, of item responses.
+For each sample, we estimate the parameters of a parametric IRT model using an estimation method of the users choice. Furthermore, the item fit statistics presented above are computed. Finally, from a suitable number of repetitions, we obtain an estimate of the sampling distribution for the minimum and maximum item fit statistics, $(L^{(s)})_{s=1,\ldots,B}$ and $(U^{(s)})_{s=1,\ldots,B}$, respectively. Four estimation  methods are available for the item parameter estimation through the \texttt{RASCHplot} package, namely,
+PCML \cite{sirt}, CML \cite{erm}, JML  \cite{tam}, and MML \cite{tam}.
+Two estimation methods are available for the person parameter estimation, namely WML and ML \cite{sirt}. 
+
+A key feature of the proposed method is that we can visualize the estimated sampling distribution of an item fit statistic.
+We can produce a density plot of the sampling distribution of an item fit statistic, that is, for a sampled minimum $(L^{(s)})_{s=1,\ldots,B}$ or maximum $(U^{(s)})_{s=1,\ldots,B}$ item fit statistic of choice. This is possible for any the item fit statistics presented above. Percentiles representing critical values can be indicated in the figures. For example, the values 2.5\% and 5\% could be reasonable for the minimum while 95\% and 97.5\% could be reasonable for the maximum. 
+The \texttt{RMDitemfit} Shiny app generates a sampling distribution for different Rasch item fit statistics and visualizes empirical critical values. The app is available free-of-charge (\url{https://shiny.sund.ku.dk/RMDitemfit/}) and can also be found through the \texttt{RASCHplot} package such that users can run the app locally using \texttt{RASCHplot::app("RMDitemfit")}.
+
+
+
+
+
+\section{Example I: AMTS data}
+
+This example uses the Abbreviated Mental Test Score (AMTS) \cite{hodkinson72} data  containing the responses of 197 persons to the ten questions of the AMTS. The AMTS is used to identify patients with dementia. One point is given for each correct answer, a score of 6 or less suggests that the patient has some mental impairment. 
+
+Initial item analysis has been done in \todo{??}RUMM and resulting estimates are available at \todo{??}, see \todo{Jeg får ikke helt det samme med PCML og WML i R...?}\autoref{tab:amtsfit}. 
+
+\todo[inline]{Tabel med outfit/infit statistics?}
+
+
+\begin{figure}
+    \centering
+    \includegraphics{amtsOutfit.pdf}
+    \caption{Empirical critical values for minimum (left) and maximum (right) outfit item fit statistics for the AMTS.}
+    \label{fig:amtsOutfitMinMax}
+\end{figure}
+
+\autoref{fig:amtsOutfitMinMax} shows \todo[inline]{???}
+\todo{Skal vi vise infit og/eller outfit?}
+
+\autoref{fig:amtsInfitMinMax} shows \todo[inline]{???}
+
+\begin{figure}
+    \centering
+    \includegraphics{amtsInfit.pdf}
+    \caption{Empirical critical values for minimum (left) and maximum (right) infit item fit statistics for the AMTS.}
+    \label{fig:amtsInfitMinMax}
+\end{figure}
+
+\begin{table}[b!]
+    \centering
+    \caption{} \label{tab:amtsfit}
+    \begin{tabular}{lrrc}
+    \toprule
+    Item     & $\beta$ & s.e. & 95\% CI\\
+    \midrule
+    Address  & 2.05&0.19& 1.68 to 2.42 \\
+    Age      &-0.62&0.21&-1.04 to -0.21 \\
+    Countbac & 0.37&0.19& 0.00 to 0.74 \\
+    Dob      &-1.72&0.25&-2.22 to -1.23 \\
+    Firstww  &-0.16&0.20&-0.55 to 0.22 \\
+    Monarch  & 0.17&0.19&-0.21 to 0.55 \\
+    Month    & 0.37&0.19& 0.00 to 0.74 \\
+    Name     &-0.62&0.21&-1.04 to -0.21 \\
+    Time     & 0.05&0.19&-0.33 to 0.43 \\
+    Year     & 0.13&0.19&-0.25 to 0.51 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\section{Example II: Knox cube test data}
+
+This example uses the classic Knox Cube test data \cite{wright-Stone-1979}. The Knox Cube Test measures short term memory and consists of 18 dichotomous items. In the data set responses from 35 subjects were considered. For four items all respondents gave the same answer and these items are not considered in what follows. Item fit statistics for the remaining 14 items are shown in Table \ref{knox} below.
+
+
+.. using joint maximum likelihood ..
+
+\begin{figure}
+    \centering
+    \includegraphics{knoxFitResid.pdf}
+    \caption{Empirical critical values for minimum (left) and maximum (right) fit residual item fit statistics for the Knox cube test data.}
+    \label{fig:knoxOutfitMinMax}
+\end{figure}
+
+
+note that computing five item fit statistics for each of 14 items yields a total of $5\cdot14=70$ instances where the researcher needs to evaluate whether an observed value constitutes an anomaly (whether guided by a $p$-value or not).
+
+\section{Discussion}
+
+Confidence intervals generated via simulation provide a more nuanced and accurate assessment of item fit, accommodating for sample size and alignment between item difficulty and person ability.​
+
+We offer a resource to help put observed fit statistics into context in order to determine whether an apparent anomaly is statistically relevant.
+
+We propose a method for empirically studying the behavior of item fit statistics to see when they produce empirical Type I error rates that are close to the nominal 5\%. Doing so yields critical values that vary depending on conditions like sample size, test length, response format, and targeting. We propose an implementation in R based on parametric bootstrap that can be used for this. 
+
+We further discuss how this implementation is useful for evaluation of item fit and address the issue of multiple testing in the context of the wide variation in number of items across instruments.
+
+Even though versions of item fit statistics with known asymptotic properties \cite{Christensen-Kreiner-2013,Muller-2020} have been implemented in R \cite{iarm}, the use of residual fit statistics with faulty statistical properties persists. This is motivation for providing guidelines for interpreting these residual fit statistics.
+
+\todo[inline]{write part about how this paper and application are also relevant to apply to pre-existing research where fit statistics for a scale/PROM have been presented}
+
+\todo[inline]{Missing}
+
+\todo[inline]{Extreme scores}
+
+\todo[inline]{Deytails about, e.g., \texttt{constraint = "items"} and \texttt{sum0 = TRUE} ?}
+
+\bibliographystyle{apacite}
+\bibliography{biblio.bib}
+
+\end{document}
+
+
+the R package \cite{Mair_2007} use unconditional item fit statistics based on (\ref{Z_uncon}), but item fit statistics with better properties can be obtained by using (\ref{Z_con}) as it uses a distribution of $X_{iv}$ conditional on actual observed values instead of conditional on parameter estimates.
+
+
+Fit statistic estimates are influenced by sample size and rules-of thumb estimates may result in incorrect conclusions about the extent to which the model fits the data (Hodge, Moran)
+
+This paper examines the residual-based fit statistics commonly used in Rasch measurement. In particular, the paper analytically examines some of the theoretical properties of the residual-based fit statistics with a view to establishing the inferences that can be made using these fit statistics. More specifically, the relationships between the distributional properties of the fit statistics and sample size are discussed; some research that erroneously concludes that residual-based fit statistics are unstable is reviewed; and finally, it is analytically illustrated that, for dichotomous items, residual-based fit statistics provide a measure of the relative slope of empirical item characteristic curves. With a clear understanding of the theoretical properties of the fit statistics, the use and limitations of these statistics can be placed in the right light. (Wu, Adams)
+
+
+Computing confidence intervals of item fit statistics in the family of Rasch models using the bootstrap method.
+Su YH, Sheu CF, Wang WC.
+J Appl Meas. 2007;8(2):190-203.
+PMID: 17440261
+
+Using the Bootstrap Method to Evaluate the Critical Range of Misfit for Polytomous Rasch Fit Statistics.
+Seol H.
+Psychol Rep. 2016 Jun;118(3):937-56. doi: 10.1177/0033294116649434. Epub 2016 May 19.
+
+An Examination of Sensitivity to Measurement Error in Rasch Residual-based Fit Statistics.
+Padgett RN, Morgan GB.
+J Appl Meas. 2019;20(4):354-366.
+
+
+Specifically, critical upper values for the outfit have been given as $1+2/\sqrt{N}$ and critical lower values for the infit have been given as $1+6/\sqrt{N}$ \cite{Smith-Schumacker-Bush}.
+
+
+
+Bootstrap approaches have been discussed earlier for the the infit and outfit mean square error statistics available in winsteps \cite{Su-Sheu-Wang2007} and a bootstrap approach that requires the combined us of SAS and WINSTEPS has been proposed \cite{Wolfe2008}
+
+The results showed that rule-of-thumb critical values for assessing the magnitude of misfit were not applicable because the infit and outfit mean square error statistics showed different magnitudes of variability over testing conditions
+
+
+
+
+general parametric IRT model defined as
+\begin{equation}
+\label{IRTmodel}
+    P(\boldsymbol{X}_v=\boldsymbol{x} \mid \theta_v = \theta)
+    =\exp(\boldsymbol{x}^{T}(\boldsymbol{B}\theta+\boldsymbol{A}\boldsymbol{\eta}))K(\theta,\boldsymbol{\eta})^{-1},
+\end{equation}
+where $\boldsymbol{\eta}$ is a vector of item parameters and 
+$$
+K(\theta,\boldsymbol{\eta})=\sum_{\boldsymbol{z}\in\Omega}\exp(\boldsymbol{z}^{T}(\boldsymbol{B}\theta+\boldsymbol{A}\boldsymbol{\eta}))
+$$
+is a normalizing constant calculated by summation over the set, $\Omega$, of all possible response vectors \cite{Adams-Wu-2007}. 
+\todo[inline]{$\boldsymbol{B}$... and $\boldsymbol{A}$...}.
