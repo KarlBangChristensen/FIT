@@ -1,0 +1,1315 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Andersen%
+}{%
+Andersen%
+}{%
+{\protect \APACyear {1977}}%
+}]{%
+andersen1977}
+\APACinsertmetastar {%
+andersen1977}%
+\begin{APACrefauthors}%
+Andersen, E\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1977}{mar}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Sufficient statistics and latent trait models}}
+  {{Sufficient statistics and latent trait models}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{42}{1}{69--81}.
+\newblock
+\begin{APACrefURL} \url{http://link.springer.com/10.1007/BF02293746}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/BF02293746} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Andersen%
+}{%
+Andersen%
+}{%
+{\protect \APACyear {1995}}%
+}]{%
+Andersen_1995}
+\APACinsertmetastar {%
+Andersen_1995}%
+\begin{APACrefauthors}%
+Andersen, E\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1995}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Polytomous Rasch Models and their Estimation}}
+  {{Polytomous Rasch Models and their Estimation}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Rasch Models} {Rasch models}\ (\BPGS\ 271--291).
+\newblock
+\APACaddressPublisher{}{Springer New York}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1007%2F978-1-4612-4230-7_15}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/978-1-4612-4230-7_15} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Andrich%
+}{%
+Andrich%
+}{%
+{\protect \APACyear {1978}}%
+}]{%
+andrich1978}
+\APACinsertmetastar {%
+andrich1978}%
+\begin{APACrefauthors}%
+Andrich, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1978}{dec}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A rating formulation for ordered response categories}}
+  {{A rating formulation for ordered response categories}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{43}{4}{561--573}.
+\newblock
+\begin{APACrefURL} \url{http://link.springer.com/10.1007/BF02293814}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/BF02293814} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Andrich%
+\ \BBA {} Luo%
+}{%
+Andrich%
+\ \BBA {} Luo%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+Andrich2003}
+\APACinsertmetastar {%
+Andrich2003}%
+\begin{APACrefauthors}%
+Andrich, D.%
+\BCBT {}\ \BBA {} Luo, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Conditional pairwise estimation in the Rasch model for
+  ordered response categories using principal components.}} {{Conditional
+  pairwise estimation in the Rasch model for ordered response categories using
+  principal components.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Applied Measurement}{}{}{205--221}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Andrich%
+, Sheridan%
+\BCBL {}\ \BBA {} Luo%
+}{%
+Andrich%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+RUMM}
+\APACinsertmetastar {%
+RUMM}%
+\begin{APACrefauthors}%
+Andrich, D.%
+, Sheridan, B.%
+\BCBL {}\ \BBA {} Luo, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{RUMM2030 [Computer software and manual]}} {{RUMM2030
+  [Computer software and manual]}}{\BBCQ}\ [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{Perth, Australia}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bond%
+\ \BBA {} Fox%
+}{%
+Bond%
+\ \BBA {} Fox%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+bondfox}
+\APACinsertmetastar {%
+bondfox}%
+\begin{APACrefauthors}%
+Bond, T\BPBI G.%
+\BCBT {}\ \BBA {} Fox, C\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Applying the {R}asch model: Fundamental measurement in the
+  human sciences} {Applying the {R}asch model: Fundamental measurement in the
+  human sciences}.
+\newblock
+\APACaddressPublisher{}{Psychology Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Christensen%
+}{%
+Christensen%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+christensen2006_SAS}
+\APACinsertmetastar {%
+christensen2006_SAS}%
+\begin{APACrefauthors}%
+Christensen, K\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Fitting Polytomous {R}asch Models in SAS}} {{Fitting
+  Polytomous {R}asch Models in SAS}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Applied Measurement}{7}{}{407--417}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Christensen%
+}{%
+Christensen%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+Christensen2013}
+\APACinsertmetastar {%
+Christensen2013}%
+\begin{APACrefauthors}%
+Christensen, K\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Conditional Maximum Likelihood Estimation in Polytomous
+  Rasch Models Using SAS}} {{Conditional Maximum Likelihood Estimation in
+  Polytomous Rasch Models Using SAS}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{ISRN Computational Mathematics}{2013}{i}{1--8}.
+\newblock
+\begin{APACrefURL}
+  \url{http://www.hindawi.com/journals/isrn.computational.mathematics/2013/617475/}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1155/2013/617475} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Christensen%
+\ \BBA {} Kreiner%
+}{%
+Christensen%
+\ \BBA {} Kreiner%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+Christensen-Kreiner2013}
+\APACinsertmetastar {%
+Christensen-Kreiner2013}%
+\begin{APACrefauthors}%
+Christensen, K\BPBI B.%
+\BCBT {}\ \BBA {} Kreiner, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{mar}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Item Fit Statistics}} {{Item Fit Statistics}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Rasch Models in Health} {Rasch models in health}\
+  (\BPGS\ 83--104).
+\newblock
+\APACaddressPublisher{Hoboken, NJ USA}{John Wiley {\&} Sons, Inc.}
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1002/9781118574454.ch5}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1002/9781118574454.ch5} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Christensen%
+, Kreiner%
+\BCBL {}\ \BBA {} Mesbah%
+}{%
+Christensen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+christensen-kreiner-mesbah2013}
+\APACinsertmetastar {%
+christensen-kreiner-mesbah2013}%
+\begin{APACrefauthors}%
+Christensen, K\BPBI B.%
+, Kreiner, S.%
+\BCBL {}\ \BBA {} Mesbah, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {{Rasch Models in Health}} {{Rasch Models in Health}}\ (K\BPBI
+  B.~Christensen, S.~Kreiner\BCBL {}\ \BBA {} M.~Mesbah, \BEDS{}).
+\newblock
+\APACaddressPublisher{Hoboken, NJ USA}{John Wiley {\&} Sons, Inc.}
+\newblock
+\begin{APACrefURL} \url{http://doi.wiley.com/10.1002/9781118574454}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1002/9781118574454} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Christensen%
+, Makransky%
+\BCBL {}\ \BBA {} Horton%
+}{%
+Christensen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Christensen-Makransky-Horton}
+\APACinsertmetastar {%
+Christensen-Makransky-Horton}%
+\begin{APACrefauthors}%
+Christensen, K\BPBI B.%
+, Makransky, G.%
+\BCBL {}\ \BBA {} Horton, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Critical Values for Yen's Q3: Identification of Local
+  Dependence in the Rasch Model Using Residual Correlations}} {{Critical Values
+  for Yen's Q3: Identification of Local Dependence in the Rasch Model Using
+  Residual Correlations}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Psychological Measurement}{41}{3}{178--194}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1177%2F0146621616677520}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0146621616677520} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dimitrov%
+\ \BBA {} Smith%
+}{%
+Dimitrov%
+\ \BBA {} Smith%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+Dimitrov-Smith2006}
+\APACinsertmetastar {%
+Dimitrov-Smith2006}%
+\begin{APACrefauthors}%
+Dimitrov, D\BPBI M.%
+\BCBT {}\ \BBA {} Smith, R\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Adjusted Rasch person-fit statistics.}} {{Adjusted
+  Rasch person-fit statistics.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of applied measurement}{7}{2}{170--83}.
+\newblock
+\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/16632900}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Efron%
+}{%
+Efron%
+}{%
+{\protect \APACyear {1979}}%
+}]{%
+efron1979}
+\APACinsertmetastar {%
+efron1979}%
+\begin{APACrefauthors}%
+Efron, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1979}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Bootstrap Methods: Another Look at the Jackknife}}
+  {{Bootstrap Methods: Another Look at the Jackknife}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Annals of Statistics}{7}{}{1--26}.
+\newblock
+\begin{APACrefDOI} \doi{10.1214/aos/1176344552} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Efron%
+}{%
+Efron%
+}{%
+{\protect \APACyear {1981}}%
+}]{%
+Efron1981}
+\APACinsertmetastar {%
+Efron1981}%
+\begin{APACrefauthors}%
+Efron, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1981}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Nonparametric estimates of standard error: The
+  jackknife, the bootstrap and other methods}} {{Nonparametric estimates of
+  standard error: The jackknife, the bootstrap and other methods}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Biometrika}{68}{}{589--599}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/biomet/68.3.589} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fischer%
+\ \BBA {} Molenaar%
+}{%
+Fischer%
+\ \BBA {} Molenaar%
+}{%
+{\protect \APACyear {1995}}%
+}]{%
+Fischer-Molenaar1995}
+\APACinsertmetastar {%
+Fischer-Molenaar1995}%
+\begin{APACrefauthors}%
+Fischer, G\BPBI H.%
+\BCBT {}\ \BBA {} Molenaar, I\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1995}.
+\newblock
+\APACrefbtitle {{Rasch Models. Foundations, Recent Developments, and
+  Applications.}} {{Rasch Models. Foundations, Recent Developments, and
+  Applications.}}
+\newblock
+\APACaddressPublisher{}{Springer}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1007/978-1-4612-4230-7}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/978-1-4612-4230-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Glas%
+}{%
+Glas%
+}{%
+{\protect \APACyear {1988}}%
+}]{%
+Glas1988}
+\APACinsertmetastar {%
+Glas1988}%
+\begin{APACrefauthors}%
+Glas, C\BPBI A\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1988}{dec}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The derivation of some tests for the Rasch model from
+  the multinomial distribution}} {{The derivation of some tests for the Rasch
+  model from the multinomial distribution}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{53}{4}{525--546}.
+\newblock
+\begin{APACrefURL} \url{http://link.springer.com/10.1007/BF02294405}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/BF02294405} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hagell%
+\ \BBA {} Westergren%
+}{%
+Hagell%
+\ \BBA {} Westergren%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Hagell-Westergren2016}
+\APACinsertmetastar {%
+Hagell-Westergren2016}%
+\begin{APACrefauthors}%
+Hagell, P.%
+\BCBT {}\ \BBA {} Westergren, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Sample size and statistical conclusions from tests of
+  fit to the Rasch model according to the Rasch unidimensional measurement
+  model (RUMM) program in health outcome measurement}} {{Sample size and
+  statistical conclusions from tests of fit to the Rasch model according to the
+  Rasch unidimensional measurement model (RUMM) program in health outcome
+  measurement}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of applied measurement}{17}{4}{416--431}.
+\newblock
+\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/28009589}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jennings%
+}{%
+Jennings%
+}{%
+{\protect \APACyear {1986}}%
+}]{%
+jennings1986}
+\APACinsertmetastar {%
+jennings1986}%
+\begin{APACrefauthors}%
+Jennings, D\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1986}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Outliers and Residual Distributions in Logistic
+  Regression}} {{Outliers and Residual Distributions in Logistic
+  Regression}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the American Statistical
+  Association}{81}{396}{987-990}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/01621459.1986.10478362} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Karabatsos%
+}{%
+Karabatsos%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+Karabatsos2000a}
+\APACinsertmetastar {%
+Karabatsos2000a}%
+\begin{APACrefauthors}%
+Karabatsos, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A critique of Rasch residual fit statistics.}} {{A
+  critique of Rasch residual fit statistics.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of applied measurement}{1}{2}{152--76}.
+\newblock
+\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/12029176}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kroenke%
+, Spitzer%
+\BCBL {}\ \BBA {} Williams%
+}{%
+Kroenke%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2003}}%
+}]{%
+kroenke2003patient}
+\APACinsertmetastar {%
+kroenke2003patient}%
+\begin{APACrefauthors}%
+Kroenke, K.%
+, Spitzer, R\BPBI L.%
+\BCBL {}\ \BBA {} Williams, J\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The Patient Health Questionnaire-2: validity of a
+  two-item depression screener}} {{The Patient Health Questionnaire-2: validity
+  of a two-item depression screener}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Medical care}{41}{11}{1284--1292}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Linacre%
+}{%
+Linacre%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+winsteps}
+\APACinsertmetastar {%
+winsteps}%
+\begin{APACrefauthors}%
+Linacre, J\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{WINSTEPS {R}asch Measurement Computer Program}}
+  {{WINSTEPS {R}asch Measurement Computer Program}}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{Beaverton, Oregon}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Marais%
+\ \BBA {} Andrich%
+}{%
+Marais%
+\ \BBA {} Andrich%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Marais2008c}
+\APACinsertmetastar {%
+Marais2008c}%
+\begin{APACrefauthors}%
+Marais, I.%
+\BCBT {}\ \BBA {} Andrich, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Effects of varying magnitude and patterns of response
+  dependence in the unidimensional Rasch model.}} {{Effects of varying
+  magnitude and patterns of response dependence in the unidimensional Rasch
+  model.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of applied measurement}{9}{2}{105--24}.
+\newblock
+\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/18480508}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Masters%
+}{%
+Masters%
+}{%
+{\protect \APACyear {1982}}%
+}]{%
+Masters1982}
+\APACinsertmetastar {%
+Masters1982}%
+\begin{APACrefauthors}%
+Masters, G\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1982}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A {R}asch model for partial credit scoring}} {{A
+  {R}asch model for partial credit scoring}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{47}{}{149--174}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/BF02296272} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mokkink%
+\ \protect \BOthers {.}}{%
+Mokkink%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+Mokkink_2006}
+\APACinsertmetastar {%
+Mokkink_2006}%
+\begin{APACrefauthors}%
+Mokkink, L.%
+, Terwee, C.%
+, Knol, D.%
+, Stratford, P.%
+, Alonso, J.%
+, Patrick, D.%
+\BDBL {}de Vet, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{jan}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Protocol of the {COSMIN} study: {COnsensus}-based
+  Standards for the selection of health Measurement {INstruments}}} {{Protocol
+  of the {COSMIN} study: {COnsensus}-based Standards for the selection of
+  health Measurement {INstruments}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{{BMC} Med Res Methodol}{6}{1}{}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1186/1471-2288-6-2}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1186/1471-2288-6-2} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pedersen%
+, Mathiasen%
+, Christensen%
+\BCBL {}\ \BBA {} Makransky%
+}{%
+Pedersen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+pedersen2016}
+\APACinsertmetastar {%
+pedersen2016}%
+\begin{APACrefauthors}%
+Pedersen, S\BPBI S.%
+, Mathiasen, K.%
+, Christensen, K\BPBI B.%
+\BCBL {}\ \BBA {} Makransky, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{nov}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Psychometric analysis of the Patient Health
+  Questionnaire in Danish patients with an implantable cardioverter
+  defibrillator (The {DEFIB}-{WOMEN} study)}} {{Psychometric analysis of the
+  Patient Health Questionnaire in Danish patients with an implantable
+  cardioverter defibrillator (The {DEFIB}-{WOMEN} study)}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Psychosomatic Research}{90}{}{105--112}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1016%2Fj.jpsychores.2016.09.010}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.jpsychores.2016.09.010} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rasch%
+}{%
+Rasch%
+}{%
+{\protect \APACyear {1960}}%
+}]{%
+rasch1960}
+\APACinsertmetastar {%
+rasch1960}%
+\begin{APACrefauthors}%
+Rasch, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1960}.
+\newblock
+\APACrefbtitle {{Probabilistic Models for some Intelligence and Attainment
+  Tests}} {{Probabilistic Models for some Intelligence and Attainment Tests}}.
+\newblock
+\APACaddressPublisher{Copenhagen}{Danish National Institute for Educational
+  Research}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rasch%
+}{%
+Rasch%
+}{%
+{\protect \APACyear {1961}}%
+}]{%
+rasch1961}
+\APACinsertmetastar {%
+rasch1961}%
+\begin{APACrefauthors}%
+Rasch, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1961}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{On General Laws and the Meaning of Measurement in
+  Psychology}} {{On General Laws and the Meaning of Measurement in
+  Psychology}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the Fourth Berkeley Symposium on
+  Mathematical Statistics and Probability, Volume 4: Contributions to Biology
+  and Problems of Medicine} {Proceedings of the fourth berkeley symposium on
+  mathematical statistics and probability, volume 4: Contributions to biology
+  and problems of medicine}\ (\BPGS\ 321--333).
+\newblock
+\APACaddressPublisher{Berkeley, Calif.}{University of California Press}.
+\newblock
+\begin{APACrefURL} \url{http://projecteuclid.org/euclid.bsmsp/1200512895}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Schulz%
+}{%
+Schulz%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+Schulz2002}
+\APACinsertmetastar {%
+Schulz2002}%
+\begin{APACrefauthors}%
+Schulz, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The Standardization of Mean-Squares}} {{The
+  Standardization of Mean-Squares}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Rasch Measurement Transactions}{16}{4}{879}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Seol%
+}{%
+Seol%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Seol2016}
+\APACinsertmetastar {%
+Seol2016}%
+\begin{APACrefauthors}%
+Seol, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{may}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Using the Bootstrap Method to Evaluate the Critical
+  Range of Misfit for Polytomous Rasch Fit Statistics}} {{Using the Bootstrap
+  Method to Evaluate the Critical Range of Misfit for Polytomous Rasch Fit
+  Statistics}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Reports}{118}{3}{937--956}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1177/0033294116649434}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0033294116649434} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+A\BPBI B.~Smith%
+, Rush%
+, Fallowfield%
+, Velikova%
+\BCBL {}\ \BBA {} Sharpe%
+}{%
+A\BPBI B.~Smith%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+smith2008}
+\APACinsertmetastar {%
+smith2008}%
+\begin{APACrefauthors}%
+Smith, A\BPBI B.%
+, Rush, R.%
+, Fallowfield, L\BPBI J.%
+, Velikova, G.%
+\BCBL {}\ \BBA {} Sharpe, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Rasch fit statistics and sample size considerations for
+  polytomous data}} {{Rasch fit statistics and sample size considerations for
+  polytomous data}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{BMC Medical Research Methodology}{8}{1}{33}.
+\newblock
+\begin{APACrefURL} \url{http://www.biomedcentral.com/1471-2288/8/33}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1186/1471-2288-8-33} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+R\BPBI M.~Smith%
+}{%
+R\BPBI M.~Smith%
+}{%
+{\protect \APACyear {1991}}%
+}]{%
+Smith1991}
+\APACinsertmetastar {%
+Smith1991}%
+\begin{APACrefauthors}%
+Smith, R\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1991}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The Distributional Properties of Rasch Item Fit
+  Statistics}} {{The Distributional Properties of Rasch Item Fit
+  Statistics}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Educational and Psychological
+  Measurement}{51}{3}{541--565}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0013164491513003} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+R\BPBI M.~Smith%
+}{%
+R\BPBI M.~Smith%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+Smith2000}
+\APACinsertmetastar {%
+Smith2000}%
+\begin{APACrefauthors}%
+Smith, R\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Fit Analysis in Latent Trait Measurement Models}} {{Fit
+  Analysis in Latent Trait Measurement Models}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Applied Measurement}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+R\BPBI M.~Smith%
+, Schumacker%
+\BCBL {}\ \BBA {} Bush%
+}{%
+R\BPBI M.~Smith%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1998}}%
+}]{%
+Smith-Schumacker-Bush}
+\APACinsertmetastar {%
+Smith-Schumacker-Bush}%
+\begin{APACrefauthors}%
+Smith, R\BPBI M.%
+, Schumacker, R\BPBI E.%
+\BCBL {}\ \BBA {} Bush, M\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Using item mean squares to evaluate fit to the Rasch
+  model}} {{Using item mean squares to evaluate fit to the Rasch
+  model}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Outcome Measurement}{2}{}{66-78}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Su%
+, Sheu%
+\BCBL {}\ \BBA {} Wang%
+}{%
+Su%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+Su2007}
+\APACinsertmetastar {%
+Su2007}%
+\begin{APACrefauthors}%
+Su, Y\BPBI H.%
+, Sheu, C\BPBI F.%
+\BCBL {}\ \BBA {} Wang, W\BHBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007{\protect \BCnt {1}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Computing confidence intervals of item fit in the
+  family of Rasch models using the bootstrap method}} {{Computing confidence
+  intervals of item fit in the family of Rasch models using the bootstrap
+  method}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Applied Measurement}{8}{2}{190--203}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Su%
+, Sheu%
+\BCBL {}\ \BBA {} Wang%
+}{%
+Su%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+Su-Sheu-Wang2007}
+\APACinsertmetastar {%
+Su-Sheu-Wang2007}%
+\begin{APACrefauthors}%
+Su, Y\BPBI H.%
+, Sheu, C\BPBI F.%
+\BCBL {}\ \BBA {} Wang, W\BHBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007{\protect \BCnt {2}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Computing confidence intervals of item fit in the
+  family of Rasch models using the bootstrap method}} {{Computing confidence
+  intervals of item fit in the family of Rasch models using the bootstrap
+  method}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Applied Measurement}{8}{2}{190--203}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van~den Wollenberg%
+}{%
+van~den Wollenberg%
+}{%
+{\protect \APACyear {1982}}%
+}]{%
+van-den-wollenberg}
+\APACinsertmetastar {%
+van-den-wollenberg}%
+\begin{APACrefauthors}%
+van~den Wollenberg, A\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1982}{jun}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Two new test statistics for the rasch model}} {{Two new
+  test statistics for the rasch model}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{47}{2}{123--140}.
+\newblock
+\begin{APACrefURL} \url{http://link.springer.com/10.1007/BF02296270}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/BF02296270} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wang%
+\ \BBA {} Chen%
+}{%
+Wang%
+\ \BBA {} Chen%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+Wang-Chen_2005}
+\APACinsertmetastar {%
+Wang-Chen_2005}%
+\begin{APACrefauthors}%
+Wang, W\BHBI C.%
+\BCBT {}\ \BBA {} Chen, C\BHBI T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Item Parameter Recovery, Standard Error Estimates, and
+  Fit Statistics of the Winsteps Program for the Family of Rasch Models}}
+  {{Item Parameter Recovery, Standard Error Estimates, and Fit Statistics of
+  the Winsteps Program for the Family of Rasch Models}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Educational and Psychological
+  Measurement}{65}{}{376-404}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0013164404268673} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Warm%
+}{%
+Warm%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+warm}
+\APACinsertmetastar {%
+warm}%
+\begin{APACrefauthors}%
+Warm, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Weighted likelihood estimation of ability in item
+  response theory}} {{Weighted likelihood estimation of ability in item
+  response theory}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{54}{}{427--450}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wolfe%
+}{%
+Wolfe%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Wolfe2008}
+\APACinsertmetastar {%
+Wolfe2008}%
+\begin{APACrefauthors}%
+Wolfe, E\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{jan}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Computer Program Exchange: RBF.sas (Rasch Bootstrap
+  Fit): A SAS Macro for Estimating Critical Values for Rasch Model Fit
+  Statistics}} {{Computer Program Exchange: RBF.sas (Rasch Bootstrap Fit): A
+  SAS Macro for Estimating Critical Values for Rasch Model Fit
+  Statistics}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Psychological Measurement}{32}{7}{585--586}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0146621607312308} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wolfe%
+}{%
+Wolfe%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+Wolfe2013}
+\APACinsertmetastar {%
+Wolfe2013}%
+\begin{APACrefauthors}%
+Wolfe, E\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A bootstrap approach to evaluating person and item fit
+  to the Rasch model.}} {{A bootstrap approach to evaluating person and item
+  fit to the Rasch model.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of applied measurement}{14}{1}{1--9}.
+\newblock
+\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/23442324}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+B.~Wright%
+\ \BBA {} Panchapakesan%
+}{%
+B.~Wright%
+\ \BBA {} Panchapakesan%
+}{%
+{\protect \APACyear {1969}}%
+}]{%
+Wright_1969}
+\APACinsertmetastar {%
+Wright_1969}%
+\begin{APACrefauthors}%
+Wright, B.%
+\BCBT {}\ \BBA {} Panchapakesan, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1969}{apr}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A Procedure for Sample-Free Item Analysis}} {{A
+  Procedure for Sample-Free Item Analysis}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Educational and Psychological
+  Measurement}{29}{1}{23--48}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1177/001316446902900102}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1177/001316446902900102} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+B\BPBI D.~Wright%
+\ \BBA {} Linacre%
+}{%
+B\BPBI D.~Wright%
+\ \BBA {} Linacre%
+}{%
+{\protect \APACyear {1994}}%
+}]{%
+wright-linacre1994}
+\APACinsertmetastar {%
+wright-linacre1994}%
+\begin{APACrefauthors}%
+Wright, B\BPBI D.%
+\BCBT {}\ \BBA {} Linacre, J\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1994}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Reasonable mean-square fit values}} {{Reasonable
+  mean-square fit values}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Rasch Measurement Transactions}{8}{3}{370}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+B\BPBI D.~Wright%
+\ \BBA {} Masters%
+}{%
+B\BPBI D.~Wright%
+\ \BBA {} Masters%
+}{%
+{\protect \APACyear {1982}}%
+}]{%
+wright-masters}
+\APACinsertmetastar {%
+wright-masters}%
+\begin{APACrefauthors}%
+Wright, B\BPBI D.%
+\BCBT {}\ \BBA {} Masters, G\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1982}.
+\newblock
+\APACrefbtitle {{Rating Scale Analysis}} {{Rating Scale Analysis}}.
+\newblock
+\APACaddressPublisher{Chicago}{MESA Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+B\BPBI D.~Wright%
+\ \BBA {} Stone%
+}{%
+B\BPBI D.~Wright%
+\ \BBA {} Stone%
+}{%
+{\protect \APACyear {1979}}%
+}]{%
+wright-stone}
+\APACinsertmetastar {%
+wright-stone}%
+\begin{APACrefauthors}%
+Wright, B\BPBI D.%
+\BCBT {}\ \BBA {} Stone, M\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1979}.
+\newblock
+\APACrefbtitle {{Best Test Design}} {{Best Test Design}}.
+\newblock
+\APACaddressPublisher{Chicago}{MESA Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yen%
+}{%
+Yen%
+}{%
+{\protect \APACyear {1984}}%
+}]{%
+Yen_1984}
+\APACinsertmetastar {%
+Yen_1984}%
+\begin{APACrefauthors}%
+Yen, W\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1984}{apr}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Effects of Local Item Dependence on the Fit and
+  Equating Performance of the Three-Parameter Logistic Model}} {{Effects of
+  Local Item Dependence on the Fit and Equating Performance of the
+  Three-Parameter Logistic Model}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Psychological Measurement}{8}{2}{125--145}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1177%2F014662168400800201}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1177/014662168400800201} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zwinderman%
+}{%
+Zwinderman%
+}{%
+{\protect \APACyear {1995}}%
+}]{%
+Zwinderman_1995}
+\APACinsertmetastar {%
+Zwinderman_1995}%
+\begin{APACrefauthors}%
+Zwinderman, A\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1995}{dec}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Pairwise Parameter Estimation in Rasch Models}}
+  {{Pairwise Parameter Estimation in Rasch Models}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Psychological Measurement}{19}{}{369--375}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/014662169501900406} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

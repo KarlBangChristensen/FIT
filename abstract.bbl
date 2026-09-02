@@ -1,0 +1,131 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Andrich%
+, Sheridan%
+\BCBL {}\ \BBA {} Luo%
+}{%
+Andrich%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+RUMM}
+\APACinsertmetastar {%
+RUMM}%
+\begin{APACrefauthors}%
+Andrich, D.%
+, Sheridan, B.%
+\BCBL {}\ \BBA {} Luo, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{RUMM2030 [Computer software and manual]}} {{RUMM2030
+  [Computer software and manual]}}{\BBCQ}\ [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{Perth, Australia}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jennings%
+}{%
+Jennings%
+}{%
+{\protect \APACyear {1986}}%
+}]{%
+jennings1986}
+\APACinsertmetastar {%
+jennings1986}%
+\begin{APACrefauthors}%
+Jennings, D\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1986}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Outliers and Residual Distributions in Logistic
+  Regression}} {{Outliers and Residual Distributions in Logistic
+  Regression}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the American Statistical
+  Association}{81}{396}{987-990}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/01621459.1986.10478362} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Linacre%
+}{%
+Linacre%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+winsteps}
+\APACinsertmetastar {%
+winsteps}%
+\begin{APACrefauthors}%
+Linacre, J\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{WINSTEPS {R}asch Measurement Computer Program}}
+  {{WINSTEPS {R}asch Measurement Computer Program}}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{Beaverton, Oregon}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wright%
+\ \BBA {} Masters%
+}{%
+Wright%
+\ \BBA {} Masters%
+}{%
+{\protect \APACyear {1982}}%
+}]{%
+wright-masters}
+\APACinsertmetastar {%
+wright-masters}%
+\begin{APACrefauthors}%
+Wright, B\BPBI D.%
+\BCBT {}\ \BBA {} Masters, G\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1982}.
+\newblock
+\APACrefbtitle {{Rating Scale Analysis}} {{Rating Scale Analysis}}.
+\newblock
+\APACaddressPublisher{Chicago}{MESA Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wright%
+\ \BBA {} Stone%
+}{%
+Wright%
+\ \BBA {} Stone%
+}{%
+{\protect \APACyear {1979}}%
+}]{%
+wright-stone}
+\APACinsertmetastar {%
+wright-stone}%
+\begin{APACrefauthors}%
+Wright, B\BPBI D.%
+\BCBT {}\ \BBA {} Stone, M\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1979}.
+\newblock
+\APACrefbtitle {{Best Test Design}} {{Best Test Design}}.
+\newblock
+\APACaddressPublisher{Chicago}{MESA Press}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

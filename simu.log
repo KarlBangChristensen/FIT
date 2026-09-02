@@ -1,0 +1,223 @@
+1                                                          The SAS System                             13:33 Friday, January 18, 2019
+
+NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M3) 
+      Licensed to CAMPUS - KBH. UNI. - LINUX, Site 50803698.
+NOTE: This session is executing on the Linux 3.10.0-862.3.3.el7.x86_64 (LIN X64) platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.1
+      SAS/ETS 14.1
+      SAS/OR 14.1
+      SAS/IML 14.1
+      SAS/QC 14.1
+
+NOTE: Additional host information:
+
+ Linux LIN X64 3.10.0-862.3.3.el7.x86_64 #1 SMP Wed Jun 13 05:44:23 EDT 2018 x86_64 Red Hat Enterprise Linux Server release 7.6 
+      (Maipo) 
+
+You are running SAS 9. Some SAS 8 files will be automatically converted 
+by the V9 engine; others are incompatible.  Please see 
+http://support.sas.com/rnd/migration/planning/platform/64bit.html
+
+PROC MIGRATE will preserve current SAS file attributes and is 
+recommended for converting all your SAS libraries from any 
+SAS 8 release to SAS 9.  For details and examples, please see
+http://support.sas.com/rnd/migration/index.html
+
+
+This message is contained in the SAS news file, and is presented upon
+initialization.  Edit the file "news" in the "misc/base" directory to
+display site-specific news and information in the program log.
+The command line option "-nonews" will prevent this display.
+
+
+
+
+NOTE: SAS initialization used:
+      real time           0.14 seconds
+      cpu time            0.04 seconds
+      
+1          %let path=P:\FIT;
+2          libname fit "&path";
+NOTE: Library FIT does not exist.
+3          data fit.simu;
+4          	array it[20] p01-p20;
+5          	do id=1 to 200;
+6          		do i=1 to 20;
+7          			it[i]=(rannor(0)>0);
+8          			output;
+9          		end;
+10         	end;
+11         run;
+
+ERROR: Library FIT does not exist.
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: SAS set option OBS=0 and will continue to check statements. This might cause NOTE: No observations in data set.
+2                                                          The SAS System                             13:33 Friday, January 18, 2019
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+12         options nofmterr;
+13         %let macropath=c:\dropbox\macro;
+14         %include "&macropath\macros\rasch_include_all.sas";
+WARNING: Physical file does not exist, /home/ifsv/pzs913/FIT/c:\dropbox\macro\macros\rasch_include_all.sas.
+ERROR: Cannot open %INCLUDE file c:\dropbox\macro\macros\rasch_include_all.sas.
+15         data in;
+16         input item_no item_name $ item_text $ max group;
+17         datalines;
+
+NOTE: The data set WORK.IN has 0 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+WARNING: Apparent invocation of macro RASCH_DATA not resolved.
+38         ;
+39         run;
+40         %rasch_data(	data=fit.simu,
+           _
+           180
+ERROR 180-322: Statement is not valid or it is used out of proper order.
+
+41                     	item_names=in);
+
+WARNING: Apparent invocation of macro RASCH_CML not resolved.
+42         %rasch_CML( 	data=fit.simu,
+           _
+           180
+ERROR 180-322: Statement is not valid or it is used out of proper order.
+
+43                     	item_names=in,
+44         				out=CML);
+
+WARNING: Apparent invocation of macro RASCH_PW not resolved.
+45         %rasch_PW( 		data=fit.simu,
+           _
+           180
+ERROR 180-322: Statement is not valid or it is used out of proper order.
+
+46                     	item_names=in,
+47         				out=PW);
+
+WARNING: Apparent invocation of macro RASCH_MML not resolved.
+48         %rasch_MML( 	data=fit.simu,
+           _
+           180
+ERROR 180-322: Statement is not valid or it is used out of proper order.
+
+49                     	item_names=in,
+50         				out=MML);
+
+51         ods html;
+3                                                          The SAS System                             13:33 Friday, January 18, 2019
+
+NOTE: Writing HTML Body file: sashtml.htm
+52         ods tagsets.tablesonlylatex file="&path\eta.tex" stylesheet="sas.sty"(url="sas");
+NOTE: Writing TAGSETS.TABLESONLYLATEX Style sheet file: sas.sty
+NOTE: Writing TAGSETS.TABLESONLYLATEX Body file: P:\FIT\eta.tex
+53         	
+53       !  proc print data=cml_ipar(drop=LowerCL UpperCL) noobs;
+ERROR: File WORK.CML_IPAR.DATA does not exist.
+54         		format estimate standarderror 8.2;
+55         	run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+56         	
+
+
+56       !  proc print data=PW_ipar(drop=LowerCL UpperCL) noobs;
+ERROR: File WORK.PW_IPAR.DATA does not exist.
+57         		format estimate standarderror 8.2;
+58         	run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+59         	
+
+
+59       !  proc print data=mml_ipar(drop=LowerCL UpperCL) noobs;
+ERROR: File WORK.MML_IPAR.DATA does not exist.
+60         		format estimate standarderror 8.2;
+61         	run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+62         ods tagsets.tablesonlylatex close;				
+WARNING: Apparent invocation of macro RASCH_PPAR not resolved.
+63         %rasch_ppar(	DATA=fit.simu,
+64         				ITEM_NAMES=in,
+65         				DATA_IPAR=mml_ipar/*cml_ipar*/,
+66         				out=pp);
+67         ods tagsets.tablesonlylatex file="&path\theta.tex" stylesheet="sas.sty"(url="sas");
+NOTE: Writing TAGSETS.TABLESONLYLATEX Style sheet file: sas.sty
+NOTE: Writing TAGSETS.TABLESONLYLATEX Body file: P:\FIT\theta.tex
+
+
+68         proc print data=pp_latent(drop=wle wle_se) noobs;
+ERROR: File WORK.PP_LATENT.DATA does not exist.
+69         	format mle mle_se 8.2;
+70         run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+4                                                          The SAS System                             13:33 Friday, January 18, 2019
+
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+71         ods tagsets.tablesonlylatex close;
+WARNING: Apparent invocation of macro RASCH_ITEMFIT not resolved.
+72         *;
+73         %rasch_itemfit(	DATA=fit.simu,
+74         				ITEM_NAMES=in,
+75         				DATA_IPAR=mml_ipar,
+76         				DATA_POPPAR=pp_outdata,
+77         				NCLASS=3,
+78         				OUT=simu2);
+
+
+79         proc print data=simu_fitresid;
+ERROR: File WORK.SIMU_FITRESID.DATA does not exist.
+80         run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+WARNING: Apparent invocation of macro RASCH_MML not resolved.
+81         
+82         %rasch_mml(		DATA=fit.simu,
+83         				ITEM_NAMES=in,
+84         				OUT=MML,
+85         				QPOINTS=50,
+86         				FITTEST=YES,
+87         				NSIMU_FITTEST=2);
+
+
+ERROR: Errors printed on pages 1,2,3,4.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.43 seconds
+      cpu time            0.21 seconds
+      

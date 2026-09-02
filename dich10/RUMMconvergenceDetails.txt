@@ -1,0 +1,27 @@
+Item Parameter Convergence Log for:
+  * PROJECT:       dich10
+  * ANALYSIS NAME: run2
+
+Details for each Item Parameter
+1=converged, 0=not converged, *=not relevant [as per max score]
+
+-------------------------------------------------------------------
+                                 Last increments
+Item  Locn Sprd Skew Kurt      Locn      Sprd      Skew      Kurt
+-------------------------------------------------------------------
+001      1    *    *    *    0.000080     **        **        **   
+002      1    *    *    *    0.000079     **        **        **   
+003      1    *    *    *    0.000072     **        **        **   
+004      1    *    *    *    0.000054     **        **        **   
+005      1    *    *    *    0.000010     **        **        **   
+006      1    *    *    *    0.000018     **        **        **   
+007      1    *    *    *    0.000050     **        **        **   
+008      1    *    *    *    0.000065     **        **        **   
+009      1    *    *    *    0.000075     **        **        **   
+010      1    *    *    *    0.000076     **        **        **   
+-------------------------------------------------------------------
+
+Number of iterations     : 6
+Convergence Criterion    : 0.00010000
+Item parameters estimated: 10
+Item parameters converged: 10

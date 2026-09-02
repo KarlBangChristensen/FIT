@@ -1,0 +1,30 @@
+Bock (1970, 1972), wright \& Mead (1977) and Yen (1981) partition persons into N_{grp} groups
+
+$$
+Q_{1i}=\sum_{g=1}^{N_{grp}}
+\frac
+{\left(\sum_{v\in g}(X_{vi}-E(X_{vi})\right)^2}
+{\sum_{v\in g}V(X_{vi})}
+$$
+
+The item chi-square in RUMM \cite{rumm} is a version of this grouping persons based on estimated person location, disregarding those with extreme scores. The infit test statistic in winsteps \cite{winsteps} is a version of this with one person in each group.
+
+Wright \& Panchapakesan (1969) partition persons into groups defined by the total score and calculate
+$$
+Q_{2i}=\sum_s\sum_{v\in s}
+$$
+
+the outfit in winsteps is
+$$
+OUTFIT_i=\frac1n Q_{2i}
+$$
+
+
+Wright, B.D. and Mead, R.J. BICAL: Calibrating rating scales
+with the Rasch model. Research Memorandum No. 23, Statistical
+Laboratory, Department of Education, University of Chicago,
+1977. 
+
+Wright, B.D. and Panchapakesan, N. A procedure for sample-free
+item analysis. Educational and Psychological Measurement,
+1969, 29, 23-48. 

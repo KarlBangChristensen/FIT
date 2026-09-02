@@ -1,0 +1,83 @@
+@article{Karabatsos_2000,
+  author = {Karabatsos, G.},
+  title = {{A critique of Rasch residual fit statistics}},
+  journal = {Journal of Applied Measurement},
+  year = {2000},
+  volume = {1},
+  number = {2},
+  pages = {152-176},
+}
+
+@article{Schulz2002,
+  author = {Schulz, Matthew},
+  journal = {Rasch Measurement Transactions},
+  number = {4},
+  pages = {879},
+  title = {{The Standardization of Mean-Squares}},
+  volume = {16},
+  year = {2002},
+}
+
+@manual{rumm,
+  author = {Andrich, D. and Sheridan, B. and Luo, G.},
+  year = {2010},
+  title = {{RUMM2030 [Computer software and manual]}},
+  organization = {RUMM Laboratory},
+  address = {Perth, Australia},
+}
+
+@article{van-den-wollenberg,
+  author = {den Wollenberg, A L},
+  journal = {Psychometrika},
+  pages = {123--139},
+  title = {{Two new test statistics for the Rasch model}},
+  volume = {47},
+  year = {1982},
+}
+
+@article{Glas1988,
+  author = {Glas, Cees A. W.},
+  doi = {10.1007/BF02294405},
+  journal = {Psychometrika},
+  keywords = {item response theory,model test,rasch model},
+  month = {dec},
+  number = {4},
+  pages = {525--546},
+  title = {{The derivation of some tests for the Rasch model from the multinomial distribution}},
+  volume = {53},
+  year = {1988},
+}
+
+@TechReport{TechReport-MüllerKreiner-2015-6,
+  title = {{Item Fit Statistics in Common Software for Rasch Analysis}},
+  author = {Müller, M and Kreiner, S},
+  year = {2015},
+  number = {6},
+  institution = {University of Copenhagen, Department of Biostatistics},
+}
+
+@article{su-sheu-wang2007,
+  author = {Su, Y.-H. and Sheu, C.-F. and Wang, W.-C.},
+  title = {{Computing confidence intervals of item fit in the family of Rasch models using the bootstrap method}},
+  journal = {Journal of Applied Measurement},
+  year = {2007},
+  volume = {8},
+  pages = {190-203},
+}
+
+@incollection{Andersen1995,
+  year = {1995},
+  isbn = {978-1-4612-8704-9},
+  booktitle = {Rasch Models},
+  editor = {Fischer, GerhardH. and Molenaar, IvoW.},
+  doi = {10.1007/978-1-4612-4230-7_15},
+  title = {{Polytomous Rasch Models and their Estimation}},
+  url = {http://dx.doi.org/10.1007/978-1-4612-4230-7_15},
+  publisher = {Springer New York},
+  author = {Andersen, ErlingB.},
+  pages = {271-291},
+  language = {English},
+}
+
+
+

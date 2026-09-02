@@ -1,0 +1,3 @@
+blockID	segmentID	Comments	blockStart	blockWdth	testType	respType	itemLength	itemSubNumb	missSymb
+1	1	id	1	3	0	0	0	0	bsp
+2	3	ItmBlock1	4	10	1	1	1	10	bsp

@@ -1,0 +1,507 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
+
+\newif\iflatexml\latexmlfalse
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{setspace}
+\usepackage{apacite}
+
+
+
+\begin{document}
+
+\title{Critical values for Rasch item fit statistics}
+
+\author{Mike Horton\\ University of Leeds  \and Guido Makransky\\ University of Copenhagen \and Karl Bang Christensen\\ University of Copenhagen}
+
+
+\maketitle
+
+Plan: We will send this to Applied Psychological Measurement
+
+
+
+\section{Introduction}
+
+The Rasch model \cite{rasch1960,Fischer-Molenaar1995,christensen-kreiner-mesbah2013} is widely used for scale validation in health, education, psychology, and other fields. Item fit statistics are arguably the most relevant and certainly the most commonly reported feature in validation studies. Several item fit statistics have been developed, however the most widely used are the infit and outfit mean square item fit statistics \cite{wright-stone,wright-masters} that are in Winsteps \cite{winsteps} and the fit residual, Chi-square and ANOVA item fit statistics in RUMM2030 \cite{RUMM}.
+
+
+All of these are based on residuals, and furthermore they rely on assumptions about convergence to asymptotic distribution of the sum of squared Pearson-type standardized residuals. However, this assumption is problematic \cite{jennings1986}.
+
+We study the behavior of the most widely used item fit statistics too see when they produce empirical Type I error rates that are close to the nominal 5\%. This leads us to recommendations regarding reasonable critical values.
+
+We do so in a way that reflects the way most users approach evaluation of item fit, i.e.\ looking at the evidence for all items and then evaluating if the item that has the worst fit is a cause for concern when taking the total number of items into account.
+
+
+Thus, we provide guidelines for evaluation of item fit that addresses the issue of multiple testing.
+
+
+
+\subsection{A summary of the most widely used item fit statistics}
+
+Infit and outfit are mean-square residual summary statistics that range from zero to infinity. The expected value, under the null hypothesis that data fit the Rasch model, is one. Values greater than one indicate under-discrimination while values below one over-discrimination, both of which violate Rasch model assumptions. These item fit statistics are reported in Winsteps \cite{winsteps}. The item fit residual implemented in RUMM \cite{RUMM} is a transformed version of the OUTFIT item fit test statistic, while the chi-squared item fit statistics and the ANOVA item fit statistics are based on a grouping of respondents into class intervals. It is typical in applications to omit respondents with an extreme (i.e. zero or maximum) total score.
+
+
+No single fit indicator discloses with certainty if an item is appropriate. Rather, every fit statistic provides some insight into how that item functions. Furthermore, evidence for all items should be considered simultaneously, i.e. we do not find out if an item is good or bad, rather if it is good or bad in relation to the other items. Finally, no specific value separates fit from misfit - it is a question of degree of misfit.
+
+
+
+\subsection{Conventional interpretation}
+
+
+For the infit and outfit item fit statistics, various rule-of-thumb for critical values have been suggested, most typically
+0.7-1.3, 0.8-1.2 for high stakes tests, and 0.6-1.4 for rating scales \cite{bondfox}
+
+
+for indicating misfit in multiple-choice items, and 0.60-1.40 indicating misfit for rating scale items \cite{wright-linacre1994}. When using these critical values, there are usually no clear hypotheses relating to specific items which are tested. The null hypothesis being tested is that all items fit the model, and practitioners look for anomalies to this expectation. In this regard, practitioners usually look for the largest misfit (anomaly) first, and focus on whether this is within a particular (accepted) range.
+
+
+For the standardized item fit-residual $\pm$ 2.5 are regularly reported as critical values in the literature \cite{Smith2000,Mokkink_2006,Marais2008c}. These values likely result from the 0.5\% and 99.5\% percentiles of the standard normal distribution. For the chi-squared item fit statistics and the ANOVA item fit statistics interpretation is typically based on the reported $p$-values often after a Bonferroni adjustment to take multiple testing into account.
+
+
+\subsection{Problems with the existing critical values}
+
+These item fit statistics use standardized differences between observed and expected item responses to evaluate item fit, and have been envisioned as a Pearsonian chi-square approach \cite{Smith1991}, but their asymptotic properties are not known, and while transformed measures are sometimes assumed to approximate scaled chi-squared distributions, this is debated in the psychometric literature. The $t$-transformed item fit statistics in Winsteps and residual item fit statistic in RUMM are often uncritically applied as $z$-score by practitioners.
+
+Although the accepted ranges are often quoted, previous studies have shown them to be inappropriate for many applied situations \cite{Smith-Schumacker-Bush}, specifically the actual range has been shown to become much smaller with larger sample sizes \cite{Smith1991,Wang-Chen_2005,hagell2016sample}. A recent simulation study indicated that infit and outfit item fit statistics have different magnitudes of variability over testing conditions and that standardized fit statistics are not well approximated by the standard normal distribution \cite{Seol2016}.
+
+Specifically Smith and colleagues provided critical upper values for the outfit and infit item fit statistics as as $1+2/\sqrt{N}$ and $1+6/\sqrt{N}$, respectively ($N$ indicating sample size) \cite{Smith-Schumacker-Bush} concluding that 'further research is needed to establish the exact type I error rates for these approximate critical values \cite[p. 78]{Smith-Schumacker-Bush}. The fact that these rule-of-thumb values are not universally appropriate led Wolfe to identify that:
+
+\begin{quote}
+...users are faced with a quandary. How does one interpret a fit statistic if the distribution of the values of that statistic, and hence the range of reasonable values, is not known? \cite{Wolfe2013}
+\end{quote}
+
+Formulas for the critical values for the FitResidual, item chi-square, or item ANOVA fit statistics have not been published, but Hagell and Westergren \cite{Hagell} illustrated that the two latter fit statistics function reasonably well for sample sizes below 500.
+
+Various ways of addressing this has been proposed. We summarize these below
+
+\subsection{Summary of solutions}
+
+Although it has been established that residual-based fit statistics are not perfect, the options that are available to practitioners are limited when it comes to accounting for these limitations. One option would be to look up an applicable critical value of infit/oufit to use in a particular situation that is appropriate to the data under consideration.
+
+
+
+\subsubsection*{Tabulation of critical values}
+
+
+var
+, adjustment formulas were provided showing the range 0.7-1.3 to be appropriate for the infit item test statistic when N=44, and for the outfit item test statistic when N=400 \cite{Smith-Schumacker-Bush}.
+
+
+While an important step forward, these adjustment formulas only take the effect of sample size into account. Another approach that has been suggested is to apply bootstrapped confidence intervals to the INFIT and OUTFIT statistics in order to identify item misfit \cite{Su2007,Wolfe2013,Seol2016}
+
+Adjustments have been presented \cite{Smith-Schumacker-Bush}, but this is often overlooked in practice, even though this adjustment offers a practical option of accounting for differences in sample size. There is no guarantee that the adjustment will be appropriate in all situations. It is our belief that a simple lookup table of critical fit values applicable to common data structures would offer a practical solution of accounting for differences in sample size and types of data.
+
+
+
+
+\subsubsection*{Bootstrap methods}
+
+
+A second option is to apply bootstrap methods \cite{efron1979,Efron1981} to the obtained item calibrations, in order to compare the obtained fit statistics with an empirical distribution of the fit statistics from the same data conditions. This allows for observed values of item fit statistic to be compared to what would be expected, and for calculation of $p$-values. Wolfe has implemented this option in a SAS macro for the WINSTEPS fit statistics \cite{Wolfe2008}. However, the practicality of this solution depends on the availability and familiarity of these specific software packages, and the additional expertise that is required is perhaps largely unknown and less appealing to practitioners. The SAS macro functions by estimating parameters for the dichotomous, rating scale, or partial credit Rasch model for a data set specified by the user. Based on these estimated parameters, the macro then proceeds to create B simulated data sets (the number specified by the user) that contain the same number of items and persons, estimates parameters and computes the target indices (mentioned above), and compiles those indices across simulated data sets. Finally, percentiles are computed for each of the simulated data sets for each target index, and the averaged values are output to a text file as bootstrap critical values along with whether individual persons or items in the original data set are more extreme than these critical values.
+
+Bootstrap procedures to evaluate how the critical values for the INFIT and OUTFIT statistics differ according to sample sizes and test lengths for polytomous Rasch models. Similarly, they found that rule-of-thumb critical values for assessing the magnitude of misfit were not applicable because the infit and outfit statistics showed different variability over the number of items and test lengths, and found that the standardized fit statistics did not exactly follow the standard normal distribution \cite{Wolfe2008,Wolfe2013,Seol2016}.
+
+\subsubsection{Using item fit statistics with known asymptotic distribution}
+
+A third option would be to calculate residuals using the conditional distribution given the total scores, so bias induced by the estimated person location values is removed from the fit statistics. Item fit statistics can be computed based on score residuals, where the statistical properties are known \cite{Christensen-Kreiner2013}. The practicality of this option is limited due to the lack of implementation in the popular Rasch analysis software packages.
+
+
+\subsection{The objective of this paper}
+
+There is vast evidence that any rule of thumb will be inappropriate in some contexts, e.g. when the sample size is large.
+
+The purpose of this paper are to (i) do a range of simulation studies where we compute the most commonly used item fit statistics: the infit, outfit, standardized fit-residual, chi-squared, and ANOVA item fit statistics looking at the empirical ranges of these statistics, (ii) to propose guidelines that researchers and practitioners can follow when making decisions about item fit during scale development and validation.
+
+The assumption (null hypothesis) is that all items fit the model, and we are looking for anomalies to this expectation. In this regard, we usually look for the largest misfit (anomaly) first, and focus on whether this is within a particular (accepted) range. In doing so we consider the test of item fit as an inherently multidimensional problem: if there are ten items in a scale the evidence for all ten should be considered simultaneously to avoid multiple testing situations where the risk of type error I is increased.
+
+We attempt to investigate the issue of critical values by approaching it from a practitioners' perspective. A practitioner typically assesses the fit of the items in a scale by looking at the largest values first, usually without an a priori hypothesis about specific items. We wish to provide guidelines to determine when a specific value should be regarded as an anomaly.
+
+We illustrate these problems in evaluating item fit using rule-of-thumb critical values from Rasch software based on the classic Knox cube test data \cite{wright-stone}, the AMTS, and recent data on depression assessed using polytomous items \cite{pedersen2016}.
+
+
+
+
+\section{Methods}
+
+
+\subsection{The dichotomous Rasch model}
+
+
+Consider persons $v=1,\ldots,N$ with values of the latent trait $\theta_1,\ldots,\theta_N$ responding to a set of items $I=\{1,\ldots,k\}$. The dichotomous Rasch model assumes a logistic model for the probability of a positive (or correct) response $x=1$
+
+\begin{equation}
+P(X_{vi}=x|\Theta_v=\theta)=\frac{\exp(x(\theta-\beta_i))}{1+\exp(\theta-\beta_i)}
+\end{equation}
+
+and assuming local independence \cite{Yen_1984,Christensen-Makransky-Horton} the distribution of a response vector $\boldsymbol{X}_v=(X_{vi})_{i\in I}$ can be written
+
+\begin{equation}
+P(\boldsymbol{X}_v=\boldsymbol{x}|\Theta_v=\theta)=
+\exp\left(r\theta-\sum_{i=1}^{I}x_i\beta_i\right)K(\theta,\boldsymbol{\beta})^{-1}
+\end{equation}
+
+for $\boldsymbol{x}=(x_i)_{i\in I}$, where $\boldsymbol{\beta}=(\beta_i)_{i\in I}$ is the vector of item parameters and $K(\theta,\boldsymbol{\beta})=\prod_{i=1}^{I}\left(1+\exp(\theta-\beta_i)\right)$ a normalizing constant, and the score $r=\sum_{i\in I}x_i$ is seen to be a sufficient statistic.
+
+
+The sufficiency of the score provides us with a simple expression for the conditional probabilities of item responses. For $r=0,\ldots,k$ and $I_0\subset I$ let
+\begin{equation}
+\gamma_r((\beta_i)_{i\in I_0};I_0)=\sum_{(x_i)_{i\in I_0}:\sum_{i\in I_0}x_i=r}\exp\left(-\sum_{i=1}^{I}x_i\beta_i\right)
+\end{equation}
+denote the symmetric $\gamma$ polynomials \cite{Andersen_1995}. The conditional mean for item $i$ is
+\begin{equation}
+E(X_{vi}=1|R_v=r)=\frac{\exp(-x_i\beta_i)\gamma_{r-1}(\boldsymbol{\beta_0};I_0)}{\gamma_r(\boldsymbol{\beta};I)}
+\label{condprob}
+\end{equation}
+with $I_0=I\backslash\{i\}$ and $\boldsymbol{\beta_0}=(\beta_i)_{i\in I_0}$
+
+
+\subsection{The polytomous Rasch model}
+
+The Rasch model for polytomous items \cite{rasch1961,andersen1977,andrich1978}, often referred to as the partial credit model \cite{Masters1982}, assumes the structure
+
+\begin{equation}
+P(X_{vi}=x|\Theta_v=\theta)=\exp\left(\sum_{k=1}^x(\theta-\beta_{ik})\right)K_i(\beta_1,\ldots,\beta_{m_i},\theta)^{-1}
+\end{equation}
+
+on the response probabilities when item $i$ has the response options $0,1,\ldots,m_i$, and again the probabilities for a response vector $\boldsymbol{x}=(x_i)_{i\in I}$ can be written
+
+\begin{equation}
+P(\boldsymbol{X}_v=\boldsymbol{x}|\Theta_v=\theta)
+= \exp\left(R_v\theta-\sum_{i=1}^{I}\sum_{k=1}^{x_i}\beta_{ik}\right)
+K(\theta,\boldsymbol{\beta})^{-1}
+\end{equation}
+
+where $\boldsymbol{\beta}=(\beta_{11},\ldots,\beta_{1m_1},\ldots,\beta_{k1},\ldots,\beta_{km_k})$ is the vector of item parameters and the score $R=\sum_{i\in I}x_i$ is seen to be a sufficient statistic for $\Theta$. As in the dichotomous case the sufficiency of the score yields a simple expression for the conditional item means similar to (\ref{condprob}) (see, e.g. \cite{Andersen_1995} for details).
+
+\subsection{Computing residuals}
+
+
+The INFIT and OUTFIT item fit statistics are computed using residuals $R_{vi}=X_{vi}-E_{vi}$, where $E_{vi}=E(X_{vi}|\theta_v)$ is the expected response. However $\theta_v$ is not observed and for this reason Winsteps \cite{winsteps} and RUMM \cite{RUMM} use $\hat\theta_v$ to compute expected item scores and thus the evaluation of item fit is based on the unconditional residuals (often called response residuals)
+
+\begin{equation}
+\hat{R}_{vi}=X_{vi} - E(X_{vi}|\Theta_v=\hat\theta_v;\hat\beta_i)
+\label{responseresiduals}
+\end{equation}
+
+another approach is to use conditional residuals (also called score residuals)
+
+\begin{equation}
+R_{vi} = X_{vi} - E(X_{vi}|R_v;\hat\beta_i)
+\label{scoreresiduals}
+\end{equation}
+
+that have better asymptotic properties \cite{Christensen-Kreiner2013}. The residuals (\ref{scoreresiduals}) have been called adjusted residuals in the context of Person-Fit statistics \cite{Dimitrov-Smith2006}, but the terminology is not consistent in the Rasch literature as some authors refer to (\ref{responseresiduals}) as score residuals.
+
+Both of these versions of the residuals appear in the early Rasch literature, but score residuals seem to have been forgotten. Notably, Wright and Panchapakesan (1969) \nocite{Wright_1969} for dichotomous items introduced standardized residuals
+
+\begin{equation}
+R_{ir}=\frac{a_{ir}-N_rp_{i|r}}
+{\sqrt{N_rp_{i|r}(1-p_{i|r})}}
+\end{equation}
+
+where $a_{ir}$ denotes the number of respondents with total score $r$ and response 1 on item $i$ and $p_{i|r}=(X_{vi}=1|R_v;\hat\beta_i)$ the conditional probability, but the current practice is to use response residuals
+
+
+\subsection{Item fit statistics}
+
+
+\subsubsection{Item fit statistics based on individual level residuals: INFIT, OUTFIT and FitResid}
+
+Infit and outfit test statistics are based on the standardized residuals
+
+\begin{equation}
+Z_{iv}=\frac{X_{iv}-E_{iv}}{\sqrt{V(X_{iv})}}.
+\label{standardizedresiduals}
+\end{equation}
+
+The infit test statistic for item $i$ is the weighted mean square
+
+\begin{equation}\label{infit}
+INFIT_i=\frac{\sum_{v=1}^{N}V(X_{iv})Z_{iv}^2}{\sum_{v=1}^NV(X_{iv})}
+\end{equation}
+and the outfit test statistic for item $i$ is the unweighted mean square
+\begin{equation}\label{outfit}
+OUTFIT_i=\frac1N\sum_{v=1}^NZ_{iv}^2=\frac1N\sum_{v=1}^N\frac{(X_{iv}-E_{iv})^2}{V(X_{iv})}.
+\end{equation}
+The statistical properties of these outfit and infit test statistics are not known, but transformed measures are often assumed to have approximate scaled chi-squared distributions. It has been suggested that using the Wilson-Hilferty cube-root transformation
+\begin{equation}\label{wilson-hilferty}
+t_i=(OUTFIT_i^{1/3}-1)\frac3{V(OUTFIT_i)}+\frac{V(OUTFIT_i)}3
+\end{equation}
+yields distributions that approximate a $t$ distribution \citep[Table 5.4a , p.100]{wright-masters}. For a further discussion of this see \cite{Schulz2002}.
+
+Another transformation the OUTFIT test statistic is reported in the software package RUMM \cite{RUMM} under the name \textit{item fit residual}. This transformation is based on using the ratio $Y_{i}^2/f$, where $Y_{i}^2=\sum_{v=1}^nZ_{iv}^2$ is assumed to be approximately chi-square distributed on $f$ degrees of freedom using an ad hoc derivation that, in the notation of this paper, amounts to $N\cdot k$ data points minus $N+\sum_{i\in I}m_i-1$ estimated parameters with each item contributing equally yielding $f=(Nk-N-\sum_{i\in I}m_i+1)/k$. Using the approximation
+\begin{equation}
+V(\log(Y_i^2/f))\simeq\frac1{f^2}{V(Y_{i}^2)}
+\end{equation}
+the test statistic
+$$
+FitResid_i=\frac{\log(Y_i^2/f)}{\sqrt{V(\log(Y_i^2/f))}}
+=\frac{f(\log(Y_i^2)-\log(f))}{\sqrt{V(Y_i^2)}}
+$$
+has a symmetrical distribution with mean zero and variance one.
+
+\subsubsection{Item fit statistics based on grouped residuals: the item $\chi^2$ and  F-test fit statistics}
+
+The item $\chi^2$ fit statistic implemented in RUMM \cite{RUMM} is based on a grouping of respondents in $G$ groups (denoted 'class intervals' in RUMM) based on the estimated person locations $\hat\theta_v$. It is computed as
+
+\begin{equation}
+\label{itemchisq}
+\chi^2(X_i)=\sum_{g}\frac{\left(\sum_{v\in V_g}X_{vi}-\sum_{v\in V_g}E(X_{vi})\right)^2}{\sum_{v\in V_g}V(X_{vi})}
+\end{equation}
+
+where $V_g$ denotes the set of respondents in class interval $g$. RUMM also provides an item fit statistic based on ANOVA. Specifically, the residuals observed for an item are in used in an ANOVA across class intervals and the resulting F-ratio used to assess the degree of deviation from expectation. This test is conceptually similar to the chi-square approach, but is speculated to yield a more precise test of item level misfit.
+
+\subsubsection{Summary}
+
+The chi-square statistic is based on the class interval grouping and compares the expected score and the observed score in each group. It is sensitive to any kind of discrepancy between the theoretical ICC and the empirical ICC and can reveal anomalies other than systematic over- or under-discrimination. The fit residual is based on individual residuals, summed across persons and transformed to be more symmetrically distributed. It is considered to be sensitive towards a deviation from the requirement of equal discrimination, and $\pm2.5$ are commonly accepted thresholds. It should be noted that both under- and over-discrimination is a  violation of the Rasch model. The $F$-test statistic is more refined compared to the chi square statistic, as individual person location estimates are taken into account. However, it cannot be added up across items and for this reason does not yield an overall fit statistic.
+
+
+
+
+\newpage
+\section{Example I: Knox cube test data}
+
+This example uses the classic Knox Cube test data \cite{wright-stone}. The Knox Cube Test measures short term memory and consists of 18 dichotomous items. In the data set responses from 35 subjects were considered. For four items all respondents gave the same answer and these items are not considered in what follows. Item fit statistics for the remaining 14 items are shown in Table \ref{knox} below.
+
+\begin{table}[b!]
+  \centering
+  \caption{The item locations and the values of seven item fit statistics for each of 14 Knox cube test items (sample size $N=35$)}\label{knox}
+\begin{longtable}{|l|r|r|r|r|r|r|r|r|r|r|r|}\hline
+item&location&$\chi^2$ &df &      p &FitResid &    F &      p & infit &     t & outfit&  t   \\\hline
+ I4 &    &0.37 & 2 & 0.8306 &   -0.45 & 0.23 & 0.7937 &  0.77 & -0.35 & 0.31  &  0.25\\\hline
+ I5 &    &0.63 & 2 & 0.7287 &   -0.37 & 0.51 & 0.6030 &  0.91 & -0.09 & 0.46  &  0.13\\\hline
+ I6 &    &0.47 & 2 & 0.7913 &   -0.12 & 0.26 & 0.7693 &  1.03 &  0.20 & 0.76  &  0.25\\\hline
+ I7 &    &6.99 & 2 & 0.0304 &    0.29 & 2.34 & 0.1133 &  1.18 &  0.56 & 1.52  &  0.82\\\hline
+ I8 &    &0.88 & 2 & 0.6426 &   -0.91 & 0.72 & 0.4944 &  0.54 & -1.73 & 0.40  & -0.71\\\hline
+ I9 &    &1.02 & 2 & 0.6008 &   -0.95 & 1.10 & 0.3441 &  0.56 & -1.34 & 0.22  & -0.45\\\hline
+ I10&    &0.90 & 2 & 0.6380 &   -0.26 & 0.27 & 0.7673 &  0.94 & -0.17 & 0.77  & -0.26\\\hline
+ I11&    &0.92 & 2 & 0.6328 &   -0.35 & 0.38 & 0.6846 &  0.96 & -0.12 & 0.74  & -0.40\\\hline
+ I12&    &1.25 & 2 & 0.5341 &   -0.07 & 0.73 & 0.4898 &  1.01 &  0.12 & 0.84  &  0.15\\\hline
+ I13&    &2.69 & 2 & 0.2600 &   -0.91 & 3.52 & 0.0419 &  0.63 & -1.48 & 0.38  & -0.69\\\hline
+ I14&    &1.10 & 2 & 0.5763 &    0.08 & 0.44 & 0.6484 &  1.31 &  0.81 & 1.05  &  0.58\\\hline
+ I15&    &0.20 & 2 & 0.9061 &   -0.61 & 0.18 & 0.8346 &  0.57 & -0.49 & 0.11  &  0.54\\\hline
+ I16&    &0.20 & 2 & 0.9061 &   -0.61 & 0.18 & 0.8346 &  0.57 & -0.49 & 0.11  &  0.54\\\hline
+ I17&    &0.20 & 2 & 0.9061 &   -0.61 & 0.18 & 0.8346 &  0.57 & -0.49 & 0.11  &  0.54\\\hline
+\end{longtable}
+\end{table}
+
+note that computing seven item fit statistics for each of 14 items yields a total of $7\cdot14=98$ instances where the researcher needs to evaluate whether an observed value constitutes an anomaly (wether guided by a $p$-value or not). Using an implementation in SAS \cite{christensen2006_SAS,Christensen2013}, the simulation study was conducted by simulating 4000 data sets under the Rasch model and, for each of these, performing the following steps:
+
+\begin{itemize}
+\item[(0)] Sampling $N$ values from the empirical distribution of person location estimates.
+\item[(i)] estimating item parameters using pairwise conditional estimation \cite{Zwinderman_1995,Andrich2003}
+\item[(ii)] estimating person parameters using Weighted Maximum Likelihood \cite{warm},
+\item[(iii)] computing item fit statistics based on the response residuals [formula (\ref{responseresiduals})],
+\end{itemize}
+
+these steps were repeated for the 11 sample sizes $N=35,70,105,140,210,350,700,1050,1400,2100,3500$ and the empirical distribution for each of these $7\cdot14\cdot11=1078$ combinations are shown on
+\begin{center}
+\url{https://publicifsv.sund.ku.dk/~kach/ITEMFIT/Knox}
+\end{center}
+(does not work right now - so don't look click). There is substantial variation.
+
+
+\section{Example II: Parametric bootstrapping illustration}
+
+An empirical data set is used to illustrate the problem associated with the use of critical values in practice. The empirical data example used in this study is from the Patient Health Questionnaire (PHQ-9), which was validated using the Rasch model in a sample of 1531 (80.4\% men) heart patients in Denmark by Pedersen et al., \cite{pedersen2016}.
+The PHQ-9 is a widely used nine item measure of depression based on the diagnostic criteria of the DSMIV \cite{kroenke2003patient}.
+
+\begin{enumerate}
+\item Little interest or pleasure in doing things
+\item Feeling down, depressed, or hopeless
+\item Trouble falling or staying asleep, or sleeping too much
+\item Feeling tired or having little energy
+\item Poor appetite or overeating
+\item Feeling bad about yourself - or that you are a failure or have let yourself or your family down
+\item Trouble concentrating on things, such as reading the newspaper or watching television
+\item Moving or speaking so slowly that other people could have noticed. Or the opposite -- being fidgety or restless and moving around a lot more than usual
+\item Thoughts that you would be better off dead or of hurting yourself in some way
+\end{enumerate}
+
+All PHQ-9 items are rated on a four point Likert scale.
+
+The final columns of Table XX show the fit statistics for the full sample with 1531 respondents and indicates that there are four misfitting items based on the fit residual statistic with a critical value of +/- 2.5 and three items for the Chi-square and ANOVA after using a Bonferroni correction. Table XX reports the fit statistics used in this study for different sample sizes that were selected randomly from the Pedersen et al., sample. It is clear from the table that the number of items that do not fit the model increases as the sample size increases.
+
+Insert table with different items misfitting based on different sample sizes here.
+
+A parametric bootstrapping simulation was performed based on the item parameters and the sample distribution in the Pedersen et al., data.
+
+
+Using an implementation in SAS \cite{christensen2006_SAS,Christensen2013}, the simulation study was conducted by simulating 10,000 data sets under the Rasch model and, for each of these, performing the following steps:
+
+
+\begin{itemize}
+\item[(i)] estimating item parameters using pairwise conditional estimation \cite{Zwinderman_1995,Andrich2003}
+\item[(ii)] estimating person parameters using Weighted Maximum Likelihood \cite{warm},
+\item[(iii)] computing item fit statistics based on the response residuals [formula (\ref{responseresiduals})],
+\item[(iv)] computing item fit statistics based on the score residuals [formula (\ref{scoreresiduals})].
+\end{itemize}
+
+
+\subsection{Results}
+
+Table \ref{chi} shows the values of the chi-square item fit statistic for\selectlanguage{english}
+\begin{table}[]
+\caption{{The P-values for item chi-squared tests in sub-samples of different sizes.}}
+\label{chi}
+\begin{center}
+\begin{tabular}{lrrrrrrr}\hline\hline
+Item& 100  & 200  & 400      & 600       &  800     & 1000 & 1531\\\hline
+1   & 0.38 & 0.26 & 0.23     & {\bf0.04} & {\bf0.01}& 0.01 & {\bf0.00}\\
+2   & 0.82 & 0.27 & {\bf0.02}& {\bf0.00} & {\bf0.00}& 0.00 & {\bf0.00}\\
+3   & 0.36 & 0.56 & 0.47     & 0.56      & 0.28     & 0.42 & 0.38\\
+4   & 0.37 & 0.11 & 0.41     & 0.42      & 0.57     & 0.72 & 0.07\\
+5   & 0.47 & 0.28 & 0.22     & 0.35      & {\bf0.01}& 0.11 & {\bf0.01}\\
+6   & 0.49 & 0.10 & {\bf0.04}& 0.01      & {\bf0.00}& 0.00 & {\bf0.00}\\
+7   & 0.78 & 0.52 & 0.18     & 0.33      & 0.08     & 0.01 & {\bf0.03}\\
+8   & 0.49 & 0.60 & 0.23     & 0.14      & 0.24     & 0.02 & {\bf0.03}\\
+9   & 0.97 & 0.42 & 0.46     & 0.39      & 0.10     & 0.22 & 0.07\\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+Table \ref{chi} shows the values of the chi-square item fit statistic for\selectlanguage{english}
+\begin{table}[]
+\caption{{chi-square}}
+\label{chi}
+\begin{center}
+\begin{tabular}{lrrrrrrrr}\hline\hline
+Item&100 &200 &400 &600 &800 &1000 &1531\\\hline
+1   &-0.18 & 2.10 & 1.84 & 1.99 & 1.05 & 2.17 & 2.91\\
+2   &-0.85 &-1.26 &-3.10 &-3.85 &-3.72 &-4.19 &-5.49\\
+3   & 0.12 &-0.95 & 0.78 & 1.10 & 0.07 &-0.06 & 0.48\\
+4   &-0.62 &-1.25 &-0.74 &-0.83 &-0.74 &-0.78 &-1.78\\
+5   & 0.60 & 0.84 & 0.93 & 1.09 & 0.66 & 0.17 & 0.73\\
+6   &-1.30 &-1.83 &-2.24 &-3.26 &-4.03 &-4.60 &-5.53\\
+7   &-0.73 & 0.39 &-1.59 &-1.31 &-1.64 &-1.91 &-2.01\\
+8   &-0.91 &-0.02 &-1.02 &-1.09 &-0.73 &-1.43 &-1.16\\
+9   &-0.82 &-1.18 &-0.62 &-1.36 &-2.08 &-2.42 &-2.72\\\hline
+min &
+max & 0.60 & 2.10 & 1.84 & 1.99 & 1.05 & 2.17 & 2.91\\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+for all sample sizes above 100 item 1 was flagged as mis-fitting.\selectlanguage{english}
+\begin{table}[]
+\caption{{ANOVA}}
+\label{ANOVA}
+\begin{center}
+\begin{tabular}{lrrrrrrr}\hline\hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\section{Example III: Simulation study}
+The simulated data sets used $k$ polytomous items simulated from
+
+The person locations were simulated from a normal distribution with mean $\mu$ and SD 1. All combinations of the four conditions: (a) number of items ($k=10,15,20$); (b) number of persons ($N=100,200,300,400,500,600,700,800,900,1000$); (c) mean value in the distribution of the latent variable ($\mu=0,2$) were simulated. This yielded a total of 60 different setups, and for each of these we simulated 10000 data sets in order to find the empirical percentiles of the null distribution of the item fit statistics.
+
+Chi-square
+\begin{center}
+\url{https://publicifsv.sund.ku.dk/~kach/ITEMFIT/Chisq}
+\end{center}
+
+FitResid
+\begin{center}
+\url{https://publicifsv.sund.ku.dk/~kach/ITEMFIT/Fit}
+\end{center}
+
+Ftest
+\begin{center}
+\url{https://publicifsv.sund.ku.dk/~kach/ITEMFIT/ANOVA}
+\end{center}
+
+INFIT
+\begin{center}
+\url{https://publicifsv.sund.ku.dk/~kach/ITEMFIT/FIT}
+\end{center}
+
+OUTFIT
+\begin{center}
+\url{https://publicifsv.sund.ku.dk/~kach/ITEMFIT/OUTFIT}
+\end{center}
+
+\section{Discussion}
+
+
+In the currently available implementations the item fit statistics are based on residuals computed for each person-item interaction. This has been criticized by Karabatsos \cite{Karabatsos2000a}, who provided a critical analysis of the residual fit statistics of the Rasch model and argued that
+
+\begin{quote}
+faulty statistical properties of the residual fit statistics do not allow either a convenient or a straightforward approach to Rasch fit analysis
+\end{quote}
+
+However the use of these item fit statistics persists, even though versions of them with known asymptotic properties are easily derived \cite{Christensen-Kreiner2013}.
+
+Smith illustrated a different problem \cite{smith2008}
+
+For Chi-square and ANOVA only large values indicate an anomaly - we do not know what is wrong
+
+Both ends should be considered for infit and outfit - this is something that is often not done - only the large values are considered indicates of misfit (and also FitResid)
+
+statistical properties are known \cite{Christensen-Kreiner2013}. The practicality of this option is limited due to the lack of implementation in the popular Rasch analysis software packages. It is not well-established how this approach work for small sample sizes.
+
+
+R packages
+
+Specifically, critical upper values for the outfit have been given as $1+2/\sqrt{N}$ and critical lower values for the infit have been given as $1+6/\sqrt{N}$ \cite{Smith-Schumacker-Bush}.
+
+\subsection{Tabulating critical values}
+
+A solution that would likely be preferred by many practitioners would be the publication of critical values for a range of combinations of sample size, number of items, etc.\ this has been provided by our simulation studies and and interactive tabulation is available at
+
+
+Something about R Smiths sample size adjustment formulas 0.7-1.3 for the INFIT when N=44, and 0.7-1.3 for the OUTFIT when N=400 in relation to our results
+
+\subsection{Bootstrap approaches}
+
+
+Bootstrap approaches have been discussed earlier for the the infit and outfit mean square error statistics available in winsteps \cite{Su-Sheu-Wang2007} and a bootstrap approach that requires the combined us of SAS and WINSTEPS has been proposed \cite{Wolfe2008}
+
+The results showed that rule-of-thumb critical values for assessing the magnitude of misfit were not applicable because the infit and outfit mean square error statistics showed different magnitudes of variability over testing conditions
+
+
+\subsection{Implementing statistically sound fit statistics}
+
+Karabatsos stressed the need to implement residual-free Rasch fit statistics. A lot of earlier work in the psychometric literature has done this \cite{van-den-wollenberg,Glas1988,Christensen-Kreiner2013}, but to date these approaches are not implemented in the most widely used software packages used for Rasch analysis. Before these approaches become commonly adopted, we offer a resource to help put observed fit statistics into context in order to determine whether an apparent anomaly is statistically relevant.
+
+(perhaps put something about these anomalies being further assessed contextually and conceptually before deciding whether to reject).
+
+
+
+\selectlanguage{english}
+\clearpage
+\bibliographystyle{apacite}
+\bibliography{bib}
+
+\end{document}
+

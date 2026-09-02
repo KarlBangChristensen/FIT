@@ -1,0 +1,4210 @@
+1                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+NOTE: Unable to open SASUSER.REGSTRY. WORK.REGSTRY will be opened instead.
+NOTE: All registry changes will be lost at the end of the session.
+
+WARNING: Unable to copy SASUSER registry to WORK registry. Because of this, you will not see registry customizations during this 
+         session.
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M3) 
+      Licensed to CAMPUS - KBH. UNI. - LINUX, Site 50803698.
+NOTE: This session is executing on the Linux 3.10.0-957.12.2.el7.x86_64 (LIN X64) platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.1
+      SAS/ETS 14.1
+      SAS/OR 14.1
+      SAS/IML 14.1
+      SAS/QC 14.1
+
+NOTE: Additional host information:
+
+ Linux LIN X64 3.10.0-957.12.2.el7.x86_64 #1 SMP Fri Apr 19 21:09:07 UTC 2019 x86_64 Red Hat Enterprise Linux Server release 7.7 
+      (Maipo) 
+
+You are running SAS 9. Some SAS 8 files will be automatically converted 
+by the V9 engine; others are incompatible.  Please see 
+http://support.sas.com/rnd/migration/planning/platform/64bit.html
+
+PROC MIGRATE will preserve current SAS file attributes and is 
+recommended for converting all your SAS libraries from any 
+SAS 8 release to SAS 9.  For details and examples, please see
+http://support.sas.com/rnd/migration/index.html
+
+
+This message is contained in the SAS news file, and is presented upon
+initialization.  Edit the file "news" in the "misc/base" directory to
+display site-specific news and information in the program log.
+The command line option "-nonews" will prevent this display.
+
+
+
+
+NOTE: SAS initialization used:
+      real time           0.19 seconds
+      cpu time            0.02 seconds
+      
+1          %include '/home/ifsv/pzs913/FIT/simu.sas';
+NOTE: Libref FIT was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /home/ifsv/pzs913/FIT
+3530       
+3531       %let nitems=12;
+3532       %let from=1901;
+3533       %let to=1950;
+3534       %simu(samplesize=300, numberofitems=&nitems., from=&from., to=&to.);
+2                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 23 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 99 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+3                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+4                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+5                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+6                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+7                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+8                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+9                                                          The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+10                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+11                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+3535       %simu(samplesize=350, numberofitems=&nitems., from=&from., to=&to.);
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+12                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+13                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+14                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+15                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+16                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+17                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+18                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+19                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+20                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+3536       %simu(samplesize=400, numberofitems=&nitems., from=&from., to=&to.);
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+21                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+22                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+23                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+24                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+25                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+26                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+27                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+28                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+3537       %simu(samplesize=450, numberofitems=&nitems., from=&from., to=&to.);
+
+29                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+30                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+31                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+32                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+33                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+34                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+35                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+36                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+37                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+3538       %simu(samplesize=500, numberofitems=&nitems., from=&from., to=&to.);
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+38                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+39                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+40                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+41                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+42                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+43                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+44                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+45                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+3539       %simu(samplesize=550, numberofitems=&nitems., from=&from., to=&to.);
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+46                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+47                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+48                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+49                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+50                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+51                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+52                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+53                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+54                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+3540       %simu(samplesize=600, numberofitems=&nitems., from=&from., to=&to.);
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+55                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+56                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+57                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+58                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+59                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+60                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+61                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+62                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+WARNING: The negative of the Hessian is not positive definite. The convergence is questionable.
+WARNING: The procedure is continuing but the validity of the model fit is questionable.
+WARNING: The specified model did not converge.
+WARNING: Negative of Hessian not positive definite.
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+
+
+
+------------------------------------------------------------------------------------------------
+
+clean-up deleting 105 temporary data sets
+clean-up deleting 179 temporary data sets
+clean-up deleting 289 temporary data sets
+clean-up deleting 83 temporary data sets
+3541       	
+3542       data FIT.out_PW_I&nitems._&from._&to.;
+3543       	set
+3544       	FIT.out_PW_I&nitems._N300_&from._&to.
+3545       	FIT.out_PW_I&nitems._N350_&from._&to.
+3546       	FIT.out_PW_I&nitems._N400_&from._&to.
+3547       	FIT.out_PW_I&nitems._N450_&from._&to.
+3548       	FIT.out_PW_I&nitems._N500_&from._&to.
+3549       	FIT.out_PW_I&nitems._N550_&from._&to.
+3550       	FIT.out_PW_I&nitems._N600_&from._&to.
+3551       	;
+3552       run;
+
+NOTE: There were 600 observations read from the data set FIT.OUT_PW_I12_N300_1901_1950.
+NOTE: There were 600 observations read from the data set FIT.OUT_PW_I12_N350_1901_1950.
+NOTE: There were 600 observations read from the data set FIT.OUT_PW_I12_N400_1901_1950.
+NOTE: There were 600 observations read from the data set FIT.OUT_PW_I12_N450_1901_1950.
+NOTE: There were 600 observations read from the data set FIT.OUT_PW_I12_N500_1901_1950.
+NOTE: There were 600 observations read from the data set FIT.OUT_PW_I12_N550_1901_1950.
+NOTE: There were 600 observations read from the data set FIT.OUT_PW_I12_N600_1901_1950.
+NOTE: The data set FIT.OUT_PW_I12_1901_1950 has 4200 observations and 16 variables.
+NOTE: DATA statement used (Total process time):
+      real time           4.22 seconds
+      cpu time            0.01 seconds
+      
+
+3553       proc datasets library=FIT;
+63                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                             Directory
+
+                                              Libref             FIT                  
+                                              Engine             V9                   
+                                              Physical Name      /home/ifsv/pzs913/FIT
+                                              Filename           /home/ifsv/pzs913/FIT
+                                              Inode Number       923176592            
+                                              Access Permission  rwx------            
+                                              Owner Name         pzs913               
+                                              File Size          48KB                 
+                                              File Size (bytes)  49152                
+
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                           1  AMTS                       DATA           128KB  01/18/2019 15:13:39        
+                           2  AMTS_FOR                   DATA           128KB  01/18/2019 15:13:34        
+                           3  AMTS_IN                    DATA           128KB  03/22/2019 16:56:21        
+                           4  AMTS_OUT                   DATA            22MB  08/15/2019 15:21:23        
+                           5  AMTS_OUT_N197_1001_1050    DATA           192KB  08/19/2019 12:12:14        
+                           6  AMTS_OUT_N197_101_150      DATA           192KB  08/17/2019 11:12:01        
+                           7  AMTS_OUT_N197_1051_1100    DATA           192KB  08/19/2019 12:14:28        
+                           8  AMTS_OUT_N197_1101_1150    DATA           192KB  08/19/2019 12:14:17        
+                           9  AMTS_OUT_N197_1151_1200    DATA           192KB  08/19/2019 12:09:16        
+                          10  AMTS_OUT_N197_1201_1250    DATA           192KB  08/20/2019 13:31:51        
+                          11  AMTS_OUT_N197_1251_1300    DATA           192KB  08/21/2019 09:13:54        
+                          12  AMTS_OUT_N197_1301_1350    DATA           192KB  08/19/2019 12:14:47        
+                          13  AMTS_OUT_N197_1351_1400    DATA           192KB  08/19/2019 12:12:12        
+                          14  AMTS_OUT_N197_1401_1450    DATA           192KB  08/21/2019 09:13:32        
+                          15  AMTS_OUT_N197_1451_1500    DATA           192KB  08/19/2019 12:12:27        
+                          16  AMTS_OUT_N197_1501_1550    DATA           192KB  08/19/2019 12:13:58        
+                          17  AMTS_OUT_N197_151_200      DATA           192KB  08/17/2019 11:16:12        
+                          18  AMTS_OUT_N197_1551_1600    DATA           192KB  08/19/2019 12:12:14        
+                          19  AMTS_OUT_N197_1601_1650    DATA           192KB  08/19/2019 12:12:16        
+                          20  AMTS_OUT_N197_1651_1700    DATA           192KB  08/19/2019 12:14:47        
+                          21  AMTS_OUT_N197_1701_1750    DATA           192KB  08/19/2019 12:14:11        
+                          22  AMTS_OUT_N197_1751_1800    DATA           192KB  08/19/2019 12:12:20        
+                          23  AMTS_OUT_N197_1801_1850    DATA           192KB  08/19/2019 12:02:13        
+                          24  AMTS_OUT_N197_1851_1900    DATA           192KB  08/19/2019 12:14:35        
+                          25  AMTS_OUT_N197_1901_1950    DATA           192KB  08/19/2019 12:16:27        
+                          26  AMTS_OUT_N197_1951_2000    DATA           192KB  08/19/2019 12:11:58        
+                          27  AMTS_OUT_N197_1_50         DATA           192KB  08/17/2019 11:08:20        
+                          28  AMTS_OUT_N197_201_250      DATA           192KB  08/17/2019 11:14:08        
+                          29  AMTS_OUT_N197_251_300      DATA           192KB  08/19/2019 12:14:48        
+                          30  AMTS_OUT_N197_301_350      DATA           192KB  08/17/2019 11:14:11        
+                          31  AMTS_OUT_N197_351_400      DATA           192KB  08/17/2019 11:20:21        
+                          32  AMTS_OUT_N197_401_450      DATA           192KB  08/20/2019 13:31:47        
+                          33  AMTS_OUT_N197_451_500      DATA           192KB  08/17/2019 11:16:04        
+                          34  AMTS_OUT_N197_501_550      DATA           192KB  08/17/2019 11:21:19        
+                          35  AMTS_OUT_N197_51_100       DATA           192KB  08/17/2019 11:14:18        
+                          36  AMTS_OUT_N197_551_600      DATA           192KB  08/17/2019 11:19:22        
+                          37  AMTS_OUT_N197_601_650      DATA           192KB  08/17/2019 11:16:42        
+                          38  AMTS_OUT_N197_651_700      DATA           192KB  08/17/2019 11:16:01        
+                          39  AMTS_OUT_N197_701_750      DATA           192KB  08/17/2019 11:24:07        
+                          40  AMTS_OUT_N197_751_800      DATA           192KB  08/17/2019 11:20:24        
+                          41  AMTS_OUT_N197_801_850      DATA           192KB  08/17/2019 11:16:42        
+                          42  AMTS_OUT_N197_851_900      DATA           192KB  08/17/2019 11:16:18        
+64                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                          43  AMTS_OUT_N197_901_950      DATA           192KB  08/17/2019 11:21:57        
+                          44  AMTS_OUT_N197_951_1000     DATA           192KB  08/17/2019 11:20:20        
+                          45  AMTS_OUT_N300_1001_1050    DATA           192KB  08/19/2019 14:15:17        
+                          46  AMTS_OUT_N300_101_150      DATA           192KB  08/17/2019 13:02:29        
+                          47  AMTS_OUT_N300_1051_1100    DATA           192KB  08/19/2019 14:14:57        
+                          48  AMTS_OUT_N300_1101_1150    DATA           192KB  08/19/2019 14:11:30        
+                          49  AMTS_OUT_N300_1151_1200    DATA           192KB  08/19/2019 14:11:25        
+                          50  AMTS_OUT_N300_1201_1250    DATA           192KB  08/20/2019 14:01:33        
+                          51  AMTS_OUT_N300_1251_1300    DATA           192KB  08/21/2019 09:36:21        
+                          52  AMTS_OUT_N300_1301_1350    DATA           192KB  08/19/2019 14:16:44        
+                          53  AMTS_OUT_N300_1351_1400    DATA           192KB  08/19/2019 14:15:19        
+                          54  AMTS_OUT_N300_1401_1450    DATA           192KB  08/21/2019 09:35:58        
+                          55  AMTS_OUT_N300_1451_1500    DATA           192KB  08/19/2019 14:13:37        
+                          56  AMTS_OUT_N300_1501_1550    DATA           192KB  08/19/2019 14:15:47        
+                          57  AMTS_OUT_N300_151_200      DATA           192KB  08/17/2019 13:15:40        
+                          58  AMTS_OUT_N300_1551_1600    DATA           192KB  08/19/2019 14:16:58        
+                          59  AMTS_OUT_N300_1601_1650    DATA           192KB  08/19/2019 14:11:26        
+                          60  AMTS_OUT_N300_1651_1700    DATA           192KB  08/19/2019 14:19:57        
+                          61  AMTS_OUT_N300_1701_1750    DATA           192KB  08/19/2019 14:13:39        
+                          62  AMTS_OUT_N300_1751_1800    DATA           192KB  08/19/2019 14:15:16        
+                          63  AMTS_OUT_N300_1801_1850    DATA           192KB  08/19/2019 13:49:42        
+                          64  AMTS_OUT_N300_1851_1900    DATA           192KB  08/19/2019 14:17:07        
+                          65  AMTS_OUT_N300_1901_1950    DATA           192KB  08/19/2019 14:22:07        
+                          66  AMTS_OUT_N300_1951_2000    DATA           192KB  08/19/2019 14:13:39        
+                          67  AMTS_OUT_N300_1_50         DATA           192KB  08/17/2019 13:12:55        
+                          68  AMTS_OUT_N300_201_250      DATA           192KB  08/17/2019 13:05:28        
+                          69  AMTS_OUT_N300_251_300      DATA           192KB  08/19/2019 14:15:46        
+                          70  AMTS_OUT_N300_301_350      DATA           192KB  08/17/2019 13:05:25        
+                          71  AMTS_OUT_N300_351_400      DATA           192KB  08/17/2019 13:24:28        
+                          72  AMTS_OUT_N300_401_450      DATA           192KB  08/20/2019 14:01:20        
+                          73  AMTS_OUT_N300_451_500      DATA           192KB  08/17/2019 13:06:07        
+                          74  AMTS_OUT_N300_501_550      DATA           192KB  08/17/2019 13:24:27        
+                          75  AMTS_OUT_N300_51_100       DATA           192KB  08/17/2019 13:16:33        
+                          76  AMTS_OUT_N300_551_600      DATA           192KB  08/17/2019 13:24:27        
+                          77  AMTS_OUT_N300_601_650      DATA           192KB  08/17/2019 13:06:49        
+                          78  AMTS_OUT_N300_651_700      DATA           192KB  08/17/2019 13:06:19        
+                          79  AMTS_OUT_N300_701_750      DATA           192KB  08/17/2019 13:25:43        
+                          80  AMTS_OUT_N300_751_800      DATA           192KB  08/17/2019 13:22:11        
+                          81  AMTS_OUT_N300_801_850      DATA           192KB  08/17/2019 13:06:49        
+                          82  AMTS_OUT_N300_851_900      DATA           192KB  08/17/2019 13:06:49        
+                          83  AMTS_OUT_N300_901_950      DATA           192KB  08/17/2019 13:24:28        
+                          84  AMTS_OUT_N300_951_1000     DATA           192KB  08/17/2019 13:22:12        
+                          85  AMTS_OUT_N400_1001_1050    DATA           192KB  08/19/2019 16:24:35        
+                          86  AMTS_OUT_N400_101_150      DATA           192KB  08/17/2019 15:19:45        
+                          87  AMTS_OUT_N400_1051_1100    DATA           192KB  08/19/2019 16:26:28        
+                          88  AMTS_OUT_N400_1101_1150    DATA           192KB  08/19/2019 16:21:42        
+                          89  AMTS_OUT_N400_1151_1200    DATA           192KB  08/19/2019 16:16:47        
+                          90  AMTS_OUT_N400_1201_1250    DATA           192KB  08/20/2019 14:33:02        
+                          91  AMTS_OUT_N400_1251_1300    DATA           192KB  08/21/2019 10:04:42        
+                          92  AMTS_OUT_N400_1301_1350    DATA           192KB  08/19/2019 16:26:12        
+                          93  AMTS_OUT_N400_1351_1400    DATA           192KB  08/19/2019 16:21:37        
+                          94  AMTS_OUT_N400_1401_1450    DATA           192KB  08/21/2019 10:04:22        
+                          95  AMTS_OUT_N400_1451_1500    DATA           192KB  08/19/2019 16:26:27        
+                          96  AMTS_OUT_N400_1501_1550    DATA           192KB  08/19/2019 16:29:58        
+                          97  AMTS_OUT_N400_151_200      DATA           192KB  08/17/2019 15:44:40        
+65                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                          98  AMTS_OUT_N400_1551_1600    DATA           192KB  08/19/2019 16:24:29        
+                          99  AMTS_OUT_N400_1601_1650    DATA           192KB  08/19/2019 16:21:55        
+                         100  AMTS_OUT_N400_1651_1700    DATA           192KB  08/19/2019 16:26:26        
+                         101  AMTS_OUT_N400_1701_1750    DATA           192KB  08/19/2019 16:24:39        
+                         102  AMTS_OUT_N400_1751_1800    DATA           192KB  08/19/2019 16:24:36        
+                         103  AMTS_OUT_N400_1801_1850    DATA           192KB  08/19/2019 15:45:05        
+                         104  AMTS_OUT_N400_1851_1900    DATA           192KB  08/19/2019 16:29:49        
+                         105  AMTS_OUT_N400_1901_1950    DATA           192KB  08/19/2019 16:32:17        
+                         106  AMTS_OUT_N400_1951_2000    DATA           192KB  08/19/2019 16:24:33        
+                         107  AMTS_OUT_N400_1_50         DATA           192KB  08/17/2019 15:40:46        
+                         108  AMTS_OUT_N400_201_250      DATA           192KB  08/17/2019 15:22:10        
+                         109  AMTS_OUT_N400_251_300      DATA           192KB  08/19/2019 16:29:48        
+                         110  AMTS_OUT_N400_301_350      DATA           192KB  08/17/2019 15:21:35        
+                         111  AMTS_OUT_N400_351_400      DATA           192KB  08/17/2019 15:50:28        
+                         112  AMTS_OUT_N400_401_450      DATA           192KB  08/20/2019 14:32:28        
+                         113  AMTS_OUT_N400_451_500      DATA           192KB  08/17/2019 15:24:28        
+                         114  AMTS_OUT_N400_501_550      DATA           192KB  08/17/2019 15:50:28        
+                         115  AMTS_OUT_N400_51_100       DATA           192KB  08/17/2019 15:43:59        
+                         116  AMTS_OUT_N400_551_600      DATA           192KB  08/17/2019 15:51:32        
+                         117  AMTS_OUT_N400_601_650      DATA           192KB  08/17/2019 15:22:11        
+                         118  AMTS_OUT_N400_651_700      DATA           192KB  08/17/2019 15:20:09        
+                         119  AMTS_OUT_N400_701_750      DATA           192KB  08/17/2019 15:49:15        
+                         120  AMTS_OUT_N400_751_800      DATA           192KB  08/17/2019 15:44:41        
+                         121  AMTS_OUT_N400_801_850      DATA           192KB  08/17/2019 15:22:11        
+                         122  AMTS_OUT_N400_851_900      DATA           192KB  08/17/2019 15:24:30        
+                         123  AMTS_OUT_N400_901_950      DATA           192KB  08/17/2019 15:51:37        
+                         124  AMTS_OUT_N400_951_1000     DATA           192KB  08/17/2019 15:44:21        
+                         125  AMTS_OUT_N500_1001_1050    DATA           192KB  08/19/2019 18:57:22        
+                         126  AMTS_OUT_N500_101_150      DATA           192KB  08/17/2019 17:52:30        
+                         127  AMTS_OUT_N500_1051_1100    DATA           192KB  08/19/2019 19:07:52        
+                         128  AMTS_OUT_N500_1101_1150    DATA           192KB  08/19/2019 19:02:47        
+                         129  AMTS_OUT_N500_1151_1200    DATA           192KB  08/19/2019 18:47:49        
+                         130  AMTS_OUT_N500_1201_1250    DATA           192KB  08/20/2019 15:11:31        
+                         131  AMTS_OUT_N500_1251_1300    DATA           192KB  08/21/2019 10:34:21        
+                         132  AMTS_OUT_N500_1301_1350    DATA           192KB  08/19/2019 19:07:14        
+                         133  AMTS_OUT_N500_1351_1400    DATA           192KB  08/19/2019 18:54:24        
+                         134  AMTS_OUT_N500_1401_1450    DATA           192KB  08/21/2019 10:34:21        
+                         135  AMTS_OUT_N500_1451_1500    DATA           192KB  08/19/2019 19:05:03        
+                         136  AMTS_OUT_N500_1501_1550    DATA           192KB  08/19/2019 19:11:33        
+                         137  AMTS_OUT_N500_151_200      DATA           192KB  08/17/2019 18:31:31        
+                         138  AMTS_OUT_N500_1551_1600    DATA           192KB  08/19/2019 18:57:19        
+                         139  AMTS_OUT_N500_1601_1650    DATA           192KB  08/19/2019 18:51:31        
+                         140  AMTS_OUT_N500_1651_1700    DATA           192KB  08/19/2019 19:11:58        
+                         141  AMTS_OUT_N500_1701_1750    DATA           192KB  08/19/2019 19:07:25        
+                         142  AMTS_OUT_N500_1751_1800    DATA           192KB  08/19/2019 19:02:37        
+                         143  AMTS_OUT_N500_1801_1850    DATA           192KB  08/19/2019 18:06:56        
+                         144  AMTS_OUT_N500_1851_1900    DATA           192KB  08/19/2019 19:11:59        
+                         145  AMTS_OUT_N500_1901_1950    DATA           192KB  08/19/2019 19:15:57        
+                         146  AMTS_OUT_N500_1951_2000    DATA           192KB  08/19/2019 19:02:36        
+                         147  AMTS_OUT_N500_1_50         DATA           192KB  08/17/2019 18:24:35        
+                         148  AMTS_OUT_N500_201_250      DATA           192KB  08/17/2019 17:57:55        
+                         149  AMTS_OUT_N500_251_300      DATA           192KB  08/19/2019 19:07:57        
+                         150  AMTS_OUT_N500_301_350      DATA           192KB  08/17/2019 17:54:57        
+                         151  AMTS_OUT_N500_351_400      DATA           192KB  08/17/2019 18:34:26        
+                         152  AMTS_OUT_N500_401_450      DATA           192KB  08/20/2019 15:11:13        
+66                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                         153  AMTS_OUT_N500_451_500      DATA           192KB  08/17/2019 18:01:24        
+                         154  AMTS_OUT_N500_501_550      DATA           192KB  08/17/2019 18:34:26        
+                         155  AMTS_OUT_N500_51_100       DATA           192KB  08/17/2019 18:27:33        
+                         156  AMTS_OUT_N500_551_600      DATA           192KB  08/17/2019 18:31:33        
+                         157  AMTS_OUT_N500_601_650      DATA           192KB  08/17/2019 18:01:26        
+                         158  AMTS_OUT_N500_651_700      DATA           192KB  08/17/2019 17:57:21        
+                         159  AMTS_OUT_N500_701_750      DATA           192KB  08/17/2019 18:31:26        
+                         160  AMTS_OUT_N500_751_800      DATA           192KB  08/17/2019 18:31:32        
+                         161  AMTS_OUT_N500_801_850      DATA           192KB  08/17/2019 17:57:22        
+                         162  AMTS_OUT_N500_851_900      DATA           192KB  08/17/2019 18:03:59        
+                         163  AMTS_OUT_N500_901_950      DATA           192KB  08/17/2019 18:35:59        
+                         164  AMTS_OUT_N500_951_1000     DATA           192KB  08/17/2019 18:27:29        
+                         165  AMTS_OUT_N600_1001_1050    DATA           192KB  08/19/2019 21:56:34        
+                         166  AMTS_OUT_N600_101_150      DATA           192KB  08/17/2019 20:25:07        
+                         167  AMTS_OUT_N600_1051_1100    DATA           192KB  08/19/2019 22:05:22        
+                         168  AMTS_OUT_N600_1101_1150    DATA           192KB  08/19/2019 22:01:50        
+                         169  AMTS_OUT_N600_1151_1200    DATA           192KB  08/19/2019 21:47:59        
+                         170  AMTS_OUT_N600_1201_1250    DATA           192KB  08/20/2019 15:51:26        
+                         171  AMTS_OUT_N600_1251_1300    DATA           192KB  08/21/2019 11:10:39        
+                         172  AMTS_OUT_N600_1301_1350    DATA           192KB  08/19/2019 22:00:51        
+                         173  AMTS_OUT_N600_1351_1400    DATA           192KB  08/19/2019 21:47:43        
+                         174  AMTS_OUT_N600_1401_1450    DATA           192KB  08/21/2019 11:10:39        
+                         175  AMTS_OUT_N600_1451_1500    DATA           192KB  08/19/2019 21:58:05        
+                         176  AMTS_OUT_N600_1501_1550    DATA           192KB  08/19/2019 22:06:38        
+                         177  AMTS_OUT_N600_151_200      DATA           192KB  08/17/2019 21:09:16        
+                         178  AMTS_OUT_N600_1551_1600    DATA           192KB  08/19/2019 21:50:02        
+                         179  AMTS_OUT_N600_1601_1650    DATA           192KB  08/19/2019 21:44:41        
+                         180  AMTS_OUT_N600_1651_1700    DATA           192KB  08/19/2019 22:06:37        
+                         181  AMTS_OUT_N600_1701_1750    DATA           192KB  08/19/2019 22:06:28        
+                         182  AMTS_OUT_N600_1751_1800    DATA           192KB  08/19/2019 21:56:35        
+                         183  AMTS_OUT_N600_1801_1850    DATA           192KB  08/19/2019 20:54:31        
+                         184  AMTS_OUT_N600_1851_1900    DATA           192KB  08/19/2019 22:04:27        
+                         185  AMTS_OUT_N600_1901_1950    DATA           192KB  08/19/2019 22:14:35        
+                         186  AMTS_OUT_N600_1951_2000    DATA           192KB  08/19/2019 21:47:31        
+                         187  AMTS_OUT_N600_1_50         DATA           192KB  08/17/2019 21:06:01        
+                         188  AMTS_OUT_N600_201_250      DATA           192KB  08/17/2019 20:30:46        
+                         189  AMTS_OUT_N600_251_300      DATA           192KB  08/19/2019 22:05:26        
+                         190  AMTS_OUT_N600_301_350      DATA           192KB  08/17/2019 20:30:49        
+                         191  AMTS_OUT_N600_351_400      DATA           192KB  08/17/2019 21:11:20        
+                         192  AMTS_OUT_N600_401_450      DATA           192KB  08/20/2019 15:51:26        
+                         193  AMTS_OUT_N600_451_500      DATA           192KB  08/17/2019 20:33:30        
+                         194  AMTS_OUT_N600_501_550      DATA           192KB  08/17/2019 21:11:26        
+                         195  AMTS_OUT_N600_51_100       DATA           192KB  08/17/2019 21:06:10        
+                         196  AMTS_OUT_N600_551_600      DATA           192KB  08/17/2019 21:05:48        
+                         197  AMTS_OUT_N600_601_650      DATA           192KB  08/17/2019 20:36:10        
+                         198  AMTS_OUT_N600_651_700      DATA           192KB  08/17/2019 20:33:30        
+                         199  AMTS_OUT_N600_701_750      DATA           192KB  08/17/2019 21:09:39        
+                         200  AMTS_OUT_N600_751_800      DATA           192KB  08/17/2019 21:12:08        
+                         201  AMTS_OUT_N600_801_850      DATA           192KB  08/17/2019 20:33:29        
+                         202  AMTS_OUT_N600_851_900      DATA           192KB  08/17/2019 20:33:32        
+                         203  AMTS_OUT_N600_901_950      DATA           192KB  08/17/2019 21:10:06        
+                         204  AMTS_OUT_N600_951_1000     DATA           192KB  08/17/2019 21:08:54        
+                         205  AMTS_OUT_N700_1001_1050    DATA           192KB  08/20/2019 01:05:25        
+                         206  AMTS_OUT_N700_101_150      DATA           192KB  08/17/2019 23:22:32        
+                         207  AMTS_OUT_N700_1051_1100    DATA           192KB  08/20/2019 01:17:08        
+67                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                         208  AMTS_OUT_N700_1101_1150    DATA           192KB  08/20/2019 01:17:13        
+                         209  AMTS_OUT_N700_1151_1200    DATA           192KB  08/20/2019 00:56:55        
+                         210  AMTS_OUT_N700_1201_1250    DATA           192KB  08/20/2019 16:30:33        
+                         211  AMTS_OUT_N700_1251_1300    DATA           192KB  08/21/2019 11:44:14        
+                         212  AMTS_OUT_N700_1301_1350    DATA           192KB  08/20/2019 01:16:46        
+                         213  AMTS_OUT_N700_1351_1400    DATA           192KB  08/20/2019 00:53:56        
+                         214  AMTS_OUT_N700_1401_1450    DATA           192KB  08/21/2019 11:44:14        
+                         215  AMTS_OUT_N700_1451_1500    DATA           192KB  08/20/2019 01:14:22        
+                         216  AMTS_OUT_N700_1501_1550    DATA           192KB  08/20/2019 01:24:55        
+                         217  AMTS_OUT_N700_151_200      DATA           192KB  08/18/2019 00:16:34        
+                         218  AMTS_OUT_N700_1551_1600    DATA           192KB  08/20/2019 01:02:14        
+                         219  AMTS_OUT_N700_1601_1650    DATA           192KB  08/20/2019 00:50:35        
+                         220  AMTS_OUT_N700_1651_1700    DATA           192KB  08/20/2019 01:28:14        
+                         221  AMTS_OUT_N700_1701_1750    DATA           192KB  08/20/2019 01:24:53        
+                         222  AMTS_OUT_N700_1751_1800    DATA           192KB  08/20/2019 01:05:25        
+                         223  AMTS_OUT_N700_1801_1850    DATA           192KB  08/19/2019 23:54:09        
+                         224  AMTS_OUT_N700_1851_1900    DATA           192KB  08/20/2019 01:22:18        
+                         225  AMTS_OUT_N700_1901_1950    DATA           192KB  08/20/2019 01:32:40        
+                         226  AMTS_OUT_N700_1951_2000    DATA           192KB  08/20/2019 00:53:56        
+                         227  AMTS_OUT_N700_1_50         DATA           192KB  08/18/2019 00:16:34        
+                         228  AMTS_OUT_N700_201_250      DATA           192KB  08/17/2019 23:32:36        
+                         229  AMTS_OUT_N700_251_300      DATA           192KB  08/20/2019 01:24:51        
+                         230  AMTS_OUT_N700_301_350      DATA           192KB  08/17/2019 23:29:41        
+                         231  AMTS_OUT_N700_351_400      DATA           192KB  08/18/2019 00:19:07        
+                         232  AMTS_OUT_N700_401_450      DATA           192KB  08/20/2019 16:30:33        
+                         233  AMTS_OUT_N700_451_500      DATA           192KB  08/17/2019 23:31:58        
+                         234  AMTS_OUT_N700_501_550      DATA           192KB  08/18/2019 00:15:05        
+                         235  AMTS_OUT_N700_51_100       DATA           192KB  08/18/2019 00:12:13        
+                         236  AMTS_OUT_N700_551_600      DATA           192KB  08/18/2019 00:15:06        
+                         237  AMTS_OUT_N700_601_650      DATA           192KB  08/17/2019 23:34:19        
+                         238  AMTS_OUT_N700_651_700      DATA           192KB  08/17/2019 23:36:50        
+                         239  AMTS_OUT_N700_701_750      DATA           192KB  08/18/2019 00:18:14        
+                         240  AMTS_OUT_N700_751_800      DATA           192KB  08/18/2019 00:19:21        
+                         241  AMTS_OUT_N700_801_850      DATA           192KB  08/17/2019 23:30:20        
+                         242  AMTS_OUT_N700_851_900      DATA           192KB  08/17/2019 23:31:44        
+                         243  AMTS_OUT_N700_901_950      DATA           192KB  08/18/2019 00:19:24        
+                         244  AMTS_OUT_N700_951_1000     DATA           192KB  08/18/2019 00:15:08        
+                         245  AMTS_OUT_N800_1001_1050    DATA           192KB  08/20/2019 04:26:47        
+                         246  AMTS_OUT_N800_101_150      DATA           192KB  08/18/2019 02:37:04        
+                         247  AMTS_OUT_N800_1051_1100    DATA           192KB  08/20/2019 04:35:07        
+                         248  AMTS_OUT_N800_1101_1150    DATA           192KB  08/20/2019 04:35:08        
+                         249  AMTS_OUT_N800_1151_1200    DATA           192KB  08/20/2019 04:14:11        
+                         250  AMTS_OUT_N800_1201_1250    DATA           192KB  08/20/2019 17:20:03        
+                         251  AMTS_OUT_N800_1251_1300    DATA           192KB  08/21/2019 12:30:26        
+                         252  AMTS_OUT_N800_1301_1350    DATA           192KB  08/20/2019 04:35:12        
+                         253  AMTS_OUT_N800_1351_1400    DATA           192KB  08/20/2019 04:13:02        
+                         254  AMTS_OUT_N800_1401_1450    DATA           192KB  08/21/2019 12:30:26        
+                         255  AMTS_OUT_N800_1451_1500    DATA           192KB  08/20/2019 04:35:10        
+                         256  AMTS_OUT_N800_1501_1550    DATA           192KB  08/20/2019 04:45:32        
+                         257  AMTS_OUT_N800_151_200      DATA           192KB  08/18/2019 03:33:04        
+                         258  AMTS_OUT_N800_1551_1600    DATA           192KB  08/20/2019 04:17:03        
+                         259  AMTS_OUT_N800_1601_1650    DATA           192KB  08/20/2019 04:13:01        
+                         260  AMTS_OUT_N800_1651_1700    DATA           192KB  08/20/2019 04:50:03        
+                         261  AMTS_OUT_N800_1701_1750    DATA           192KB  08/20/2019 04:45:30        
+                         262  AMTS_OUT_N800_1751_1800    DATA           192KB  08/20/2019 04:22:11        
+68                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                         263  AMTS_OUT_N800_1801_1850    DATA           192KB  08/20/2019 03:05:49        
+                         264  AMTS_OUT_N800_1851_1900    DATA           192KB  08/20/2019 04:39:07        
+                         265  AMTS_OUT_N800_1901_1950    DATA           192KB  08/20/2019 04:53:45        
+                         266  AMTS_OUT_N800_1951_2000    DATA           192KB  08/20/2019 04:09:48        
+                         267  AMTS_OUT_N800_1_50         DATA           192KB  08/18/2019 03:33:50        
+                         268  AMTS_OUT_N800_201_250      DATA           192KB  08/18/2019 02:44:46        
+                         269  AMTS_OUT_N800_251_300      DATA           192KB  08/20/2019 04:42:24        
+                         270  AMTS_OUT_N800_301_350      DATA           192KB  08/18/2019 02:42:11        
+                         271  AMTS_OUT_N800_351_400      DATA           192KB  08/18/2019 03:32:38        
+                         272  AMTS_OUT_N800_401_450      DATA           192KB  08/20/2019 17:20:03        
+                         273  AMTS_OUT_N800_451_500      DATA           192KB  08/18/2019 02:44:46        
+                         274  AMTS_OUT_N800_501_550      DATA           192KB  08/18/2019 03:32:10        
+                         275  AMTS_OUT_N800_51_100       DATA           192KB  08/18/2019 03:29:01        
+                         276  AMTS_OUT_N800_551_600      DATA           192KB  08/18/2019 03:30:06        
+                         277  AMTS_OUT_N800_601_650      DATA           192KB  08/18/2019 02:49:10        
+                         278  AMTS_OUT_N800_651_700      DATA           192KB  08/18/2019 02:49:06        
+                         279  AMTS_OUT_N800_701_750      DATA           192KB  08/18/2019 03:32:10        
+                         280  AMTS_OUT_N800_751_800      DATA           192KB  08/18/2019 03:34:48        
+                         281  AMTS_OUT_N800_801_850      DATA           192KB  08/18/2019 02:42:26        
+                         282  AMTS_OUT_N800_851_900      DATA           192KB  08/18/2019 02:44:44        
+                         283  AMTS_OUT_N800_901_950      DATA           192KB  08/18/2019 03:33:09        
+                         284  AMTS_OUT_N800_951_1000     DATA           192KB  08/18/2019 03:32:09        
+                         285  AMTS_OUT_N900_1001_1050    DATA           192KB  08/20/2019 08:13:44        
+                         286  AMTS_OUT_N900_101_150      DATA           192KB  08/18/2019 06:08:15        
+                         287  AMTS_OUT_N900_1051_1100    DATA           192KB  08/20/2019 08:23:56        
+                         288  AMTS_OUT_N900_1101_1150    DATA           192KB  08/20/2019 08:24:25        
+                         289  AMTS_OUT_N900_1151_1200    DATA           192KB  08/20/2019 08:04:31        
+                         290  AMTS_OUT_N900_1201_1250    DATA           192KB  08/20/2019 18:11:43        
+                         291  AMTS_OUT_N900_1251_1300    DATA           192KB  08/21/2019 13:19:32        
+                         292  AMTS_OUT_N900_1301_1350    DATA           192KB  08/20/2019 08:24:24        
+                         293  AMTS_OUT_N900_1351_1400    DATA           192KB  08/20/2019 08:04:28        
+                         294  AMTS_OUT_N900_1401_1450    DATA           192KB  08/21/2019 13:21:14        
+                         295  AMTS_OUT_N900_1451_1500    DATA           192KB  08/20/2019 08:23:56        
+                         296  AMTS_OUT_N900_1501_1550    DATA           192KB  08/20/2019 08:26:34        
+                         297  AMTS_OUT_N900_151_200      DATA           192KB  08/18/2019 06:51:40        
+                         298  AMTS_OUT_N900_1551_1600    DATA           192KB  08/20/2019 08:05:27        
+                         299  AMTS_OUT_N900_1601_1650    DATA           192KB  08/20/2019 08:05:44        
+                         300  AMTS_OUT_N900_1651_1700    DATA           192KB  08/20/2019 08:30:58        
+                         301  AMTS_OUT_N900_1701_1750    DATA           192KB  08/20/2019 08:28:05        
+                         302  AMTS_OUT_N900_1751_1800    DATA           192KB  08/20/2019 08:09:57        
+                         303  AMTS_OUT_N900_1801_1850    DATA           192KB  08/20/2019 06:40:21        
+                         304  AMTS_OUT_N900_1851_1900    DATA           192KB  08/20/2019 08:22:48        
+                         305  AMTS_OUT_N900_1901_1950    DATA           192KB  08/20/2019 08:31:58        
+                         306  AMTS_OUT_N900_1951_2000    DATA           192KB  08/20/2019 08:00:26        
+                         307  AMTS_OUT_N900_1_50         DATA           192KB  08/18/2019 06:51:41        
+                         308  AMTS_OUT_N900_201_250      DATA           192KB  08/18/2019 06:12:39        
+                         309  AMTS_OUT_N900_251_300      DATA           192KB  08/20/2019 08:26:35        
+                         310  AMTS_OUT_N900_301_350      DATA           192KB  08/18/2019 06:12:00        
+                         311  AMTS_OUT_N900_351_400      DATA           192KB  08/18/2019 06:51:30        
+                         312  AMTS_OUT_N900_401_450      DATA           192KB  08/20/2019 18:11:43        
+                         313  AMTS_OUT_N900_451_500      DATA           192KB  08/18/2019 06:14:05        
+                         314  AMTS_OUT_N900_501_550      DATA           192KB  08/18/2019 06:51:40        
+                         315  AMTS_OUT_N900_51_100       DATA           192KB  08/18/2019 06:46:41        
+                         316  AMTS_OUT_N900_551_600      DATA           192KB  08/18/2019 06:46:38        
+                         317  AMTS_OUT_N900_601_650      DATA           192KB  08/18/2019 06:16:11        
+69                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                         318  AMTS_OUT_N900_651_700      DATA           192KB  08/18/2019 06:13:58        
+                         319  AMTS_OUT_N900_701_750      DATA           192KB  08/18/2019 06:51:41        
+                         320  AMTS_OUT_N900_751_800      DATA           192KB  08/18/2019 06:52:35        
+                         321  AMTS_OUT_N900_801_850      DATA           192KB  08/18/2019 06:12:42        
+                         322  AMTS_OUT_N900_851_900      DATA           192KB  08/18/2019 06:13:45        
+                         323  AMTS_OUT_N900_901_950      DATA           192KB  08/18/2019 06:51:40        
+                         324  AMTS_OUT_N900_951_1000     DATA           192KB  08/18/2019 06:52:35        
+                         325  CML_AMTS_ETA               DATA           128KB  03/22/2019 16:56:31        
+                         326  CML_AMTS_IPAR              DATA           128KB  03/22/2019 16:56:24        
+                         327  CML_AMTS_LOGL              DATA           128KB  03/22/2019 16:56:31        
+                         328  CML_IPAR                   DATA           128KB  01/18/2019 14:31:09        
+                         329  KNOX                       DATA           128KB  01/18/2019 14:31:04        
+                         330  KNOX_IN                    DATA           128KB  01/18/2019 14:31:04        
+                         331  OUT_PW_I12_1001_1050       DATA           704KB  08/22/2019 01:54:01        
+                         332  OUT_PW_I12_101_150         DATA           704KB  08/22/2019 01:56:48        
+                         333  OUT_PW_I12_1051_1100       DATA           704KB  08/16/2019 21:10:12        
+                         334  OUT_PW_I12_1101_1150       DATA           704KB  08/22/2019 01:57:49        
+                         335  OUT_PW_I12_1151_1200       DATA           704KB  08/16/2019 21:12:08        
+                         336  OUT_PW_I12_1201_1250       DATA           704KB  08/22/2019 01:51:32        
+                         337  OUT_PW_I12_1251_1300       DATA           704KB  08/16/2019 21:10:19        
+                         338  OUT_PW_I12_1301_1350       DATA           704KB  08/22/2019 01:57:51        
+                         339  OUT_PW_I12_1351_1400       DATA           704KB  08/16/2019 21:12:03        
+                         340  OUT_PW_I12_1401_1450       DATA           704KB  08/22/2019 01:51:49        
+                         341  OUT_PW_I12_1451_1500       DATA           704KB  08/16/2019 21:10:23        
+                         342  OUT_PW_I12_1501_1550       DATA           704KB  08/22/2019 01:57:53        
+                         343  OUT_PW_I12_151_200         DATA           704KB  08/16/2019 20:55:30        
+                         344  OUT_PW_I12_1551_1600       DATA           704KB  08/16/2019 21:12:10        
+                         345  OUT_PW_I12_1601_1650       DATA           704KB  08/22/2019 01:51:50        
+                         346  OUT_PW_I12_1651_1700       DATA           704KB  08/16/2019 21:12:16        
+                         347  OUT_PW_I12_1701_1750       DATA           704KB  08/22/2019 01:57:51        
+                         348  OUT_PW_I12_1751_1800       DATA           704KB  08/16/2019 21:11:04        
+                         349  OUT_PW_I12_1801_1850       DATA           704KB  08/22/2019 01:52:13        
+                         350  OUT_PW_I12_1851_1900       DATA           704KB  08/16/2019 21:09:09        
+                         351  OUT_PW_I12_1901_1950       DATA           704KB  08/22/2019 01:57:53        
+                         352  OUT_PW_I12_1951_2000       DATA           704KB  08/16/2019 21:11:05        
+                         353  OUT_PW_I12_1_50            DATA           704KB  08/22/2019 01:52:52        
+                         354  OUT_PW_I12_201_250         DATA           704KB  08/22/2019 01:49:29        
+                         355  OUT_PW_I12_251_300         DATA           704KB  08/16/2019 20:48:33        
+                         356  OUT_PW_I12_301_350         DATA           704KB  08/22/2019 01:49:34        
+                         357  OUT_PW_I12_351_400         DATA           704KB  08/16/2019 21:09:42        
+                         358  OUT_PW_I12_401_450         DATA           704KB  08/22/2019 01:53:08        
+                         359  OUT_PW_I12_451_500         DATA           704KB  08/16/2019 21:09:15        
+                         360  OUT_PW_I12_501_550         DATA           704KB  08/22/2019 01:50:48        
+                         361  OUT_PW_I12_51_100          DATA           704KB  08/16/2019 20:47:38        
+                         362  OUT_PW_I12_551_600         DATA           704KB  08/16/2019 21:11:42        
+                         363  OUT_PW_I12_601_650         DATA           704KB  08/22/2019 01:53:44        
+                         364  OUT_PW_I12_651_700         DATA           704KB  08/16/2019 21:07:08        
+                         365  OUT_PW_I12_701_750         DATA           704KB  08/22/2019 01:51:35        
+                         366  OUT_PW_I12_751_800         DATA           704KB  08/16/2019 21:10:39        
+                         367  OUT_PW_I12_801_850         DATA           704KB  08/22/2019 01:53:44        
+                         368  OUT_PW_I12_851_900         DATA           704KB  08/16/2019 21:10:06        
+                         369  OUT_PW_I12_901_950         DATA           704KB  08/22/2019 01:57:50        
+                         370  OUT_PW_I12_951_1000        DATA           704KB  08/16/2019 21:10:20        
+                         371  OUT_PW_I12_N300_1501_1550  DATA           192KB  08/21/2019 16:46:45        
+                         372  OUT_PW_I12_N300_1901_1950  DATA           192KB  08/21/2019 16:47:05        
+70                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+                                                         Member
+                           #  Name                       Type       File Size  Last Modified
+
+                         373  OUT_PW_I12_N350_1501_1550  DATA           192KB  08/21/2019 18:19:34        
+                         374  OUT_PW_I12_N350_1901_1950  DATA           192KB  08/21/2019 18:19:51        
+                         375  OUT_PW_I12_N400_1301_1350  DATA           192KB  08/21/2019 19:53:14        
+                         376  OUT_PW_I12_N400_1501_1550  DATA           192KB  08/21/2019 19:53:34        
+                         377  OUT_PW_I12_N400_1701_1750  DATA           192KB  08/21/2019 19:53:15        
+                         378  OUT_PW_I12_N400_1901_1950  DATA           192KB  08/21/2019 19:53:52        
+                         379  OUT_PW_I12_N400_901_950    DATA           192KB  08/21/2019 19:52:52        
+                         380  OUT_PW_I12_N450_1301_1350  DATA           192KB  08/21/2019 21:26:57        
+                         381  OUT_PW_I12_N450_1501_1550  DATA           192KB  08/21/2019 21:27:10        
+                         382  OUT_PW_I12_N450_1701_1750  DATA           192KB  08/21/2019 21:26:51        
+                         383  OUT_PW_I12_N450_1901_1950  DATA           192KB  08/21/2019 21:27:26        
+                         384  OUT_PW_I12_N450_901_950    DATA           192KB  08/21/2019 21:26:29        
+                         385  OUT_PW_I12_N500_1101_1150  DATA           192KB  08/21/2019 23:00:17        
+                         386  OUT_PW_I12_N500_1301_1350  DATA           192KB  08/21/2019 23:00:25        
+                         387  OUT_PW_I12_N500_1501_1550  DATA           192KB  08/21/2019 23:00:47        
+                         388  OUT_PW_I12_N500_1701_1750  DATA           192KB  08/21/2019 23:00:29        
+                         389  OUT_PW_I12_N500_1901_1950  DATA           192KB  08/21/2019 23:01:00        
+                         390  OUT_PW_I12_N500_901_950    DATA           192KB  08/21/2019 23:00:08        
+                         391  OUT_PW_I12_N550_1101_1150  DATA           192KB  08/22/2019 00:34:53        
+                         392  OUT_PW_I12_N550_1301_1350  DATA           192KB  08/22/2019 00:35:01        
+                         393  OUT_PW_I12_N550_1501_1550  DATA           192KB  08/22/2019 00:35:31        
+                         394  OUT_PW_I12_N550_1701_1750  DATA           192KB  08/22/2019 00:35:04        
+                         395  OUT_PW_I12_N550_1901_1950  DATA           192KB  08/22/2019 00:35:42        
+                         396  OUT_PW_I12_N550_901_950    DATA           192KB  08/22/2019 00:34:41        
+                         397  OUT_PW_I12_N600_1101_1150  DATA           192KB  08/22/2019 01:57:43        
+                         398  OUT_PW_I12_N600_1301_1350  DATA           192KB  08/22/2019 01:57:43        
+                         399  OUT_PW_I12_N600_1501_1550  DATA           192KB  08/22/2019 01:57:48        
+                         400  OUT_PW_I12_N600_1701_1750  DATA           192KB  08/22/2019 01:57:44        
+                         401  OUT_PW_I12_N600_1901_1950  DATA           192KB  08/22/2019 01:57:49        
+                         402  OUT_PW_I12_N600_901_950    DATA           192KB  08/22/2019 01:57:43        
+                         403  PP_AMTS_CML_LATENT         DATA           128KB  03/22/2019 12:03:56        
+                         404  PP_AMTS_CML_OUTDATA        DATA           128KB  03/22/2019 12:03:56        
+                         405  PP_AMTS_OUTDATA            DATA           128KB  03/22/2019 12:11:52        
+                         406  PP_AMTS_PW_LATENT          DATA           128KB  03/22/2019 16:58:01        
+                         407  PP_AMTS_PW_OUTDATA         DATA           128KB  03/22/2019 16:58:05        
+                         408  PP_CML_LATENT              DATA           128KB  01/18/2019 14:31:52        
+                         409  PP_CML_OUTDATA             DATA           128KB  01/18/2019 14:31:52        
+                         410  PW_AMTS_IPAR               DATA           128KB  03/22/2019 16:56:33        
+3554       	delete
+3555       	out_PW_I&nitems._N300_&from._&to.
+3556       	out_PW_I&nitems._N350_&from._&to.
+3557       	out_PW_I&nitems._N400_&from._&to.
+3558       	out_PW_I&nitems._N450_&from._&to.
+3559       	out_PW_I&nitems._N500_&from._&to.
+3560       	out_PW_I&nitems._N550_&from._&to.
+3561       	out_PW_I&nitems._N600_&from._&to.
+3562       	;
+3563       quit;
+
+NOTE: Deleting FIT.OUT_PW_I12_N300_1901_1950 (memtype=DATA).
+NOTE: Deleting FIT.OUT_PW_I12_N350_1901_1950 (memtype=DATA).
+NOTE: Deleting FIT.OUT_PW_I12_N400_1901_1950 (memtype=DATA).
+NOTE: Deleting FIT.OUT_PW_I12_N450_1901_1950 (memtype=DATA).
+NOTE: Deleting FIT.OUT_PW_I12_N500_1901_1950 (memtype=DATA).
+NOTE: Deleting FIT.OUT_PW_I12_N550_1901_1950 (memtype=DATA).
+71                                                         The SAS System                           15:14 Wednesday, August 21, 2019
+
+NOTE: Deleting FIT.OUT_PW_I12_N600_1901_1950 (memtype=DATA).
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           5.56 seconds
+      cpu time            0.02 seconds
+      
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           10:43:27.20
+      cpu time            1:03:31.77
+      

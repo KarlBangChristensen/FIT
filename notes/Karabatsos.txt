@@ -1,0 +1,11 @@
+The faulty statistical properties of the residual fit statistics
+do not allow either a convenient or a straightforward approach to Rasch fit
+analysis. For instance, given a residual fit statistic, the use of a single
+minimum critical value for misfit diagnosis across different testing situations, 
+where the situations vary in sample and test properties, leads to both the
+overdetection and underdetection of misfit.
+
+
+Karabatsos G. A critique of Rasch residual fit statistics. J Appl Meas. 2000;1(2):152-76.
+PMID: 12029176 
+
