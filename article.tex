@@ -85,7 +85,8 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \email{kach@sund.ku.dk}
 
 \begin{abstract}
-Item fit statistics are very frequently reported as part of Rasch validation studies. Many of them have an unknown asymptotic distribution, and the interpretation of what constitutes 'fit' relies on cut-off values that may not always be appropriate. Extensive simulation studies have shown that it is not possible to provide critical fit range values that will apply in all settings. This is a problem for all Rasch validation studies that relies on proprietary software. We introduce an easy-to-use software application that will help in establishing critical values on a case-by-case basis.\end{abstract}
+Item fit statistics are very frequently reported as part of Rasch validation studies. Many have an unknown asymptotic distribution, and interpreting what constitutes 'fit' relies on cut-off values that may not always be appropriate. Extensive simulation studies have shown that it is not possible to provide critical fit range values that will apply in all settings. This is a problem for all Rasch validation studies that rely on proprietary software. We introduce an easy-to-use software application that will help in establishing critical values on a case-by-case basis.
+\end{abstract}
 
 \keywords{dichotomous Rasch model, item fit, type I error, asymptotic distribution.}
 
@@ -95,12 +96,11 @@ Item fit statistics are very frequently reported as part of Rasch validation stu
 \listoftodos
 %%%%%%%%%%%%
 
-
 \maketitle
 
 \section{Introduction}
 
-Indirect measurement of latent traits is common, across a number of disciplines, such as healthcare, psychology, and education. This indirect measurement takes the form of scales, questionnaires, assessments, or examinations, and in healthcare applications these types of scales are often known as patient reported outcomes measures (PROMs). In all of these types of scales, the measurement principle is the same, in that a number of items are summed to form a total score that represents the latent trait that is being measured. For these measures to be considered useful, they must be validated in some way, and modern test theory (MTT), which encompasses item response theory (IRT) and Rasch measurement theory (RMT), provides the current standard against which they should be validated.
+Indirect measurement of latent traits is common across a number of disciplines, such as healthcare, psychology, and education. This indirect measurement takes the form of scales, questionnaires, assessments, or examinations, and in healthcare applications these types of scales are often known as patient reported outcomes measures (PROMs). In all of these types of scales, the measurement principle is the same, in that a number of items are summed to form a total score that represents the latent trait that is being measured. For these measures to be considered useful, they must be validated in some way, and modern test theory (MTT), which encompasses item response theory (IRT) and Rasch measurement theory (RMT), provides the current standard against which they should be validated.
 
 In most applications of item response theory (IRT) models, evaluation of item fit is an important part of the validation process. Here, we outline a general approach for the evaluation of item fit and illustrate an implementation in R for the Rasch \citeyear{Rasch-1960} model for dichotomous items (RMD).
 
@@ -108,23 +108,25 @@ In the Rasch model, the fit of an item refers to the extent to which an item fun
 
 \emph{Item fit statistics} are a commonly reported feature in Rasch validation studies. Among the wide range of existing item fit statistics, very few are actually used in practice. The most widely used are the fit statistics and the fit of the fit of the fitting and the equipment \cite{wright-Stone-1979,Wright-Masters-1982} reported in the Winsteps software program \cite{Winsteps} and the \emph{fit residual}, \emph{Chi-square} and \emph{ANOVA} item fit statistics reported in the RUMM2030 software program \cite{Andrich-Sheridan-Luo-2010}. 
 
-All of these item fit statistics are based on residuals computed for each person-item interaction. They rely on assumptions about convergence to an asymptotic distribution of the sum of squared Pearson-type standardized residuals. This has been criticized by Karabatsos \cite{Karabatsos-2000}, who provided a critical analysis of the residual fit statistics of the Rasch model and argued:
+All of these item fit statistics are based on residuals computed for each person-item interaction. They rely on assumptions about convergence to an asymptotic distribution of the sum of squared Pearson-type standardised residuals. This has been criticised by Karabatsos \cite{Karabatsos-2000}, who provided a critical analysis of the residual fit statistics of the Rasch model and argued:
 
 \begin{quote}
 `The faulty statistical properties of the residual fit statistics do not allow either a convenient or a straightforward approach to Rasch fit analysis.'
 \end{quote}
 
-More specifically, in mathematical statistics this assumption from linear models is known to be problematic for non-linear models like the Rasch model, because the residuals have a discrete distribution that depends on the observed value. A consequence of this is that each residual has a unique distribution. In this setting, it is not appropriate to claim that standardized residuals are asymptotically normal or chi-squared \cite{Jennings-1986}. 
+More specifically, in mathematical statistics, this assumption from linear models is known to be problematic for non-linear models like the Rasch model, because the residuals have a discrete distribution that depends on the observed value. A consequence of this is that each residual has a unique distribution. In this setting, it is not appropriate to claim that standardised residuals are asymptotically normal or chi-squared \cite{Jennings-1986}. 
 
-Item fit statistics with known asymptotic properties \cite{Christensen-Kreiner-2013,Muller-2020,Johansson2025} exist and have been implemented in R \cite{iarm}, but the use of residual fit statistics with faulty statistical properties persists. Until such a time when item fit statistics with known asymptotic properties are commonly used, it would be helpful for practitioners to have some guidelines for interpreting the residual fit statistics that are produced by the current major Rasch software packages.
+Regarding mean squared (MSQ) item residuals, which should ideally be close to 1.0, commonly cited recommendations vary. Bond and Fox \citeyearpar{Bond-Fox2015} provide rule-of-thumb ranges from 0.8-1.2 to 0.5-1.7, while Linacre \citeyearpar{Linacre2002} suggests 0.5-1.5 as “productive for measurement” (sic). 
 
-One way to do this would be to tabulate critical values for a range of conditions, but even large tables would not be exhaustive. Simple rule-of-thumb critical values for acceptable fit may be inappropriate \cite{Smith-et-al-1998,Wang-Chen-2005}. Critical ranges set using adapted values like $1\pm6/\sqrt{N}$ and $1\pm2/\sqrt{N}$, respectively, are sometimes recommended, as is the use of the Wilson-Hilferty cube-root transformation. However, these do not apply in all settings as illustrated in a Monte Carlo simulation study \cite{Seol2016}.
+Simple rule-of-thumb critical values for acceptable fit may be inappropriate \cite{Smith-et-al-1998,Wang-Chen-2005}. Critical ranges set using adapted values like $1\pm6/\sqrt{N}$ and $1\pm2/\sqrt{N}$, respectively, are sometimes recommended, as is the use of the Wilson-Hilferty cube-root transformation. However, these do not apply in all settings as illustrated in a Monte Carlo simulation study \cite{Seol2016}. One way to do this would be to tabulate critical values for a range of conditions, but even large tables would not be exhaustive. 
 
-Beyond illustrating empirical distributions Mont Carlo methods have also been used directly in calculation of item fit statistics. Stone \citeyear{Stone-2000} described a fit statistic based on Monte Carlo that closely approximates a scaled chi-squared random variable and is similar to Yen's \citeyear{Yen-1981} method. Similar methodology was discussed by \citeA{Su-Sheu-Wang-2007} in the context of Rasch models and \citeNP{Wolfe-2008} describes an implementation in SAS for estimating critical values for, among other things, the item fit statistics produced by the WINSTEPS computer program.\todo{We provide a online interface based on R that will allow users to estimate empirical critical values in any setting.}
+Beyond illustrating empirical distributions Monte Carlo methods have also been used directly in the calculation of item fit statistics. Stone \citeyear{Stone-2000} described a fit statistic based on Monte Carlo that closely approximates a scaled chi-squared random variable and is similar to Yen's \citeyear{Yen-1981} method. Similar methodology was discussed by \citeA{Su-Sheu-Wang-2007} and \citeNP{Wolfe-2008} describes an implementation in SAS for estimating critical values for, among other things, the item fit statistics produced by the WINSTEPS computer program.
 
 Wolfe \citeyear{Wolfe-2013} examined the distributions of outfit and infit statistics under a limited number of conditions, and recommended bootstrapping to get adequate critical values. This motivates the method and implementation developed here.
 
 Hodge and Morgan \citeyear{Hodge-Morgan-2017} examined the stability and appropriateness of the "rule-of-thumb" critical values for infit and outfit (e.g., values within 0.7 to 1.3 indicating fit) in applied settings with small samples, such as professional certification clinical exams. Using data from a high-stakes clinical certification exam (the American Chiropractic Neurology Board OSCE), they compared empirical fit statistics against 250 simulated datasets to assess stability. For both statistics the proportion of values within the 0.7 to 1.3 rule-of-thumb range was substantially larger than the proportion that fell within the simulated confidence interval. Thus, relying solely on fixed critical values (rule-of-thumb) can lead to incorrect conclusions about model-data fit.
+
+Here we describe an online interface based on R that will allow users to estimate empirical critical values in any setting.
 
 
 
@@ -279,7 +281,7 @@ The \texttt{RMDitemfit} Shiny app generates a sampling distribution for differen
 
 \section{Example I: AMTS data}
 
-This example uses the Abbreviated Mental Test Score (AMTS) \cite{hodkinson72} data  containing the responses of 197 persons to the ten questions of the AMTS. The AMTS is used to identify patients with dementia. One point is given for each correct answer, a score of 6 or less suggests that the patient has some mental impairment. 
+This example uses the Abbreviated Mental Test Score (AMTS) \cite{hodkinson72} data containing the responses of 197 persons to the ten questions of the AMTS. The AMTS is used to identify patients with dementia. One point is given for each correct answer, a score of 6 or less suggests that the patient has some mental impairment. 
 
 Initial item analysis has been done in \todo{??}RUMM and resulting estimates are available at \todo{??}, see \todo{Jeg får ikke helt det samme med PCML og WML i R...?}\autoref{tab:amtsfit}. 
 
@@ -352,7 +354,10 @@ We offer a resource to help put observed fit statistics into context in order to
 
 We propose a method for empirically studying the behavior of item fit statistics to see when they produce empirical Type I error rates that are close to the nominal 5\%. Doing so yields critical values that vary depending on conditions like sample size, test length, response format, and targeting. We propose an implementation in R based on parametric bootstrap that can be used for this. 
 
-We further discuss how this implementation is useful for evaluation of item fit and address the issue of multiple testing in the context of the wide variation in number of items across instruments.
+We further discuss how this implementation is useful for the evaluation of item fit and address the issue of multiple testing in the context of the wide variation in number of items across instruments.
+
+Item fit statistics with known asymptotic properties \cite{Christensen-Kreiner-2013,Muller-2020,Johansson2025} exist and have been implemented in R \cite{iarm}, but the use of residual fit statistics with faulty statistical properties persists. Until such a time when item fit statistics with known asymptotic properties are commonly used, it would be helpful for practitioners to have some guidelines for interpreting the residual fit statistics that are produced by the current major Rasch software packages.
+
 
 Even though versions of item fit statistics with known asymptotic properties \cite{Christensen-Kreiner-2013,Muller-2020} have been implemented in R \cite{iarm}, the use of residual fit statistics with faulty statistical properties persists. This is motivation for providing guidelines for interpreting these residual fit statistics.
 
@@ -373,23 +378,9 @@ Even though versions of item fit statistics with known asymptotic properties \ci
 the R package \cite{Mair_2007} use unconditional item fit statistics based on (\ref{Z_uncon}), but item fit statistics with better properties can be obtained by using (\ref{Z_con}) as it uses a distribution of $X_{iv}$ conditional on actual observed values instead of conditional on parameter estimates.
 
 
-Fit statistic estimates are influenced by sample size and rules-of thumb estimates may result in incorrect conclusions about the extent to which the model fits the data (Hodge, Moran)
-
 This paper examines the residual-based fit statistics commonly used in Rasch measurement. In particular, the paper analytically examines some of the theoretical properties of the residual-based fit statistics with a view to establishing the inferences that can be made using these fit statistics. More specifically, the relationships between the distributional properties of the fit statistics and sample size are discussed; some research that erroneously concludes that residual-based fit statistics are unstable is reviewed; and finally, it is analytically illustrated that, for dichotomous items, residual-based fit statistics provide a measure of the relative slope of empirical item characteristic curves. With a clear understanding of the theoretical properties of the fit statistics, the use and limitations of these statistics can be placed in the right light. (Wu, Adams)
 
 
-Computing confidence intervals of item fit statistics in the family of Rasch models using the bootstrap method.
-Su YH, Sheu CF, Wang WC.
-J Appl Meas. 2007;8(2):190-203.
-PMID: 17440261
-
-Using the Bootstrap Method to Evaluate the Critical Range of Misfit for Polytomous Rasch Fit Statistics.
-Seol H.
-Psychol Rep. 2016 Jun;118(3):937-56. doi: 10.1177/0033294116649434. Epub 2016 May 19.
-
-An Examination of Sensitivity to Measurement Error in Rasch Residual-based Fit Statistics.
-Padgett RN, Morgan GB.
-J Appl Meas. 2019;20(4):354-366.
 
 
 Specifically, critical upper values for the outfit have been given as $1+2/\sqrt{N}$ and critical lower values for the infit have been given as $1+6/\sqrt{N}$ \cite{Smith-Schumacker-Bush}.
