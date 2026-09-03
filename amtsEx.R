@@ -16,16 +16,30 @@ it.AMTSc <- it.AMTS[complete.cases(it.AMTS), ]
 idx <- which(rowSums(it.AMTSc) %in% c(0,ncol(it.AMTSc)))
 dat <- it.AMTSc[-idx,]
 
+# RUMM-ish
+
 fit <- RASCHfits(method.item = "PCML",
                  method.person = "WML",
                  dat = dat)
-beta <- fit$beta
+delta <- fit$delta
 theta <- fit$theta
-#names(beta) <- colnames(amts)[4:13]
+names(delta) <- colnames(amts)[4:13]
 
-stats <- RASCHstats(beta, theta, dat)
-outfits <- data.frame(x = stats$Outfit,
-                      y = rep(0, length(stats$Outfit)))
+stats <- RMDstats(delta = delta, theta = theta, dat = dat)
+
+FitResids <- data.frame(x = stats$FitResid, y = rep(0, length(stats$FitResid)))
+
+# winsteps-ish
+
+fit <- RASCHfits(method.item = "JML",
+                 method.person = "JML",
+                 dat = dat)
+delta <- fit$delta
+theta <- fit$theta
+names(delta) <- colnames(amts)[4:13]
+
+outfits <- data.frame(x = stats$Outfit, y = rep(0, length(stats$Outfit)))
+infits <- data.frame(x = stats$Outfit, y = rep(0, length(stats$Outfit)))
 
 write_csv(data.frame(beta = beta), 'amtsbeta.csv')
 write_csv(data.frame(theta = theta), 'amtstheta.csv')
