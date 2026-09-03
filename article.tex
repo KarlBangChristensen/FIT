@@ -99,7 +99,7 @@ P(X_{vi}=x|\theta_v=\theta)
 \end{equation}
 $\beta_1,\ldots,\beta_k$ that can be interpreted as item difficulties.
 
-In the Rasch model, estimates $\hat\beta_1,\ldots,\hat\beta_k$ can be computed in several ways \cite{Christensen-2013,Robitzsch-2021}, but in most applications the choice of estimation procedure is dictated by the choice of software. For R users, the choices are many \cite{Robitzsch-2021}, while for users of proprietary software, there are fewer choices. ConQuest \cite{Adams-Wu-Cloney-Wilson-2020} uses marginal maximum likehood (MML). RUMM \cite{Andrich-Sheridan-Luo} uses pairwise conditional estimation (PCML; \citeNP{Zwinderman-1995,Andrich-Luo-2003}). Winsteps \cite{Winsteps} uses joint maximum likelihood (JML) estimation. This approach was used in IRT for many years until the MML approach became dominant. 
+In the Rasch model, estimates $\hat\beta_1,\ldots,\hat\beta_k$ can be computed in several ways \cite{Christensen-2013,Robitzsch-2021}, but in most applications the choice of estimation procedure is dictated by the choice of software. For R users, the choices are many \cite{Robitzsch-2021}, while for users of proprietary software, there are fewer choices. ConQuest \cite{Adams-Wu-Cloney-Wilson-2020} uses marginal maximum likehood (MML). RUMM \cite{Andrich-Sheridan-Luo-2010} uses pairwise conditional estimation (PCML; \citeNP{Zwinderman-1995,Andrich-Luo-2003}). Winsteps \cite{Winsteps} uses joint maximum likelihood (JML) estimation. This approach was used in IRT for many years until the MML approach became dominant. 
 
 Estimates $\hat\theta_1,\ldots,\hat\theta_N$ of the person parameters $\theta_1,\ldots,\theta_N$ can be computed using maximum likelihood (ML), weighted maximum likelihood (WML; \citeNP{Warm-1989}) and other methods \cite{Kreiner-Christensen-2013}. Again, the choice of estimator is often dictated by the choice of software.
 
@@ -169,7 +169,7 @@ and
 \begin{equation}\label{wilson-hilferty-IN}
 t_{v,i} = \frac{3v_i^{\frac{1}{3}} - 1}{q_i} + \frac{q_i}{3}
 \end{equation}
-yield distributions that approximate a $t$ distribution \cite[Table 5.4a, p.100]{Wright-Masters-1982}. However, this claim rests on the false assumption that the item fit statistics (\ref{infit}) and (\ref{outfit}) follow a $\chi^2$ distribution. Another transformation of the outfit test statistic is reported in the software package RUMM \cite{Andrich-Sheridan-Luo}. This transformation is based on using the ratio $S_i/f$ where
+yield distributions that approximate a $t$ distribution \cite[Table 5.4a, p.100]{Wright-Masters-1982}. However, this claim rests on the false assumption that the item fit statistics (\ref{infit}) and (\ref{outfit}) follow a $\chi^2$ distribution. Another transformation of the outfit test statistic is reported in the software package RUMM \cite{Andrich-Sheridan-Luo-2010}. This transformation is based on using the ratio $S_i/f$ where
 \begin{equation}
 S_i = \sum_{v = 1}^N z_{vi}^2.
 \label{S}
@@ -294,7 +294,7 @@ overdetection and underdetection of misfit.
 
 - Dimitrov, Smith - person fit. In the context of person fit Magis et al adapted a general approach proposed by Snijders (2001) to correct infit and outfit indexes and compared corrected indexes are compared to their classical versions using a simulation study. The correction was found to control Type I errors, while significantly increasing power to detect specific misfitting response patterns gets 
 
-Karabatsos \cite{} provided a critical analysis of these illustrating that the task of Rasch fit analysis is not as simple and straightforward as it appears to be. The faulty statistical properties of the residual fit statistics do not allow either a convenient or a straightforward approach to Rasch fit analysis. For any of these fit statistic, the use of a single minimum critical value for misfit diagnosis across different testing situations, where the situations vary in sample and test properties, leads to both the overdetection and underdetection of misfit. 
+Karabatsos \cite{Karabatsos-2000} provided a critical analysis of these illustrating that the task of Rasch fit analysis is not as simple and straightforward as it appears to be. The faulty statistical properties of the residual fit statistics do not allow either a convenient or a straightforward approach to Rasch fit analysis. For any of these fit statistic, the use of a single minimum critical value for misfit diagnosis across different testing situations, where the situations vary in sample and test properties, leads to both the overdetection and underdetection of misfit. 
 
 - Karabatsos advocated the use of residual-free Rasch fit statistics based on the number of Guttman response errors and for the dichotomous rasch model Kreiner and Christensen studied exact
 tests based on
