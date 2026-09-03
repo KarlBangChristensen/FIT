@@ -234,17 +234,12 @@ For each sample, we estimate the parameters of a parametric IRT model using an e
 PCML \cite{sirt}, CML \cite{erm}, JML  \cite{tam}, and MML \cite{tam}.
 Two estimation methods are available for the person parameter estimation, namely WML and ML \cite{sirt}. 
 
-A key feature of the proposed method is that we can visualize the estimated sampling distribution of an item fit statistic.
-We can produce a density plot of the sampling distribution of an item fit statistic, that is, for a sampled minimum $(L^{(s)})_{s=1,\ldots,B}$ or maximum $(U^{(s)})_{s=1,\ldots,B}$ item fit statistic of choice. This is possible for any the item fit statistics presented above. Percentiles representing critical values can be indicated in the figures. For example, the values 2.5\% and 5\% could be reasonable for the minimum while 95\% and 97.5\% could be reasonable for the maximum. 
-The \texttt{RMDitemfit} Shiny app generates a sampling distribution for different Rasch item fit statistics and visualizes empirical critical values. The app is available free-of-charge (\url{https://shiny.sund.ku.dk/RMDitemfit/}) and can also be found through the \texttt{RASCHplot} package such that users can run the app locally using \texttt{RASCHplot::app("RMDitemfit")}.
+A key feature of the proposed method is that we can visualize the estimated sampling distribution of an item fit statistic. We can produce a density plot of the sampling distribution of an item fit statistic, that is, for a sampled minimum $(L^{(s)})_{s=1,\ldots,B}$ or maximum $(U^{(s)})_{s=1,\ldots,B}$ item fit statistic of choice. This is possible for any the item fit statistics presented above. Percentiles representing critical values can be indicated in the figures. For example, the values 2.5\% and 5\% could be reasonable for the minimum while 95\% and 97.5\% could be reasonable for the maximum. The \texttt{RMDitemfit} Shiny app generates a sampling distribution for different Rasch item fit statistics and visualizes empirical critical values. The app is available free of charge (\url{https://shiny.sund.ku.dk/RMDitemfit/}) and can also be found through the \texttt{RASCHplot} package so that users can run the app locally using \texttt{RASCHplot::app("RMDitemfit")}.
 
 
+\section{Example with dichotomous data: AMTS data}
 
-
-
-\section{Example I: AMTS data}
-
-This example uses the Abbreviated Mental Test Score (AMTS) \cite{hodkinson72} data containing the responses of 197 persons to the ten questions of the AMTS. The AMTS is used to identify patients with dementia. One point is given for each correct answer, a score of 6 or less suggests that the patient has some mental impairment. 
+This example uses the responses of 197 persons to the ten questions of the Abbreviated Mental Test Score \cite[AMTS]{hodkinson72}. The AMTS is used in screening for dementia. One point is given for each correct answer; a score of 6 or less suggests that the patient has some mental impairment. 
 
 Initial item analysis has been done in \todo{??}RUMM and resulting estimates are available at \todo{??}, see \todo{Jeg får ikke helt det samme med PCML og WML i R...?}\autoref{tab:amtsfit}. 
 
@@ -291,14 +286,6 @@ Initial item analysis has been done in \todo{??}RUMM and resulting estimates are
     \end{tabular}
 \end{table}
 
-
-\section{Example II: Knox cube test data}
-
-This example uses the classic Knox Cube test data \cite{wright-Stone-1979}. The Knox Cube Test measures short term memory and consists of 18 dichotomous items. In the data set responses from 35 subjects were considered. For four items all respondents gave the same answer and these items are not considered in what follows. Item fit statistics for the remaining 14 items are considered in what follows.
-
-.. using joint maximum likelihood ..
-
-note that computing five item fit statistics for each of 14 items yields a total of $5\cdot14=70$ instances where the researcher needs to evaluate whether an observed value constitutes an anomaly (whether guided by a $p$-value or not).
 
 \section{Discussion}
 
