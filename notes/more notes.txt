@@ -1,8 +1,0 @@
-INFIT+OUTFIT in SAS (ref) and eRm (ref) 
-
-
-
-DISCUSSION:
-
-
-for the dichotomous rasch model Kreiner and Christensen studied ... exact
