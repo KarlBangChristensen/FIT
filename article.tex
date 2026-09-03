@@ -1,9 +1,14 @@
-\documentclass[Review,sageapa,times]{sagej}
-\renewcommand{\normalsize}{\fontsize{10}{12pt}\selectfont}
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
 
 \usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=CadetBlue,urlcolor=CadetBlue]{hyperref}
-\usepackage{comment,moreverb,url,apacite}
+\usepackage{url,apacite}
 \usepackage{booktabs}
 
 \usepackage{varwidth}
@@ -31,72 +36,28 @@
        }%
 \makeatother  
 
-\usepackage{soul}
-\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
-
-    
-\usepackage{listings}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{blue},
-    %numberstyle=\tiny\color{codegray},               
-    %numbers=left,                    
-    %numbersep=5pt,      
-    numbers=none,
-    stringstyle=\color{red},
-    basicstyle=\ttfamily\small,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,              
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2,
-    frameround=tttt,
-    rulecolor=\color{backcolour}
-}
-\lstset{style=mystyle}
-
-\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
-T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-
-\def\volumeyear{2023}
-
-
-\runninghead{Christensen, Buchardt and Horton}
-
 \title{Empirical critical values for Rasch item fit statistics}
 
-\author{Karl Bang Christensen\affilnum{1}, Ann-Sophie Buchardt\affilnum{2} and Mike Horton\affilnum{3}}
+\author{%
+    Karl Bang Christensen$^{1}$, Ann-Sophie Buchardt$^{2}$, and Mike Horton$^{3}$\\[2ex]
+    \normalsize $^{1}$Section of Biostatistics, Department of Public Health, University of Copenhagen, Denmark\\
+    \normalsize $^{2}$Mary Elizabeth’s Hospital, University Hospital Copenhagen, Rigshospitalet, Denmark\\
+    \normalsize $^{3}$Psychometric Laboratory for Health Sciences, University of Leeds, UK\\[2ex]
+    \normalsize Corresponding author: Karl Bang Christensen, Section of Biostatistics, Department of Public Health, University of Copenhagen, Øster Farimagsgade 5 opg. B, 1353 København K, Denmark. Email: \texttt{kach@sund.ku.dk}
+}
+\date{}
 
-\affiliation{\affilnum{1}Section of Biostatistics, Department of Public Health, University of Copenhagen, Denmark}
+\begin{document}
 
-\affiliation{\affilnum[2]{Mary Elizabeth’s Hospital, University Hospital Copenhagen, Rigshospitalet, Denmark}}
+\maketitle
 
-\affiliation{\affilnum{3}Psychometric Laboratory for Health Sciences, University of Leeds, UK}
-
-\corrauth{Karl Bang Christensen, Section of Biostatistics, Department of Public Health, University of Copenhagen, Øster Farimagsgade 5 opg. B, 1353 København K, Denmark.}
-
-\email{kach@sund.ku.dk}
+\listoftodos
 
 \begin{abstract}
 Item fit statistics are very frequently reported as part of Rasch validation studies. Many have an unknown asymptotic distribution, and interpreting what constitutes 'fit' relies on cut-off values that may not always be appropriate. Extensive simulation studies have shown that it is not possible to provide critical fit range values that will apply in all settings. This is a problem for all Rasch validation studies that rely on proprietary software. We introduce an easy-to-use software application that will help in establishing critical values on a case-by-case basis.
 \end{abstract}
 
-\keywords{dichotomous Rasch model, item fit, type I error, asymptotic distribution.}
-
-\begin{document}
-
-%%%%%%%%%%%%
-\listoftodos
-%%%%%%%%%%%%
-
-\maketitle
+\noindent\textbf{Keywords:} dichotomous Rasch model, item fit, type I error, asymptotic distribution.
 
 \section{Introduction}
 
@@ -172,8 +133,6 @@ Let $z_{vi}$ denote the standardized residuals, that is,
 $$
 z_{vi} = \frac{x_{vi} - E_{vi}}{\sqrt{V_{vi}}}
 $$
-
-%Let $\boldsymbol{D}_v=\textrm{diag}(\hat{\boldsymbol{p}}_v)$.
 
 \subsection{Outfit}
 
@@ -358,9 +317,6 @@ We further discuss how this implementation is useful for the evaluation of item 
 
 Item fit statistics with known asymptotic properties \cite{Christensen-Kreiner-2013,Muller-2020,Johansson2025} exist and have been implemented in R \cite{iarm}, but the use of residual fit statistics with faulty statistical properties persists. Until such a time when item fit statistics with known asymptotic properties are commonly used, it would be helpful for practitioners to have some guidelines for interpreting the residual fit statistics that are produced by the current major Rasch software packages.
 
-
-Even though versions of item fit statistics with known asymptotic properties \cite{Christensen-Kreiner-2013,Muller-2020} have been implemented in R \cite{iarm}, the use of residual fit statistics with faulty statistical properties persists. This is motivation for providing guidelines for interpreting these residual fit statistics.
-
 \todo[inline]{write part about how this paper and application are also relevant to apply to pre-existing research where fit statistics for a scale/PROM have been presented}
 
 \todo[inline]{Missing}
@@ -369,40 +325,9 @@ Even though versions of item fit statistics with known asymptotic properties \ci
 
 \todo[inline]{Deytails about, e.g., \texttt{constraint = "items"} and \texttt{sum0 = TRUE} ?}
 
+\todo[inline]{$\boldsymbol{B}$... and $\boldsymbol{A}$...}
+
 \bibliographystyle{apacite}
 \bibliography{biblio.bib}
 
 \end{document}
-
-
-the R package \cite{Mair_2007} use unconditional item fit statistics based on (\ref{Z_uncon}), but item fit statistics with better properties can be obtained by using (\ref{Z_con}) as it uses a distribution of $X_{iv}$ conditional on actual observed values instead of conditional on parameter estimates.
-
-
-This paper examines the residual-based fit statistics commonly used in Rasch measurement. In particular, the paper analytically examines some of the theoretical properties of the residual-based fit statistics with a view to establishing the inferences that can be made using these fit statistics. More specifically, the relationships between the distributional properties of the fit statistics and sample size are discussed; some research that erroneously concludes that residual-based fit statistics are unstable is reviewed; and finally, it is analytically illustrated that, for dichotomous items, residual-based fit statistics provide a measure of the relative slope of empirical item characteristic curves. With a clear understanding of the theoretical properties of the fit statistics, the use and limitations of these statistics can be placed in the right light. (Wu, Adams)
-
-
-
-
-Specifically, critical upper values for the outfit have been given as $1+2/\sqrt{N}$ and critical lower values for the infit have been given as $1+6/\sqrt{N}$ \cite{Smith-Schumacker-Bush}.
-
-
-
-Bootstrap approaches have been discussed earlier for the the infit and outfit mean square error statistics available in winsteps \cite{Su-Sheu-Wang2007} and a bootstrap approach that requires the combined us of SAS and WINSTEPS has been proposed \cite{Wolfe2008}
-
-The results showed that rule-of-thumb critical values for assessing the magnitude of misfit were not applicable because the infit and outfit mean square error statistics showed different magnitudes of variability over testing conditions
-
-
-
-
-general parametric IRT model defined as
-\begin{equation}
-\label{IRTmodel}
-    P(\boldsymbol{X}_v=\boldsymbol{x} \mid \theta_v = \theta)
-    =\exp(\boldsymbol{x}^{T}(\boldsymbol{B}\theta+\boldsymbol{A}\boldsymbol{\eta}))K(\theta,\boldsymbol{\eta})^{-1},
-\end{equation}
-where $\boldsymbol{\eta}$ is a vector of item parameters and 
-$$
-K(\theta,\boldsymbol{\eta})=\sum_{\boldsymbol{z}\in\Omega}\exp(\boldsymbol{z}^{T}(\boldsymbol{B}\theta+\boldsymbol{A}\boldsymbol{\eta}))
-$$
-is a normalizing constant calculated by summation over the set, $\Omega$, of all possible response vectors \cite{Adams-Wu-2007}. 
-\todo[inline]{$\boldsymbol{B}$... and $\boldsymbol{A}$...}.
