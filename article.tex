@@ -81,19 +81,13 @@ All of these item fit statistics are based on residuals computed for each person
 
 More specifically, in mathematical statistics, this assumption from linear models is known to be problematic for non-linear models like the Rasch model, because the residuals have a discrete distribution that depends on the observed value. A consequence of this is that each residual has a unique distribution. In this setting, it is not appropriate to claim that standardised residuals are asymptotically normal or chi-squared \cite{Jennings-1986}. 
 
-Regarding mean squared (MSQ) item residuals, which should ideally be close to 1.0, commonly cited recommendations vary. Bond and Fox \citeyear{Bond-Fox2015} provide rule-of-thumb ranges from 0.8-1.2 to 0.5-1.7, while Linacre \citeyear{Linacre2002} suggests 0.5-1.5 as “productive for measurement” (sic). 
+Regarding mean squared item residuals, which should ideally be close to 1.0, commonly cited recommendations vary. Bond and Fox \citeyear{Bond-Fox2015} provide rule-of-thumb ranges from 0.8-1.2 to 0.5-1.7, while Linacre \citeyear{Linacre2002} suggests 0.5-1.5 as “productive for measurement” (sic). 
 
-Simple rule-of-thumb critical values for acceptable fit may be inappropriate \cite{Smith-et-al-1998,Wang-Chen-2005}. Critical ranges set using adapted values like $1\pm6/\sqrt{N}$ and $1\pm2/\sqrt{N}$, respectively, are sometimes recommended, as is the use of the Wilson-Hilferty cube-root transformation. However, these do not apply in all settings as illustrated in a Monte Carlo simulation study \cite{Seol2016}. One way to do this would be to tabulate critical values for a range of conditions, but even large tables would not be exhaustive. 
+Simple rule-of-thumb critical values for acceptable fit may be inappropriate \cite{Smith-et-al-1998,Wang-Chen-2005}. Critical ranges set using adapted values like $1\pm6/\sqrt{N}$ and $1\pm2/\sqrt{N}$, respectively, are sometimes recommended, as is the use of the Wilson-Hilferty cube-root transformation. However, these do not apply in all settings as illustrated in Monte Carlo simulation studies. Specifically, a common critical range for MNSQs to screen misfitting items fails because of the variability of these across sample sizes. Further, maximum and minimum values were not symmetric around unity, for the outfit with sample sizes around 200, the maximum value could be as large as 2.5. Therefore, commonly used critical ranges were too harsh \cite{Wang-Chen-2005,Seol2016}. Hodge and Morgan \citeyear{Hodge-Morgan-2017} evaluated the stability of infit and outfit "rule-of-thumb" critical values (e.g., 0.7-1.3) in a high-stakes clinical certification exam. Comparing empirical fit statistics with 250 simulated datasets, they found that substantially more values fell within the rule-of-thumb range than within the simulated confidence intervals. This suggests that relying solely on fixed critical values can lead to incorrect conclusions about model-data fit.
 
-Beyond illustrating empirical distributions Monte Carlo methods have also been used directly in the calculation of item fit statistics. Stone \citeyear{Stone-2000} described a fit statistic based on Monte Carlo that closely approximates a scaled chi-squared random variable and is similar to Yen's \citeyear{Yen-1981} method. Similar methodology was discussed by \citeA{Su-Sheu-Wang-2007} and \citeNP{Wolfe-2008} describes an implementation in SAS for estimating critical values for, among other things, the item fit statistics produced by the WINSTEPS computer program.
+Beyond illustrating empirical distributions, Monte Carlo methods have also been used directly in the calculation of item fit statistics. Stone \citeyear{Stone-2000} described a fit statistic based on Monte Carlo that closely approximates a scaled chi-squared random variable and is similar to Yen's \citeyear{Yen-1981} method. Similar methodology was discussed by \citeA{Su-Sheu-Wang-2007} and Wolfe \citeyearpar{Wolfe-2008} describes an implementation in SAS for estimating critical values for, among other things, the item fit statistics produced by the WINSTEPS computer program.
 
-Wolfe \citeyear{Wolfe-2013} examined the distributions of outfit and infit statistics under a limited number of conditions, and recommended bootstrapping to get adequate critical values. This motivates the method and implementation developed here.
-
-Hodge and Morgan \citeyear{Hodge-Morgan-2017} examined the stability and appropriateness of the "rule-of-thumb" critical values for infit and outfit (e.g., values within 0.7 to 1.3 indicating fit) in applied settings with small samples, such as professional certification clinical exams. Using data from a high-stakes clinical certification exam (the American Chiropractic Neurology Board OSCE), they compared empirical fit statistics against 250 simulated datasets to assess stability. For both statistics the proportion of values within the 0.7 to 1.3 rule-of-thumb range was substantially larger than the proportion that fell within the simulated confidence interval. Thus, relying solely on fixed critical values (rule-of-thumb) can lead to incorrect conclusions about model-data fit.
-
-We outline a general approach for the evaluation of item fit and illustrate an implementation in R for the Rasch \citeyear{Rasch-1960} model for dichotomous items (RMD).
-
-
+Wolfe \citeyear{Wolfe-2013} examined the distributions of outfit and infit statistics under a limited number of conditions, and recommended bootstrapping to get adequate critical values. This motivates the method and implementation developed here: Instead of tabulating critical values for a wide range of conditions we outline a general approach for the evaluation of item fit and illustrate an implementation in R for the Rasch \citeyear{Rasch-1960} model for dichotomous items (RMD).
 
 \section{Statistical assumptions and item fit statistics}
 
@@ -292,6 +286,22 @@ Initial item analysis has been done in \todo{??}RUMM and resulting estimates are
 - Here we describe an online interface based on R that will allow users to estimate empirical critical values in any setting.
 
 - Confidence intervals generated via simulation provide a more nuanced and accurate assessment of item fit, accommodating for sample size and alignment between item difficulty and person ability.
+
+- The use of a single critical value for misfit diagnosis for item fit statistics based on residuals will, across different conditions, lead to both the
+overdetection and underdetection of misfit.
+
+- Wolfe (2013): explains how three implementations of the bootstrap procedure works
+
+- Dimitrov, Smith - person fit. In the context of person fit Magis et al adapted a general approach proposed by Snijders (2001) to correct infit and outfit indexes and compared corrected indexes are compared to their classical versions using a simulation study. The correction was found to control Type I errors, while significantly increasing power to detect specific misfitting response patterns gets 
+
+Karabatsos \cite{} provided a critical analysis of these illustrating that the task of Rasch fit analysis is not as simple and straightforward as it appears to be. The faulty statistical properties of the residual fit statistics do not allow either a convenient or a straightforward approach to Rasch fit analysis. For any of these fit statistic, the use of a single minimum critical value for misfit diagnosis across different testing situations, where the situations vary in sample and test properties, leads to both the overdetection and underdetection of misfit. 
+
+- Karabatsos advocated the use of residual-free Rasch fit statistics based on the number of Guttman response errors and for the dichotomous rasch model Kreiner and Christensen studied exact
+tests based on
+
+- The empirical standard deviations of the infit and outfit mean squares become smaller as the sample size becomes larger
+
+- Simulation studies have shown means of t-transformed infit and outfit item fit statistics to be very close to zero, but to have standard deviations considerably smaller than one. Moreover, standard deviations of these became smaller as the number of items increased. 
 
 We offer a resource to help put observed fit statistics into context in order to determine whether an apparent anomaly is statistically relevant.
 
