@@ -61,11 +61,11 @@ Item fit statistics are very frequently reported as part of Rasch validation stu
 
 \section{Introduction}
 
-Indirect measurement of latent traits is common across a number of disciplines, such as healthcare, psychology, and education. This indirect measurement takes the form of scales, questionnaires, assessments, or examinations, and in healthcare applications these types of scales are often known as patient reported outcomes measures (PROMs). In all of these types of scales, the measurement principle is the same, in that a number of items are summed to form a total score that represents the latent trait that is being measured. For these measures to be considered useful, they must be validated in some way, and modern test theory (MTT), which encompasses item response theory (IRT) and Rasch measurement theory (RMT), provides the current standard against which they should be validated.
+Item fit statistics are arguably the most relevant and certainly the most commonly reported feature in Rasch validation studies. A very wide range of item fit statistics have been developed, but very few are used in practice. The most widely used are (i) the infit and outfit mean square item fit statistics \cite{wright-stone,wright-masters} that are reported in Winsteps \cite{winsteps} and (ii) the fit residual, Chi-square, and ANOVA item fit statistics in RUMM2030 \cite{RUMM}. All of these are based on residuals and rely on assumptions about convergence to an asymptotic distribution of the sum of squared Pearson-type standardized residuals. However, this assumption is problematic \cite{jennings1986}. 
 
-In most applications of item response theory (IRT) models, evaluation of item fit is an important part of the validation process. Here, we outline a general approach for the evaluation of item fit and illustrate an implementation in R for the Rasch \citeyear{Rasch-1960} model for dichotomous items (RMD).
+We study the behavior of the most widely used item fit statistics to see when they produce empirical Type I error rates that are close to the nominal 5\%. This leads us to recommendations regarding reasonable critical values. We do so in a way that reflects the way most users approach evaluation of item fit, i.e.\ looking at the evidence for all items and then evaluating if the item that has the worst fit is a cause for concern when taking the total number of items into account. Thus, we provide guidelines for evaluation of item fit that addresses the issue of multiple testing. 
 
-In the Rasch model, the fit of an item refers to the extent to which an item functions as intended within the context of the overall measurement scale. Many methods are used to evaluate item fit. These include: (i) infit and outfit statistics based on the deviation of observed responses from the expected values under the Rasch model, (ii) chi-square tests that use these observed and expected responses to calculate a $p$-value, (iii) Standardized residuals where the standardization means that they can be directly compared across items. Furthermore, graphical methods have always been an important part of Rasch analysis: Visual inspection of plots of the observed responses against the expected responses or other fit statistics can also be used to identify items with poor fit.
+In the Rasch model, the fit of an item refers to the extent to which an item functions as intended within the context of the overall measurement scale. Sometimes this evaluation entails calculation of a $p$-value, (iii) Standardized residuals where the standardization means that they can be directly compared across items. Furthermore, graphical methods have always been an important part of Rasch analysis: Visual inspection of plots of the observed responses against the expected responses or other fit statistics can also be used to identify items with poor fit.
 
 \emph{Item fit statistics} are a commonly reported feature in Rasch validation studies. Among the wide range of existing item fit statistics, very few are actually used in practice. The most widely used are the fit statistics and the fit of the fit of the fitting and the equipment \cite{wright-Stone-1979,Wright-Masters-1982} reported in the Winsteps software program \cite{Winsteps} and the \emph{fit residual}, \emph{Chi-square} and \emph{ANOVA} item fit statistics reported in the RUMM2030 software program \cite{Andrich-Sheridan-Luo-2010}. 
 
@@ -87,7 +87,7 @@ Wolfe \citeyear{Wolfe-2013} examined the distributions of outfit and infit stati
 
 Hodge and Morgan \citeyear{Hodge-Morgan-2017} examined the stability and appropriateness of the "rule-of-thumb" critical values for infit and outfit (e.g., values within 0.7 to 1.3 indicating fit) in applied settings with small samples, such as professional certification clinical exams. Using data from a high-stakes clinical certification exam (the American Chiropractic Neurology Board OSCE), they compared empirical fit statistics against 250 simulated datasets to assess stability. For both statistics the proportion of values within the 0.7 to 1.3 rule-of-thumb range was substantially larger than the proportion that fell within the simulated confidence interval. Thus, relying solely on fixed critical values (rule-of-thumb) can lead to incorrect conclusions about model-data fit.
 
-Here we describe an online interface based on R that will allow users to estimate empirical critical values in any setting.
+We outline a general approach for the evaluation of item fit and illustrate an implementation in R for the Rasch \citeyear{Rasch-1960} model for dichotomous items (RMD).
 
 
 
@@ -307,7 +307,9 @@ note that computing five item fit statistics for each of 14 items yields a total
 
 \section{Discussion}
 
-Confidence intervals generated via simulation provide a more nuanced and accurate assessment of item fit, accommodating for sample size and alignment between item difficulty and person ability.​
+- Here we describe an online interface based on R that will allow users to estimate empirical critical values in any setting.
+
+- Confidence intervals generated via simulation provide a more nuanced and accurate assessment of item fit, accommodating for sample size and alignment between item difficulty and person ability.​
 
 We offer a resource to help put observed fit statistics into context in order to determine whether an apparent anomaly is statistically relevant.
 
