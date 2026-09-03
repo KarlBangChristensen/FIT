@@ -39,7 +39,7 @@ theta <- fit$theta
 names(delta) <- colnames(amts)[4:13]
 
 outfits <- data.frame(x = stats$Outfit, y = rep(0, length(stats$Outfit)))
-infits <- data.frame(x = stats$Outfit, y = rep(0, length(stats$Outfit)))
+infits <- data.frame(x = stats$Infit, y = rep(0, length(stats$Infit)))
 
 write_csv(data.frame(beta = beta), 'amtsbeta.csv')
 write_csv(data.frame(theta = theta), 'amtstheta.csv')
