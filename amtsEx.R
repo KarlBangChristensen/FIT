@@ -117,3 +117,8 @@ p_infit_max_jml <- plot(sim_jml, type = "Infit", extreme = "max", colours = lege
 ggsave("amtsInfitMax.pdf", plot = p_infit_max_jml, width = 11, height = 8, units = "cm")
 ggpubr::ggarrange(p_infit_min_jml, p_infit_max_jml, legend = "bottom", common.legend = TRUE)
 ggsave("amtsInfit.pdf", width = 11, height = 8, units = "cm")
+
+
+
+
+
