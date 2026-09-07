@@ -33,7 +33,7 @@ sim_pcml <- rRMDstats(delta = delta_pcml,
                       theta = theta_pcml,
                       method.item = "PCML",
                       method.person = "WML",
-                      B = 1000)
+                      B = 2000)
 
 save(sim_pcml, file = "amtsstats_pcml.RData")
 
@@ -86,7 +86,7 @@ sim_jml <- rRMDstats(delta = delta_jml,
                      theta = theta_jml,
                      method.item = "JML",
                      method.person = "MLE",
-                     B = 1000)
+                     B = 2000)
 
 save(sim_jml, file = "amtsstats_jml.RData")
 
