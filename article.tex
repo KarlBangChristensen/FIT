@@ -231,11 +231,11 @@ A key feature of the proposed method is that we can visualize the estimated samp
 
 \section{Example with dichotomous data: AMTS data}
 
-This example uses the responses of 197 persons to the ten questions of the Abbreviated Mental Test Score \cite[AMTS]{hodkinson72}. One point is given for each correct answer; a score of 6 or less suggests that the patient has some mental impairment. Table \ref{tab:amtsfit} agrees with an earlier analysis using comparison of observed and expected item-restscore correlations \cite{Christensen-Kreiner-2013} and graphical evaluation of item fit \cite{Buchardt2023VisualizingR}.
+This example uses the responses of 197 persons to the ten questions of the Abbreviated Mental Test Score \cite[AMTS]{hodkinson72}. One point is given for each correct answer; a score of 6 or less suggests that the patient has some mental impairment. Table \ref{tab:amtsfit} shows item locations and three item-fit evaluations
 
 \begin{table}[h!]
     \centering
-    \caption{Item locations and three evaluations of item fit for the abbreviated mental test score.} \label{tab:amtsfit}
+    \caption{Item locations and three item-fit evaluations for the abbreviated mental test score.} \label{tab:amtsfit}
     \begin{tabular}{lrrrrr}
     \\
     \toprule
@@ -256,8 +256,24 @@ This example uses the responses of 197 persons to the ten questions of the Abbre
     \end{tabular}
 \end{table}
 
-\autoref{fig:amtsInfitMinMax} shows \todo[inline]{???}
+For all three fit statistics, the value is seen to be smallest for the item 'Month' and largest for the item 'Countbac'. Thus, the three values are in agreement (and with respect to the item 'Month', they also agree with an earlier reported analysis using comparison of observed and expected item-restscore correlations \cite{Christensen-Kreiner-2013} and graphical evaluation of item fit \cite{Buchardt2023VisualizingR}). 
 
+\subsection{FitResid}
+
+Conventional rules-of-thumb would flag the item 'Month' as an anomaly. The question is whether the observed values actually constitute an anomaly. To answer this question, we rely on the approach outlined in the methods section. Minimum values below -2.65 occurred in 16\% of the simulated data sets and thus the observed value does not constitute evidence against the Rasch model. On the other hand maximum values above 2.30 occurred only in 1\% of the simulated data sets and for thus this observed value could be interpreted as evidence against the Rasch model. Figure \autoref{fig:amtsFitResidMinMax} shows the empirical distribution of the smallest (left panel) and largest (right panel) values of the ten FitResid values computed in each of $B=2000$ simulated data sets. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics{amtsFitResid.pdf}
+    \caption{Empirical critical values for minimum (left) and maximum (right) item fit residual values for the AMTS.}
+    \label{fig:amtsFitResidMinMax}
+\end{figure}
+
+Minimum values below -3.47 occur in 2.5\% of the simulated data sets and that minimum values below -3.19 occur in 5\% of the simulated data sets. Similarly, maximum values above 2.13 occur in 2.5\% of the simulated data sets and maximum values above 1.89 occur in 5\% of the simulated data sets.
+
+\subsection{Outfit}
+
+Minimum values below 0.57 occurred in 57\% of the simulated data sets and thus the observed value does not constitute evidence against the Rasch model. Maximum values above 1.34 occurred only in 4\% of the simulated data sets, so this observed value could be interpreted as mild evidence against the Rasch model. Figure \autoref{fig:amtsOutfitMinMax} shows the empirical distribution of the smallest (left panel) and largest (right panel) values computed in each of $B=2000$ simulated data sets. 
 
 \begin{figure}
     \centering
@@ -266,7 +282,11 @@ This example uses the responses of 197 persons to the ten questions of the Abbre
     \label{fig:amtsOutfitMinMax}
 \end{figure}
 
+Again, the values that occur less than 5\% of the times and values that occur less than 2.5\% of the times are indicated.
 
+\subsection{Infit}
+
+Minimum values below 0.66 occurred in only 1\% of the simulated data sets and thus the observed constitutes evidence against the Rasch model. Maximum values above 1.34 occurred only in 3\% of the simulated data sets, so this observed value could be interpreted as mild evidence against the Rasch model. Figure \autoref{fig:amtsInfitMinMax} shows the empirical distribution of the smallest (left panel) and largest (right panel) values computed in each of $B=2000$ simulated data sets. 
 
 \begin{figure}
     \centering
@@ -275,7 +295,7 @@ This example uses the responses of 197 persons to the ten questions of the Abbre
     \label{fig:amtsInfitMinMax}
 \end{figure}
 
-
+Again, the values that occur less than 5\% of the times and values that occur less than 2.5\% of the times are indicated.
 
 \section{Discussion}
 
@@ -311,14 +331,6 @@ Rost and von Davier \citeyear{Rost-vonDavier-1994} proposed the use of a probabi
 
 
 \todo[inline]{write part about how this paper and application are also relevant to apply to pre-existing research where fit statistics for a scale/PROM have been presented}
-
-\todo[inline]{Missing}
-
-\todo[inline]{Extreme scores}
-
-\todo[inline]{Deytails about, e.g., \texttt{constraint = "items"} and \texttt{sum0 = TRUE} ?}
-
-\todo[inline]{$\boldsymbol{B}$... and $\boldsymbol{A}$...}
 
 \bibliographystyle{apacite}
 \bibliography{biblio.bib}
