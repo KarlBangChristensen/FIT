@@ -95,16 +95,14 @@ Let $X_{vi} \in \{0,1\}$ denote a dichotomous random variable representing a res
 \begin{equation}
 \label{RMD}
 P(X_{vi}=x|\theta_v=\theta)
-=\frac{\exp(x(\theta-\delta))}{1 + \exp(x(\theta-\delta))}.
+=\frac{\exp(x(\theta-\delta_i))}{1 + \exp(x(\theta-\delta_i))}.
 \end{equation}
-$\delta_1,\ldots,\delta_k$ that can be interpreted as item difficulties.
 
-In the Rasch model, estimates $\hat\delta_1,\ldots,\hat\delta_k$ can be computed in several ways \cite{Christensen-2013,Robitzsch-2021}, but in most applications the choice of estimation procedure is dictated by the choice of software. For R users, the choices are many \cite{Robitzsch-2021}, while for users of proprietary software, there are fewer choices. ConQuest \cite{Adams-Wu-Cloney-Wilson-2020} uses marginal maximum likehood (MML). RUMM \cite{Andrich-Sheridan-Luo-2010} uses pairwise conditional estimation (PCML; \citeNP{Zwinderman-1995,Andrich-Luo-2003}). Winsteps \cite{Winsteps} uses joint maximum likelihood (JML) estimation. This approach was used in IRT for many years until the MML approach became dominant. 
+In the Rasch model the parameters $\delta_1,\ldots,\delta_k$ that can be interpreted as item difficulties and estimates $\hat\delta_1,\ldots,\hat\delta_k$ can be computed in several ways \cite{Christensen-2013,Robitzsch-2021}, but typically the choice of estimation procedure is dictated by the choice of software. For users of proprietary software this means this means: marginal maximum likehood (MML) estimation for ConQuest \cite{Adams-Wu-Cloney-Wilson-2020} users; pairwise conditional estimation (PCML; \citeNP{Zwinderman-1995,Andrich-Luo-2003}) for RUMM \cite{Andrich-Sheridan-Luo-2010} users; joint maximum likelihood (JML) estimation for Winsteps \cite{Winsteps} users. 
 
 Estimates $\hat\theta_1,\ldots,\hat\theta_N$ of the person parameters $\theta_1,\ldots,\theta_N$ can be computed using maximum likelihood (ML), weighted maximum likelihood (WML; \citeNP{Warm-1989}) and other methods \cite{Kreiner-Christensen-2013}. Again, the choice of estimator is often dictated by the choice of software.
 
-
-The RMD is \eqref{RMD} is sometimes supplemented by an assumption about the distribution of the latent variable in the population. After observing a value $x$ we can use \eqref{RMD} to estimate the item parameters and the person parameters. The issue of model fit then boils down to whether or not the observed data $x_{vi}$ is consistent with the data generating mechanism
+After observing data $(x_{vi})$ and estimating item and person parameters, the issue of model fit boils down to whether or not the observed data is consistent with the data generating mechanism
 
 \begin{equation}
 \label{IRThat}
@@ -233,36 +231,13 @@ A key feature of the proposed method is that we can visualize the estimated samp
 
 \section{Example with dichotomous data: AMTS data}
 
-This example uses the responses of 197 persons to the ten questions of the Abbreviated Mental Test Score \cite[AMTS]{hodkinson72}. The AMTS is used in screening for dementia. One point is given for each correct answer; a score of 6 or less suggests that the patient has some mental impairment. 
+This example uses the responses of 197 persons to the ten questions of the Abbreviated Mental Test Score \cite[AMTS]{hodkinson72}. One point is given for each correct answer; a score of 6 or less suggests that the patient has some mental impairment. Table \ref{tab:amtsfit} agrees with an earlier analysis using comparison of observed and expected item-restscore correlations \cite{Christensen-Kreiner-2013} and graphical evaluation of item fit \cite{Buchardt2023VisualizingR}.
 
-Initial item analysis has been done in \todo{??}RUMM and resulting estimates are available at \todo{??}, see \todo{Jeg får ikke helt det samme med PCML og WML i R...?}\autoref{tab:amtsfit}. 
-
-Table \ref{tab:amtsfit} agrees with an earlier analysis using item-restscore and graphical evaluation of item fit \cite{Buchardt2023VisualizingR}.
-
-
-\begin{figure}
+\begin{table}[h!]
     \centering
-    \includegraphics{amtsOutfit.pdf}
-    \caption{Empirical critical values for minimum (left) and maximum (right) outfit item fit statistics for the AMTS.}
-    \label{fig:amtsOutfitMinMax}
-\end{figure}
-
-\autoref{fig:amtsOutfitMinMax} shows \todo[inline]{???}
-\todo{Skal vi vise infit og/eller outfit?}
-
-\autoref{fig:amtsInfitMinMax} shows \todo[inline]{???}
-
-\begin{figure}
-    \centering
-    \includegraphics{amtsInfit.pdf}
-    \caption{Empirical critical values for minimum (left) and maximum (right) infit item fit statistics for the AMTS.}
-    \label{fig:amtsInfitMinMax}
-\end{figure}
-
-\begin{table}[b!]
-    \centering
-    \caption{} \label{tab:amtsfit}
+    \caption{Item locations and three evaluations of item fit for the abbreviated mental test score.} \label{tab:amtsfit}
     \begin{tabular}{lrrrrr}
+    \\
     \toprule
              &          &    & RUMM     & \multicolumn{2}{c}{Winsteps}\\
     Item     & $\delta$ & SE & FitResid & Outfit & Infit\\
@@ -280,6 +255,26 @@ Table \ref{tab:amtsfit} agrees with an earlier analysis using item-restscore and
     \bottomrule
     \end{tabular}
 \end{table}
+
+\autoref{fig:amtsInfitMinMax} shows \todo[inline]{???}
+
+
+\begin{figure}
+    \centering
+    \includegraphics{amtsOutfit.pdf}
+    \caption{Empirical critical values for minimum (left) and maximum (right) outfit item fit statistics for the AMTS.}
+    \label{fig:amtsOutfitMinMax}
+\end{figure}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics{amtsInfit.pdf}
+    \caption{Empirical critical values for minimum (left) and maximum (right) infit item fit statistics for the AMTS.}
+    \label{fig:amtsInfitMinMax}
+\end{figure}
+
 
 
 \section{Discussion}
