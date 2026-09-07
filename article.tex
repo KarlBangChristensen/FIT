@@ -95,11 +95,11 @@ Let $X_{vi} \in \{0,1\}$ denote a dichotomous random variable representing a res
 \begin{equation}
 \label{RMD}
 P(X_{vi}=x|\theta_v=\theta)
-=\frac{\exp(x(\theta-\beta))}{1 + \exp(x(\theta-\beta))}.
+=\frac{\exp(x(\theta-\delta))}{1 + \exp(x(\theta-\delta))}.
 \end{equation}
-$\beta_1,\ldots,\beta_k$ that can be interpreted as item difficulties.
+$\delta_1,\ldots,\delta_k$ that can be interpreted as item difficulties.
 
-In the Rasch model, estimates $\hat\beta_1,\ldots,\hat\beta_k$ can be computed in several ways \cite{Christensen-2013,Robitzsch-2021}, but in most applications the choice of estimation procedure is dictated by the choice of software. For R users, the choices are many \cite{Robitzsch-2021}, while for users of proprietary software, there are fewer choices. ConQuest \cite{Adams-Wu-Cloney-Wilson-2020} uses marginal maximum likehood (MML). RUMM \cite{Andrich-Sheridan-Luo-2010} uses pairwise conditional estimation (PCML; \citeNP{Zwinderman-1995,Andrich-Luo-2003}). Winsteps \cite{Winsteps} uses joint maximum likelihood (JML) estimation. This approach was used in IRT for many years until the MML approach became dominant. 
+In the Rasch model, estimates $\hat\delta_1,\ldots,\hat\delta_k$ can be computed in several ways \cite{Christensen-2013,Robitzsch-2021}, but in most applications the choice of estimation procedure is dictated by the choice of software. For R users, the choices are many \cite{Robitzsch-2021}, while for users of proprietary software, there are fewer choices. ConQuest \cite{Adams-Wu-Cloney-Wilson-2020} uses marginal maximum likehood (MML). RUMM \cite{Andrich-Sheridan-Luo-2010} uses pairwise conditional estimation (PCML; \citeNP{Zwinderman-1995,Andrich-Luo-2003}). Winsteps \cite{Winsteps} uses joint maximum likelihood (JML) estimation. This approach was used in IRT for many years until the MML approach became dominant. 
 
 Estimates $\hat\theta_1,\ldots,\hat\theta_N$ of the person parameters $\theta_1,\ldots,\theta_N$ can be computed using maximum likelihood (ML), weighted maximum likelihood (WML; \citeNP{Warm-1989}) and other methods \cite{Kreiner-Christensen-2013}. Again, the choice of estimator is often dictated by the choice of software.
 
@@ -201,9 +201,9 @@ Published Rasch validation studies will very often report an item fit statistic 
 Inspired by earlier work \cite{Stone-2000,Su-Sheu-Wang-2007,Wolfe-2008,Hodge-Morgan-2017} we propose the following general approach:
 
 \begin{enumerate}
-\item Given estimates $\beta_1,\ldots,\beta_K$ and $\theta_1,\ldots,\theta_N$ simulate $B$ data sets using the data generating mechanism (\ref{IRThat}) and, for each of these:
+\item Given estimates $\delta_1,\ldots,\delta_K$ and $\theta_1,\ldots,\theta_N$ simulate $B$ data sets using the data generating mechanism (\ref{IRThat}) and, for each of these:
 \begin{enumerate}
-\item Estimate $\beta_1^{(s)},\ldots,\beta_K^{(s)}$ and $\theta_1^{(s)},\ldots,\theta_N^{(s)}$ using an estimation method of choice;
+\item Estimate $\delta_1^{(s)},\ldots,\delta_K^{(s)}$ and $\theta_1^{(s)},\ldots,\theta_N^{(s)}$ using an estimation method of choice;
 \item compute the item fit statistic of choice $Z_i^{(s)}$ for each item;
 \item compute $L^{(s)}=\min\{Z_i^{(s)}:i=1,\ldots,K\}$; and
 \item compute $U^{(s)}=\max\{Z_i^{(s)}:i=1,\ldots,K\}$.
@@ -214,13 +214,13 @@ Inspired by earlier work \cite{Stone-2000,Su-Sheu-Wang-2007,Wolfe-2008,Hodge-Mor
 This approach applies to any estimation method and, for this reason, can be used to study the empirical distribution of item fit statistics from proprietary software. In this paper we present a software implementation that generates these empirical distributions. It is part of the \texttt{RASCHplot} package which is available as a free package for the R software environment \cite{R}. In addition, we have supplemented the R code with a shiny app \cite{shiny} to provide a web interface. Shiny is an open source R package that provides an elegant and powerful web framework for building web applications using R \cite{beeley2013}. The ‘app’ can be interacted with by entering data, running functions with user-specified settings to plot figures, and downloading the resultant figures in a variety of formats.
 
 %\todo[inline]{Følgende er en forkortet og mindre R-teknisk version af den i R-afsnittet}
-The computational algorithm relies on repeated random sampling to obtain a sampling distribution for an item fit statistic of interest, in particular, the outfit, infit, or item fit residual. From the imported item and person parameter estimates $\hat\beta_1,\ldots,\hat\beta_k$ and $\hat\theta_1,\ldots,\hat\theta_k$ conditional probabilities for item responses are computed under the model \eqref{RMD}. The probabilities are stored in a matrix as follows:
+The computational algorithm relies on repeated random sampling to obtain a sampling distribution for an item fit statistic of interest, in particular, the outfit, infit, or item fit residual. From the imported item and person parameter estimates $\hat\delta_1,\ldots,\hat\delta_k$ and $\hat\theta_1,\ldots,\hat\theta_k$ conditional probabilities for item responses are computed under the model \eqref{RMD}. The probabilities are stored in a matrix as follows:
 \begin{equation}
 \boldsymbol{\hat{P}}
 =
 \left[\hat{P}_{vi}\right]_{\substack{v=1,\ldots,N \\ i=1,\ldots,K}}
 =
-\left[P(x_{vi}=1 \mid \theta_v=\hat\theta_v; \beta_i=\hat\beta_i)\right]_{\substack{v=1,\ldots,N \\ i=1,\ldots,K}}.
+\left[P(x_{vi}=1 \mid \theta_v=\hat\theta_v; \delta_i=\hat\delta_i)\right]_{\substack{v=1,\ldots,N \\ i=1,\ldots,K}}.
 \label{probability-matrix}
 \end{equation}
 Then, for each cell in the matrix of probabilities, a random number is generated from a uniform distribution $p^{(l)}_{vi} \sim \mathcal{U}[0,1]$ and we define $x^{(l)}_{vi}=1$ if $\hat{P}_{vi} > p^{(l)}_{vi}$ and $x^{(l)}_{vi}=0$ otherwise. This way we generate a data matrix  $\mathbf{x}^{(l)}$, $l=1,2,\ldots$, of item responses.
