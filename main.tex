@@ -226,7 +226,7 @@ The computational algorithm relies on repeated random sampling to obtain a sampl
 \end{equation}
 
 Then, for each cell in the matrix of probabilities, a random number is generated from a uniform distribution $p^{(l)}_{vi} \sim \mathcal{U}[0,1]$ and we define $x^{(l)}_{vi}=1$ if $\hat{P}_{vi} > p^{(l)}_{vi}$ and $x^{(l)}_{vi}=0$ otherwise. This way we generate a data matrix  $\mathbf{x}^{(l)}$, $l=1,2,\ldots$, of item responses. For each sample, we estimate the parameters of a parametric IRT model using the estimation methods applied to the observed data to reproduce the conditions of the original analysis; the same methods used to estimate the item and person parameters in the observed data should also be used for each simulated data set. Furthermore, the item fit statistics presented above are computed. Finally, from a suitable number of repetitions, we obtain an estimate of the sampling distribution for the minimum and maximum item fit statistics, $(L^{(s)})_{s=1,\ldots,B}$ and $(U^{(s)})_{s=1,\ldots,B}$, respectively. 
-Four estimation  methods are available for the item parameter estimation through the \texttt{RASCHplot} package, namely, PCML \cite{Robitzsch-2022}, CML \cite{Mair-Hatzinger-Maier-et-al-2021}, JML  \cite{Robitzsch-Kiefer-Wu-et-al-2022}, and MML \cite{Robitzsch-Kiefer-Wu-et-al-2022}. Two estimation methods are available for the person parameter estimation, namely WML and ML \cite{Robitzsch-2022}. 
+Four estimation  methods are available for the item parameter estimation through the \texttt{RASCHplot} package, namely, PCML \cite{Robitzsch-2022}, CML \cite{Mair-et-al-2021}, JML  \cite{Robitzsch-Kiefer-Wu-et-al-2022}, and MML \cite{Robitzsch-Kiefer-Wu-et-al-2022}. Two estimation methods are available for the person parameter estimation, namely WML and ML \cite{Robitzsch-2022}. 
 
 \subsection{Implementation for the Rasch model for polytomous items}
 
@@ -313,10 +313,11 @@ Again, the values that occur less than 5\% of the times and values that occur le
     \label{fig:amtsInfitMinMax}
 \end{figure}
 
-
-\paragraph{}
 The example illustrates that the interpretation of observed item fit statistics can differ substantially when empirical rather than conventional critical values are used. Although 'Month' has the smallest observed value for all three statistics, its fit residual and outfit values are not unusual under the fitted Rasch model, whereas its infit value is. Conversely, the largest values observed for 'Countbac' are relatively unusual for all three fit statistics. Thus, the same items are identified as having the most extreme observed values, but whether these values provide evidence against the Rasch model depends on the empirical distribution of the particular fit statistic.
 
+\subsection{Polytomous items}
+
+For an application of the methodology for polytomous items we refer to an analysis reported in Appendix \ref{sec:Appendix-A-RMP} using data from $99$ respondents who completed the $10$ item version of Actinic Keratosis Quality of Life (AKQoL) questionnaire \cite{Esmann-2013}. 
 
 \section{Discussion}
 
