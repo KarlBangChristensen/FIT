@@ -10,10 +10,9 @@ The \texttt{RMDitemfit} Shiny app generates a sampling distribution for differen
 \label{fig:userinterface}
 \end{figure}
 
-The sidebar panel contains input controls to select parameter estimation methods, input data, and specify the number of simulations to run. This application requires a vector of item difficulties and a vector of person parameters in two separate files. Users enter their data by uploading CSV files. Once files are uploaded, the data used going forward are shown on the app landing page (the ‘Input’ tab), see \autoref{fig:inputtab}.
+The left sidebar panel contains input controls to select parameter estimation methods, input data, and specify the number of simulations to run. This is done at the top of the left sidebar panel. The methodology requires a vector of item difficulties and a vector of person parameters, and these must be uploaded in two separate CSV files. Once the user clicks on "Browse" and does this, the data are used going forward as shown on the app landing page (in the ‘Input’ tab). An example of this is shown in \autoref{fig:inputtab}, where the 10 item parameters reported in \autoref{tab:amtsfit} saved in a CSV file have been uploaded together with estimates of person locations from another CSV file.
 
-Subsequently, when the number of simulations is selected, users proceed to press the `Go` button to see the resultant figures. On the `Outfit` (see \autoref{fig:outfittab}), `Infit`, and `FitResid` tabs the sample distributions for the minimum and maximum outfit, infit, and item fit residuals, respectively, are shown.
-
+Subsequently, the number of simulations is selected, and the user proceeds to press the `Go` button to see the resultant figures. These are on separate tabs (\autoref{fig:outfittab} shows the empirical distribution of the minimum and maximum values of reported in the `Outfit` tab).
 
 \begin{figure}
     \centering
