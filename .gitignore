@@ -1,6 +1,21 @@
-# Third-party published journal articles (copyright) - not for redistribution
-/pdf/
-14(4) 339-355 Wu.M Adams.RJ_Properties of Rasch Residual Fit Statistics.pdf
+# Third-party published journal articles (copyright) - not for redistribution.
+# The pdf/ folder also holds tracked figures/outputs, so these are listed
+# individually rather than ignoring the whole folder.
+pdf/1(2) 152-176 Karabatsos.G_A Critique of Rasch Residual Fit Statistics.pdf
+pdf/1(2) 199-218 Smith.RB_Fit Analysis in Latent Trait Measurement Models.pdf
+pdf/14(1) 1-9 Wolfe.EW_A Bootstrap Approach to Evaluating Person and Item Fit to the Rasch Model.pdf
+pdf/14(4) 339-355 Wu.M Adams.RJ_Properties of Rasch Residual Fit Statistics.pdf
+pdf/2(1) 66-78 Smith.RM Schumacker.RE Bush.MJ_Using Item Mean Squares to Evaluate Fit to the Rasch Model.pdf
+pdf/8(2) 190-203 Su.YH Sheu.CF Wang.WC_Computing Confidence Intervals of Item Fit Statistics in the Family of Rasch Models.pdf
+pdf/Antal, Fit Indices for the Rasch model, 2003.pdf
+pdf/Applied Psychological Measurement-1994-Rost-171-82 (1).pdf
+pdf/Heene et al, Psychological Test and Assessment Modeling, vol. 53, 283-294, 2011.pdf
+pdf/Smith, Rasch fit statistics and sample size considerations for polytomous data, BMC Medical Research Methodology, 2008.pdf
+pdf/Smith, The Distributional Properties of Rasch Item Fit Statistics, Educational and Psychological Measurement, vol. 51, 451-565, 1991.pdf
+pdf/Smith, The distributional properties of Rasch standardized residuals, Educational and Psychological Measurement, vol. 48, 657-67, 1988.pdf
+pdf/Snijders, Asymptotic null distribution of person fit statistics with estimated person parameter, Psychometrika, vol. 66, 331-342, 2001.pdf
+pdf/Wilson, Hilferty, The Distribution of Chi-Square, 1931.pdf
+pdf/Wolfe, McGill, Comparison of Asymptotic and Bootstrap Item Fit Indices in Identifying Misfit to the Rasch model, 2003.pdf
 145_pdf.pdf
 Johansson 2026 preprint - Simulation-based cutoffs for conditional item fit.pdf
 .Rproj.user
