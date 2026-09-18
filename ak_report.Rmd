@@ -1,0 +1,174 @@
+---
+title: "AKQoL Item Fit Analysis"
+subtitle: "Empirical critical values for polytomous Rasch item fit statistics"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  pdf_document:
+    latex_engine: pdflatex
+    number_sections: true
+geometry: margin=2.5cm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.align = "center")
+library(RASCHplot)
+library(ggplot2)
+library(knitr)
+library(ggpubr)
+load("ak_final_analysis.RData")
+theme_set(theme_minimal() + theme(legend.title = element_blank(),
+                                   plot.title = element_text(size = 9, hjust = 0.5),
+                                   text = element_text(size = 8)))
+
+# RASCHplot's own plot.RASCHstats() calls density() on the raw min/max
+# values without filtering non-finite ones. Outfit/Infit/FitResid can be
+# +/-Inf when an item's total weighted variance is (numerically) zero in a
+# given replicate, so this rebuilds the same quantile-shaded density plot
+# but drops non-finite values first, and renders a placeholder instead of
+# crashing when a distribution is degenerate (too few distinct finite
+# values to estimate a density from).
+safe_null_plot <- function(sim, type, extreme, probs, title) {
+  which_item <- sapply(sim$statobj, function(s) items[if (extreme == "min") which.min(s[[type]]) else which.max(s[[type]])])
+  z <- sapply(sim$statobj, function(s) if (extreme == "min") min(s[[type]], na.rm = TRUE) else max(s[[type]], na.rm = TRUE))
+  n_total <- length(z)
+  finite_z <- z[is.finite(z)]
+  n_dropped <- n_total - length(finite_z)
+
+  # Degenerate: fewer than 2 distinct finite values means there is no
+  # distribution to draw a density for (either every replicate is
+  # non-finite, e.g. Infit = Inf, or every replicate lands on the exact
+  # same finite value, e.g. Outfit = 0 whenever some item's simulated data
+  # has zero weighted residual variance).
+  if (length(unique(finite_z)) < 2) {
+    driver <- sort(table(which_item), decreasing = TRUE)
+    driver_txt <- paste(names(driver), " (", driver, "/", n_total, ")", sep = "", collapse = ", ")
+    val_txt <- if (length(finite_z) == 0) "non-finite" else paste0("= ", signif(unique(finite_z), 3))
+    msg <- paste(c(paste0(extreme, " ", type, " is ", val_txt), paste0("in all ", n_total, " replicates."),
+                   "Item achieving it:", strwrap(driver_txt, width = 24)), collapse = "\n")
+    return(ggplot() + annotate("text", x = 0, y = 0, size = 2.3, label = msg) +
+      xlim(-1, 1) + ylim(-1, 1) + theme_void() + ggtitle(title))
+  }
+
+  # A handful of replicates can inflate to astronomically large values (a
+  # near-singular refit on an already-fragile item), so a heavy-tailed
+  # distribution is plotted on a log10 x-axis - otherwise the density is
+  # compressed into an unreadable sliver near zero.
+  use_log <- all(finite_z > 0) && (max(finite_z) / min(finite_z) > 1000)
+  z_plot <- if (use_log) log10(finite_z) else finite_z
+  dens <- density(z_plot)
+  qs <- quantile(z_plot, probs = probs)
+  breaks <- if (extreme == "min") paste0(probs * 100, "%") else paste0((1 - probs) * 100, "%")
+  labels <- if (extreme == "min") c(breaks, "other") else c("other", breaks)
+  colours <- if (extreme == "min") c("#A43340", "#F44F4F", "#CFCFC2") else c("#CFCFC2", "#F44F4F", "#A43340")
+  names(colours) <- labels
+  ints <- findInterval(dens$x, qs)
+  df <- data.frame(x = dens$x, y = dens$y, quant = factor(labels[ints + 1], levels = labels))
+  xt <- paste0(ifelse(extreme == "max", "Maximal ", "Minimal "), type, if (use_log) " (log10)" else "")
+  cap <- if (n_dropped > 0) paste0(title, " (", n_dropped, "/", n_total, " excl.)") else title
+  ggplot(df, aes(x, y)) +
+    geom_area(aes(fill = quant), position = "identity") +
+    scale_fill_manual(values = colours, name = "Quantiles") +
+    xlab(xt) + ylab("") + ggtitle(cap) +
+    theme(axis.ticks.y = element_blank(), axis.text.y = element_blank())
+}
+```
+
+# Data and method
+
+The AKQoL (actinic keratosis quality of life) questionnaire consists of 10 items
+(`Q1`-`Q10`), originally scored 0-3. Following a check of category usage,
+categories 2 and 3 were collapsed for all 10 items, giving a 0-2 scale.
+`r length(extreme_idx)` respondent(s) with an extreme (minimum or maximum
+possible) total score were excluded, since their person-parameter estimate is
+undefined, leaving **N = `r nrow(dat)`** respondents.
+
+Item and person parameters were estimated by conditional maximum likelihood
+(CML, via `eRm::PCM`) and weighted maximum likelihood (WML) respectively,
+using the `RASCHplot` package (v`r as.character(packageVersion("RASCHplot"))`)
+with the local patch (`RASCHplot_patches.R`) applied — this fixes an item/
+threshold orientation bug in `pcmfct()`/`rRMPstats()` and a numerical-overflow
+issue that otherwise crashes the simulation for polytomous data. The empirical
+sampling distribution of the minimum and maximum item fit statistics across
+all `r ncol(dat)` items was estimated from **B = `r B`** parametric bootstrap
+replicates (`rRMPstats()`), refitting CML/WML on each simulated data set.
+
+# Item parameters
+
+```{r item-params}
+delta_df <- data.frame(Item = items, round(delta, 3))
+colnames(delta_df) <- c("Item", paste0("Threshold ", 1:ncol(delta)))
+kable(delta_df, row.names = FALSE,
+      caption = "Estimated item step (threshold) parameters (CML).")
+```
+
+# Evaluation of item fit
+
+Observed fit statistics for each item, compared against the empirical null
+distribution of the minimum/maximum across items from the `r B` simulated
+replicates. `*` marks an item beyond the 5%/95% empirical percentile,
+`**` beyond the 2.5%/97.5% percentile (two-sided, unadjusted for multiple
+testing).
+
+```{r fit-eval}
+pctl <- function(type, extreme, probs) {
+  z <- sapply(sim$statobj, function(s) if (extreme == "min") min(s[[type]], na.rm = TRUE) else max(s[[type]], na.rm = TRUE))
+  z <- z[is.finite(z)]
+  quantile(z, probs = probs, na.rm = TRUE)
+}
+flag <- function(x, type) {
+  lo_25 <- pctl(type, "min", 0.025); lo_5 <- pctl(type, "min", 0.05)
+  hi_95 <- pctl(type, "max", 0.95); hi_975 <- pctl(type, "max", 0.975)
+  is_below <- function(v, thr) !is.na(thr) & v < thr
+  is_above <- function(v, thr) !is.na(thr) & v > thr
+  ifelse(is_below(x, lo_25) | is_above(x, hi_975), "**",
+         ifelse(is_below(x, lo_5) | is_above(x, hi_95), "*", ""))
+}
+
+fit_df <- data.frame(
+  Item = items,
+  Outfit = sprintf("%.3f%s", obs$Outfit, flag(obs$Outfit, "Outfit")),
+  Infit = sprintf("%.3f%s", obs$Infit, flag(obs$Infit, "Infit")),
+  tOutfit = round(obs$tOutfit, 3),
+  tInfit = round(obs$tInfit, 3),
+  FitResid = round(obs$FitResid, 3)
+)
+kable(fit_df, row.names = FALSE,
+      caption = "Observed item fit statistics, flagged against the empirical null. Outfit is not flagged against a maximum threshold, and Infit not against a minimum threshold, since those reference distributions are degenerate (see Section 4).")
+```
+
+# Simulated empirical null distributions
+
+The minimal-Outfit and maximal-Infit distributions are both degenerate under
+this model, for the same reason: in every one of the `r B` replicates, at
+least one item has zero total weighted residual variance in the simulated
+data set, giving that item Outfit $=0$ and Infit $=\infty$ simultaneously.
+This is not a fixed item - it rotates among Q3, Q4, Q5, Q7, Q8 and Q9 (the
+same items flagged in Table 2), confirming that their extreme observed fit
+reflects a genuinely fragile CML calibration for this collapsed scale rather
+than a one-off artifact. Both are shown as such below rather than as a
+(misleading) density plot. The maximal-Outfit distribution is not degenerate,
+but its right tail is extreme (up to the order of $10^{90}$ in a handful of
+replicates, again traceable to the same fragile items being refit on
+resampled data), so it is plotted on a log10 x-axis; even so, its median
+(`r round(median(sapply(sim$statobj, function(s) max(s$Outfit))), 0)`) is far
+above what an Outfit statistic should be under good fit, so this null
+distribution should not be treated as a usable empirical critical value
+without first addressing why Q3-Q9 refit so unstably.
+
+```{r null-dist-outfit, fig.width=6.3, fig.height=2.6, fig.cap="Empirical null distribution of the minimum and maximum Outfit across items."}
+p1 <- safe_null_plot(sim, "Outfit", "min", c(0.025, 0.05), "Minimal Outfit")
+p2 <- safe_null_plot(sim, "Outfit", "max", c(0.95, 0.975), "Maximal Outfit")
+ggarrange(p1, p2, ncol = 2)
+```
+
+```{r null-dist-infit, fig.width=6.3, fig.height=2.6, fig.cap="Empirical null distribution of the minimum and maximum Infit across items."}
+p3 <- safe_null_plot(sim, "Infit", "min", c(0.025, 0.05), "Minimal Infit")
+p4 <- safe_null_plot(sim, "Infit", "max", c(0.95, 0.975), "Maximal Infit")
+ggarrange(p3, p4, ncol = 2)
+```
+
+```{r null-dist-fitresid, fig.width=6.3, fig.height=2.6, fig.cap="Empirical null distribution of the minimum and maximum FitResid across items."}
+p5 <- safe_null_plot(sim, "FitResid", "min", c(0.025, 0.05), "Minimal FitResid")
+p6 <- safe_null_plot(sim, "FitResid", "max", c(0.95, 0.975), "Maximal FitResid")
+ggarrange(p5, p6, ncol = 2)
+```
