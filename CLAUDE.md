@@ -10,9 +10,11 @@ residual-based fit). LaTeX manuscript backed by R (and some legacy SAS) simulati
   cached as `.RData`/`.csv` at the root (`amtsstats*.RData`, `amtsdelta.csv`, `amtsoutfit.csv`,
   `amtstheta.csv`, etc.) and are large/regenerable — don't hand-edit, regenerate via the R scripts
   if they need to change.
-- `AMTS.csv`, `AMTSsimu/`, `SPADI.csv`/`.sas`, `knox*.sas7bdat`/`.sas`/`.log`, `dich10/` — example
-  and simulation datasets (AMTS, SPADI, Knox scales) used to illustrate the fit statistics, mixing
-  R and legacy SAS.
+- `AMTS.csv`, `knox*.sas7bdat`/`.sas`/`.log` — example dichotomous datasets (AMTS, Knox scales) used
+  to illustrate the fit statistics, mixing R and legacy SAS.
+- `ak.csv`, `ak_data_description.md`, `export_ak_csv.R` — the AKQoL polytomous example dataset (99
+  respondents, 10 items `Q1`-`Q10` scored 0-3) referenced in Appendix A; `export_ak_csv.R` produces
+  `ak.csv` from the original SPSS/SAS source files.
 - `pdf/` — reference literature on Rasch fit statistics (Smith, Wright, Wu & Adams, etc.) — read
   these before changing how a fit statistic is computed or described.
 - Root `.RData`/`.Rhistory` — live RStudio session state (this one is large, ~8MB).
@@ -25,8 +27,8 @@ residual-based fit). LaTeX manuscript backed by R (and some legacy SAS) simulati
   already committed.
 
 ## Conventions
-- R is the active language for new work; SAS files (`knoxsimu.sas`, `SPADI.sas`) are legacy/kept
-  for reproducibility, not being extended.
+- R is the active language for new work; SAS files (`knoxsimu.sas`) are legacy/kept for
+  reproducibility, not being extended.
 - No automated tests — validate changes by comparing simulation output against the manuscript's
   reported critical values/tables.
 
